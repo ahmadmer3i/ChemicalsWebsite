@@ -17,12 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.home');
 })->name('home');
-Route::get('contacts', [ HomeController::class,'contact'])->name('contacts');
-Route::get('products', [HomeController::class, 'products'])->name('products');
-Route::get('about', [HomeController::class, 'about'])->name('about');
+Route::get('contacts', [ HomeController::class, 'contact' ])->name('contacts');
+Route::get('products', [ HomeController::class, 'products' ])->name('products');
+Route::get('about', [ HomeController::class, 'about' ])->name('about');
+Route::get('news', [ HomeController::class, 'news' ])->name('news');
 
 Route::get('/dashboard', function () {
     return view('backend.body.index');
-})->middleware(['auth'])->name('dashboard');
+})->middleware([ 'auth' ])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

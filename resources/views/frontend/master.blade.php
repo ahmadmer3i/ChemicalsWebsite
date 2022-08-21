@@ -54,12 +54,14 @@
     @include('frontend.partials.footer')
 </div>
 <!-- JavaScript files-->
-{{--    <script src="{{ asset('frontend/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>--}}
+<script src="{{ asset('frontend/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('frontend/vendor/swiper/swiper-bundle.min.js') }}"></script>
 <script src="{{ asset('frontend/vendor/modal-video/js/modal-video.js') }}"></script>
 <script src="{{ asset('frontend/vendor/leaflet/leaflet.js') }}"></script>
 <script src="{{ asset('frontend/js/front.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
 <script>
     // ------------------------------------------------------- //
     //   Inject SVG Sprite -
@@ -71,13 +73,14 @@
         var ajax = new XMLHttpRequest();
         ajax.open("GET", path, true);
         ajax.send();
-        ajax.onload = function(e) {
+        ajax.onload = function (e) {
             var div = document.createElement("div");
             div.className = 'd-none';
             div.innerHTML = ajax.responseText;
             document.body.insertBefore(div, document.body.childNodes[0]);
         }
     }
+
     // this is set to BootstrapTemple website as you cannot
     // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
     // while using file:// protocol
@@ -89,9 +92,8 @@
 <script>
 
 
-
-    document.addEventListener("DOMContentLoaded", function(){
-        window.addEventListener('scroll', function() {
+    document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener('scroll', function () {
             if (window.scrollY > 50) {
                 document.getElementById('navbar_top').classList.add('fixed-top');
                 // add padding top to show content behind navbar
@@ -110,6 +112,7 @@
 
 @yield('script')
 <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </body>
 </html>
