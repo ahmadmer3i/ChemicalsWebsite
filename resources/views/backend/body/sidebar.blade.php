@@ -33,21 +33,22 @@
                 <a href="#ecommerce" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <i class="flaticon-home-fill"></i>
-                        <span>Ecommerce</span>
+                        <span>Home Page</span>
                     </div>
                     <div>
                         <i class="flaticon-right-arrow"></i>
                     </div>
                 </a>
-                <ul class="collapse submenu list-unstyled" id="ecommerce" data-parent="#accordionExample">
-                    <li>
+                <ul class="collapse submenu list-unstyled {{request()->is('admin/home/sliders') ? 'show' : ''}}"
+                    id="ecommerce" data-parent="#accordionExample">
+                    <li class="{{request()->is('admin/home/sliders') ? 'active' : ''}}">
                         <a href="{{route('home.sliders')}}"> Home Sliders </a>
                     </li>
 
                 </ul>
             </li>
 
-            <li class="menu">
+            {{--<li class="menu">
                 <a href="#ui-features" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <i class="flaticon-elements"></i>
@@ -1063,7 +1064,7 @@
                         <a href="javascript:void(0);"> Sample Link 3 </a>
                     </li>
                 </ul>
-            </li>
+            </li>--}}
         </ul>
     </nav>
 
