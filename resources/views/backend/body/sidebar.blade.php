@@ -1,436 +1,1068 @@
-<div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
-    <div class="navbar-header">
-        <ul class="nav navbar-nav flex-row">
-            <li class="nav-item me-auto"><a class="navbar-brand" href="../../../html/ltr/vertical-menu-template/index.html"><span class="brand-logo">
-                            <svg viewbox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="24">
-                                <defs>
-                                    <lineargradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%" y2="89.4879456%">
-                                        <stop stop-color="#000000" offset="0%"></stop>
-                                        <stop stop-color="#FFFFFF" offset="100%"></stop>
-                                    </lineargradient>
-                                    <lineargradient id="linearGradient-2" x1="64.0437835%" y1="46.3276743%" x2="37.373316%" y2="100%">
-                                        <stop stop-color="#EEEEEE" stop-opacity="0" offset="0%"></stop>
-                                        <stop stop-color="#FFFFFF" offset="100%"></stop>
-                                    </lineargradient>
-                                </defs>
-                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="Artboard" transform="translate(-400.000000, -178.000000)">
-                                        <g id="Group" transform="translate(400.000000, 178.000000)">
-                                            <path class="text-primary" id="Path" d="M-5.68434189e-14,2.84217094e-14 L39.1816085,2.84217094e-14 L69.3453773,32.2519224 L101.428699,2.84217094e-14 L138.784583,2.84217094e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L6.71554594,44.4188507 C2.46876683,39.9813776 0.345377275,35.1089553 0.345377275,29.8015838 C0.345377275,24.4942122 0.230251516,14.560351 -5.68434189e-14,2.84217094e-14 Z" style="fill:currentColor"></path>
-                                            <path id="Path1" d="M69.3453773,32.2519224 L101.428699,1.42108547e-14 L138.784583,1.42108547e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L32.8435758,70.5039241 L69.3453773,32.2519224 Z" fill="url(#linearGradient-1)" opacity="0.2"></path>
-                                            <polygon id="Path-2" fill="#000000" opacity="0.049999997" points="69.3922914 32.4202615 32.8435758 70.5039241 54.0490008 16.1851325"></polygon>
-                                            <polygon id="Path-21" fill="#000000" opacity="0.099999994" points="69.3922914 32.4202615 32.8435758 70.5039241 58.3683556 20.7402338"></polygon>
-                                            <polygon id="Path-3" fill="url(#linearGradient-2)" opacity="0.099999994" points="101.428699 0 83.0667527 94.1480575 130.378721 47.0740288"></polygon>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg></span>
-                    <h2 class="brand-text">Vuexy</h2>
-                </a></li>
-            <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary" data-feather="disc" data-ticon="disc"></i></a></li>
-        </ul>
-    </div>
-    <div class="shadow-bottom"></div>
-    <div class="main-menu-content">
-        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class=" nav-item"><a class="d-flex align-items-center" href="index.html"><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Dashboards</span><span class="badge badge-light-warning rounded-pill ms-auto me-1">2</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="dashboard-analytics.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Analytics">Analytics</span></a>
-                    </li>
-                    <li class="active"><a class="d-flex align-items-center" href="dashboard-ecommerce.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">eCommerce</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Apps &amp; Pages</span><i data-feather="more-horizontal"></i>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Email</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="app-chat.html"><i data-feather="message-square"></i><span class="menu-title text-truncate" data-i18n="Chat">Chat</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="app-todo.html"><i data-feather="check-square"></i><span class="menu-title text-truncate" data-i18n="Todo">Todo</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="app-calendar.html"><i data-feather="calendar"></i><span class="menu-title text-truncate" data-i18n="Calendar">Calendar</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="app-kanban.html"><i data-feather="grid"></i><span class="menu-title text-truncate" data-i18n="Kanban">Kanban</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Invoice">Invoice</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="app-invoice-list.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">List</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="app-invoice-preview.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Preview">Preview</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="app-invoice-edit.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Edit">Edit</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="app-invoice-add.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Add">Add</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="app-file-manager.html"><i data-feather="save"></i><span class="menu-title text-truncate" data-i18n="File Manager">File Manager</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">Roles &amp; Permission</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="app-access-roles.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Roles">Roles</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="app-access-permission.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Permission">Permission</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shopping-cart"></i><span class="menu-title text-truncate" data-i18n="eCommerce">eCommerce</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="app-ecommerce-shop.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Shop">Shop</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="app-ecommerce-details.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Details">Details</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="app-ecommerce-wishlist.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Wish List">Wish List</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="app-ecommerce-checkout.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Checkout">Checkout</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="User">User</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="app-user-list.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">List</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="View">View</span></a>
-                        <ul class="menu-content">
-                            <li><a class="d-flex align-items-center" href="app-user-view-account.html"><span class="menu-item text-truncate" data-i18n="Account">Account</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="app-user-view-security.html"><span class="menu-item text-truncate" data-i18n="Security">Security</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="app-user-view-billing.html"><span class="menu-item text-truncate" data-i18n="Billing &amp; Plans">Billing &amp; Plans</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="app-user-view-notifications.html"><span class="menu-item text-truncate" data-i18n="Notifications">Notifications</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="app-user-view-connections.html"><span class="menu-item text-truncate" data-i18n="Connections">Connections</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Pages">Pages</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Account Settings">Account Settings</span></a>
-                        <ul class="menu-content">
-                            <li><a class="d-flex align-items-center" href="page-account-settings-account.html"><span class="menu-item text-truncate" data-i18n="Account">Account</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="page-account-settings-security.html"><span class="menu-item text-truncate" data-i18n="Security">Security</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="page-account-settings-billing.html"><span class="menu-item text-truncate" data-i18n="Billings &amp; Plans">Billings &amp; Plans</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="page-account-settings-notifications.html"><span class="menu-item text-truncate" data-i18n="Notifications">Notifications</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="page-account-settings-connections.html"><span class="menu-item text-truncate" data-i18n="Connections">Connections</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="page-profile.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Profile">Profile</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="page-faq.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="FAQ">FAQ</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="page-knowledge-base.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Knowledge Base">Knowledge Base</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="page-pricing.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Pricing">Pricing</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="page-license.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="License">License</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="page-api-key.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="API Key">API Key</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Blog">Blog</span></a>
-                        <ul class="menu-content">
-                            <li><a class="d-flex align-items-center" href="page-blog-list.html"><span class="menu-item text-truncate" data-i18n="List">List</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="page-blog-detail.html"><span class="menu-item text-truncate" data-i18n="Detail">Detail</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="page-blog-edit.html"><span class="menu-item text-truncate" data-i18n="Edit">Edit</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Mail Template">Mail Template</span></a>
-                        <ul class="menu-content">
-                            <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-welcome.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Welcome">Welcome</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-reset-password.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Reset Password">Reset Password</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-verify-email.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Verify Email">Verify Email</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-deactivate-account.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Deactivate Account</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-invoice.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Invoice">Invoice</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-mail-template/mail-promotional.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Promotional">Promotional</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Miscellaneous">Miscellaneous</span></a>
-                        <ul class="menu-content">
-                            <li><a class="d-flex align-items-center" href="page-misc-coming-soon.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Coming Soon">Coming Soon</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="page-misc-not-authorized.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Not Authorized">Not Authorized</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="page-misc-under-maintenance.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Maintenance">Maintenance</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="page-misc-error.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Error">Error</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="user-check"></i><span class="menu-title text-truncate" data-i18n="Authentication">Authentication</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Login">Login</span></a>
-                        <ul class="menu-content">
-                            <li><a class="d-flex align-items-center" href="auth-login-basic.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Basic">Basic</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="auth-login-cover.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Cover">Cover</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Register">Register</span></a>
-                        <ul class="menu-content">
-                            <li><a class="d-flex align-items-center" href="auth-register-basic.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Basic">Basic</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="auth-register-cover.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Cover">Cover</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="auth-register-multisteps.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Multi-Steps">Multi-Steps</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Forgot Password">Forgot Password</span></a>
-                        <ul class="menu-content">
-                            <li><a class="d-flex align-items-center" href="auth-forgot-password-basic.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Basic">Basic</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="auth-forgot-password-cover.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Cover">Cover</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Reset Password">Reset Password</span></a>
-                        <ul class="menu-content">
-                            <li><a class="d-flex align-items-center" href="auth-reset-password-basic.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Basic">Basic</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="auth-reset-password-cover.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Cover">Cover</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Verify Email">Verify Email</span></a>
-                        <ul class="menu-content">
-                            <li><a class="d-flex align-items-center" href="auth-verify-email-basic.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Basic">Basic</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="auth-verify-email-cover.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Cover">Cover</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Two Steps">Two Steps</span></a>
-                        <ul class="menu-content">
-                            <li><a class="d-flex align-items-center" href="auth-two-steps-basic.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Basic">Basic</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="auth-two-steps-cover.html" target="_blank"><span class="menu-item text-truncate" data-i18n="Cover">Cover</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="modal-examples.html"><i data-feather="square"></i><span class="menu-title text-truncate" data-i18n="Modal Examples">Modal Examples</span></a>
-            </li>
-            <li class=" navigation-header"><span data-i18n="User Interface">User Interface</span><i data-feather="more-horizontal"></i>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="ui-typography.html"><i data-feather="type"></i><span class="menu-title text-truncate" data-i18n="Typography">Typography</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="ui-feather.html"><i data-feather="eye"></i><span class="menu-title text-truncate" data-i18n="Feather">Feather</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="credit-card"></i><span class="menu-title text-truncate" data-i18n="Card">Card</span><span class="badge badge-light-success rounded-pill ms-auto me-1">New</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="card-basic.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Basic">Basic</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="card-advance.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Advance">Advance</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="card-statistics.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Statistics">Statistics</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="card-analytics.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Analytics">Analytics</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="card-actions.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Card Actions">Card Actions</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="briefcase"></i><span class="menu-title text-truncate" data-i18n="Components">Components</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="component-accordion.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Accordion">Accordion</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-alerts.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Alerts">Alerts</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-avatar.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Avatar">Avatar</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-badges.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Badges">Badges</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-breadcrumbs.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Breadcrumbs">Breadcrumbs</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-buttons.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Buttons">Buttons</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-carousel.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Carousel">Carousel</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-collapse.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Collapse">Collapse</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-divider.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Divider">Divider</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-dropdowns.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Dropdowns">Dropdowns</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-list-group.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List Group">List Group</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-modals.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Modals">Modals</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-navs-component.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Navs Component">Navs Component</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-offcanvas.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Offcanvas">Offcanvas</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-pagination.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Pagination">Pagination</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-pill-badges.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Pill Badges">Pill Badges</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-pills-component.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Pills Component">Pills Component</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-popovers.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Popovers">Popovers</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-progress.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Progress">Progress</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-spinner.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Spinner">Spinner</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-tabs-component.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Tabs Component">Tabs Component</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-timeline.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Timeline">Timeline</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-bs-toast.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Toasts">Toasts</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="component-tooltips.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Tooltips">Tooltips</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="box"></i><span class="menu-title text-truncate" data-i18n="Extensions">Extensions</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="ext-component-sweet-alerts.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Sweet Alert">Sweet Alert</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="ext-component-blockui.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Block UI">BlockUI</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="ext-component-toastr.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Toastr">Toastr</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="ext-component-sliders.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Sliders">Sliders</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="ext-component-drag-drop.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Drag &amp; Drop">Drag &amp; Drop</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="ext-component-tour.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Tour">Tour</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="ext-component-clipboard.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Clipboard">Clipboard</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="ext-component-media-player.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Media player">Media Player</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="ext-component-context-menu.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Context Menu">Context Menu</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="ext-component-swiper.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="swiper">Swiper</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="ext-component-tree.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Tree">Tree</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="ext-component-ratings.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Ratings">Ratings</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="ext-component-i18n.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="l18n">l18n</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="layout"></i><span class="menu-title text-truncate" data-i18n="Page Layouts">Page Layouts</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="layout-collapsed-menu.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Collapsed Menu">Collapsed Menu</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="layout-full.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Layout Full">Layout Full</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="layout-without-menu.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Without Menu">Without Menu</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="layout-empty.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Layout Empty">Layout Empty</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="layout-blank.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Layout Blank">Layout Blank</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" navigation-header"><span data-i18n="Forms &amp; Tables">Forms &amp; Tables</span><i data-feather="more-horizontal"></i>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="copy"></i><span class="menu-title text-truncate" data-i18n="Form Elements">Form Elements</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="form-input.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Input">Input</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="form-input-groups.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Input Groups">Input Groups</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="form-input-mask.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Input Mask">Input Mask</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="form-textarea.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Textarea">Textarea</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="form-checkbox.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Checkbox">Checkbox</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="form-radio.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Radio">Radio</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="form-custom-options.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Custom Options">Custom Options</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="form-switch.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Switch">Switch</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="form-select.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Select">Select</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="form-number-input.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Number Input">Number Input</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="form-file-uploader.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="File Uploader">File Uploader</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="form-quill-editor.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Quill Editor">Quill Editor</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="form-date-time-picker.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Date &amp; Time Picker">Date &amp; Time Picker</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="form-layout.html"><i data-feather="box"></i><span class="menu-title text-truncate" data-i18n="Form Layout">Form Layout</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="form-wizard.html"><i data-feather="package"></i><span class="menu-title text-truncate" data-i18n="Form Wizard">Form Wizard</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="form-validation.html"><i data-feather="check-circle"></i><span class="menu-title text-truncate" data-i18n="Form Validation">Form Validation</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="form-repeater.html"><i data-feather="rotate-cw"></i><span class="menu-title text-truncate" data-i18n="Form Repeater">Form Repeater</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="table-bootstrap.html"><i data-feather="server"></i><span class="menu-title text-truncate" data-i18n="Table">Table</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="grid"></i><span class="menu-title text-truncate" data-i18n="Datatable">Datatable</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="table-datatable-basic.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Basic">Basic</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="table-datatable-advanced.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Advanced">Advanced</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" navigation-header"><span data-i18n="Charts &amp; Maps">Charts &amp; Maps</span><i data-feather="more-horizontal"></i>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="pie-chart"></i><span class="menu-title text-truncate" data-i18n="Charts">Charts</span><span class="badge badge-light-danger rounded-pill ms-auto me-2">2</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="chart-apex.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Apex">Apex</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="chart-chartjs.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Chartjs">Chartjs</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="maps-leaflet.html"><i data-feather="map"></i><span class="menu-title text-truncate" data-i18n="Leaflet Maps">Leaflet Maps</span></a>
-            </li>
-            <li class=" navigation-header"><span data-i18n="Misc">Misc</span><i data-feather="more-horizontal"></i>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="menu"></i><span class="menu-title text-truncate" data-i18n="Menu Levels">Menu Levels</span></a>
-                <ul class="menu-content">
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Second Level">Second Level 2.1</span></a>
-                    </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Second Level">Second Level 2.2</span></a>
-                        <ul class="menu-content">
-                            <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Third Level">Third Level 3.1</span></a>
-                            </li>
-                            <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Third Level">Third Level 3.2</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="disabled nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="eye-off"></i><span class="menu-title text-truncate" data-i18n="Disabled Menu">Disabled Menu</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/documentation" target="_blank"><i data-feather="folder"></i><span class="menu-title text-truncate" data-i18n="Documentation">Documentation</span></a>
-            </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="https://pixinvent.ticksy.com/" target="_blank"><i data-feather="life-buoy"></i><span class="menu-title text-truncate" data-i18n="Raise Support">Raise Support</span></a>
+<div class="sidebar-wrapper sidebar-theme">
+
+    <div id="dismiss" class="d-lg-none"><i class="flaticon-cancel-12"></i></div>
+
+    <nav id="sidebar">
+
+        <ul class="navbar-nav theme-brand flex-row  d-none d-lg-flex">
+            <li class="nav-item d-flex align-center py-1">
+                <a href="{{route('dashboard')}}" class="theme-text">
+                    <img src="{{asset('frontend/img/logo/logo.png')}}" class="img-fluid" width="50%" alt="logo">
+                </a>
+
             </li>
         </ul>
-    </div>
+
+
+        <ul class="list-unstyled menu-categories" id="accordionExample">
+            <li class="menu">
+                <a href="{{route('dashboard')}}" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-computer-6 ml-3"></i>
+                        <span>Dashboard</span>
+                    </div>
+
+                    <div>
+                        <span class="badge badge-pill badge-secondary mr-2">7</span>
+                    </div>
+                </a>
+            </li>
+            <li class="menu">
+                <a href="#ecommerce" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-home-fill"></i>
+                        <span>Ecommerce</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="ecommerce" data-parent="#accordionExample">
+                    <li>
+                        <a href="{{route('home.sliders')}}"> Home Sliders </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#ui-features" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-elements"></i>
+                        <span>UI Kit</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="ui-features" data-parent="#accordionExample">
+                    <li>
+                        <a href="ui_helper_classes.html"> Helper Classes </a>
+                    </li>
+                    <li>
+                        <a href="ui_color_library.html"> Color Library </a>
+                    </li>
+                    <li>
+                        <a href="ui_grid.html"> Grid System </a>
+                    </li>
+                    <li>
+                        <a href="ui_typography.html"> Typography </a>
+                    </li>
+                    <li>
+                        <a href="ui_shadows.html"> Shadow </a>
+                    </li>
+                    <li>
+                        <a href="ui_miscellaneous.html"> Miscellaneous </a>
+                    </li>
+                    <li>
+                        <a href="ui_pagination.html">Pagination</a>
+                    </li>
+                    <li>
+                        <a href="ui_alert.html"> Alerts </a>
+                    </li>
+                    <li>
+                        <a href="ui_tooltips_and_popovers.html"> Tooltips And Popovers </a>
+                    </li>
+                    <li>
+                        <a href="ui_loader.html"> Loaders </a>
+                    </li>
+                    <li>
+                        <a href="#ui-buttons" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Buttons <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="ui-buttons" data-parent="#ui-features">
+                            <li>
+                                <a href="ui_buttons.html"> Bootstrap </a>
+                            </li>
+                            <li>
+                                <a href="ui_creative.html"> Creative </a>
+                            </li>
+                            <li>
+                                <a href="ui_switches.html"> Switches </a>
+                            </li>
+                            <li>
+                                <a href="ui_social_button.html"> Social </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="ui_sweetalert.html"> Sweet Alerts </a>
+                    </li>
+                    <li>
+                        <a href="#ui-font-icons" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Font Icons <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="ui-font-icons"
+                            data-parent="#ui-features">
+                            <li>
+                                <a href="ui_flaticon_icon.html"> Flaticon </a>
+                            </li>
+                            <li>
+                                <a href="ui_linea_icon.html"> Linea </a>
+                            </li>
+                            <li>
+                                <a href="ui_themify_icon.html"> Themify </a>
+                            </li>
+                            <li>
+                                <a href="ui_pixeden_icon.html"> Pixeden </a>
+                            </li>
+                            <li>
+                                <a href="ui_fontawesome_icon.html"> Fontawesome </a>
+                            </li>
+                            <li>
+                                <a href="ui_metro_icon.html"> Metro </a>
+                            </li>
+                            <li>
+                                <a href="ui_weather_icon.html"> Weather </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="ui_tabs.html"> Tabs </a>
+                    </li>
+                    <li>
+                        <a href="ui_accordion.html"> Accordions </a>
+                    </li>
+                    <li>
+                        <a href="ui_modal.html"> Modals </a>
+                    </li>
+                    <li>
+                        <a href="ui_sliders.html"> Range Sliders </a>
+                    </li>
+                    <li>
+                        <a href="ui_timeline.html"> Timeline </a>
+                    </li>
+                    <li>
+                        <a href="ui_tree.html"> Tree View </a>
+                    </li>
+                    <li>
+                        <a href="#ui-progress" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Progress Bar <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="ui-progress" data-parent="#ui-features">
+                            <li>
+                                <a href="ui_bootstrap_progress_bar.html"> Bootstrap </a>
+                            </li>
+                            <li>
+                                <a href="ui_material_progress_bar.html"> Custom </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#ui-notification" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Notifications <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="ui-notification"
+                            data-parent="#ui-features">
+                            <li>
+                                <a href="ui_toastr.html"> Toastr </a>
+                            </li>
+                            <li>
+                                <a href="ui_notification.html"> Creative </a>
+                            </li>
+                            <li>
+                                <a href="ui_snackbar.html"> Snackbar </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="ui_session_timeout.html"> Session Timeout </a>
+                    </li>
+                    <li>
+                        <a href="ui_media_object.html"> Media Object </a>
+                    </li>
+                    <li>
+                        <a href="ui_list_group.html"> List Group </a>
+                    </li>
+                    <li>
+                        <a href="ui_nestable_list.html"> Nested List </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#components" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-3d-cube"></i>
+                        <span>Components</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="components" data-parent="#accordionExample">
+                    <li>
+                        <a href="component_portlet.html"> Portlets </a>
+                    </li>
+                    <li>
+                        <a href="component_keypad.html"> Keypad </a>
+                    </li>
+
+                    <li>
+                        <a href="#component-carousel" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Carousel <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="component-carousel"
+                            data-parent="#components">
+                            <li>
+                                <a href="component_bootstrap_carousel.html">Bootstrap</a>
+                            </li>
+                            <li>
+                                <a href="component_carousel.html">Metro</a>
+                            </li>
+                            <li>
+                                <a href="component_sliders.html">Swiper</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="component_rating.html"> Rating </a>
+                    </li>
+                    <li>
+                        <a href="component_blockui.html"> Block UI </a>
+                    </li>
+                    <li>
+                        <a href="component_popup.html"> Popup </a>
+                    </li>
+                    <li>
+                        <a href="component_scroll_bars_basic.html"> Scrollbar </a>
+                    </li>
+                    <li>
+                        <a href="component_todo_list.html"> Todo List </a>
+                    </li>
+                    <li>
+                        <a href="component_scrollspy.html"> Scrollspy </a>
+                    </li>
+                    <li>
+                        <a href="component_countdown.html"> Countdown </a>
+                    </li>
+
+                    <li>
+                        <a href="component_counter.html"> Counter </a>
+                    </li>
+                    <li>
+                        <a href="component_datetime_picker.html"> Date &amp; Time Picker </a>
+                    </li>
+                    <li>
+                        <a href="component_lightbox.html"> LightBox </a>
+                    </li>
+                    <li>
+                        <a href="component_color_picker.html"> Color Picker </a>
+                    </li>
+                    <li>
+                        <a href="#component-media" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Media <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="component-media"
+                            data-parent="#components">
+                            <li>
+                                <a href="component_video_player.html"> Video Player </a>
+                            </li>
+                            <li>
+                                <a href="component_audio_player.html"> Audio Player </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="component_clipboard.html"> Clipboard </a>
+                    </li>
+                    <li>
+                        <a href="component_typeahead.html"> Typeahead </a>
+                    </li>
+                    <li>
+                        <a href="#component-search" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Search <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="component-search"
+                            data-parent="#components">
+                            <li>
+                                <a href="component_search_multiple.html"> Multiple </a>
+                            </li>
+                            <li>
+                                <a href="component_search_web.html"> Web </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#component-animation" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Animations <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="component-animation"
+                            data-parent="#components">
+                            <li>
+                                <a href="component_animation_buttons.html"> Buttons </a>
+                            </li>
+                            <li>
+                                <a href="component_animation_css.html"> CSS </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#component-img-crop" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Image Cropping <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="component-img-crop"
+                            data-parent="#components">
+                            <li>
+                                <a href="component_image_cropping_basic.html"> Basic </a>
+                            </li>
+                            <li>
+                                <a href="component_image_cropping_advanced.html"> Advanced </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-copy-line"></i>
+                        <span>Forms</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="forms" data-parent="#accordionExample">
+                    <li>
+                        <a href="#forms-bootstrap" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Bootstrap <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="forms-bootstrap" data-parent="#forms">
+                            <li>
+                                <a href="form_bootstrap_basic.html"> Basic </a>
+                            </li>
+                            <li>
+                                <a href="form_bootstrap_rounded.html"> Rounded </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#forms-input-group" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Input Group <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="forms-input-group" data-parent="#forms">
+                            <li>
+                                <a href="form_input_group_basic.html"> Basic </a>
+                            </li>
+                            <li>
+                                <a href="form_input_group_rounded.html"> Rounded </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="form_bootstrap_material.html"> Material </a>
+                    </li>
+                    <li>
+                        <a href="#forms-layout" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Layouts <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="forms-layout" data-parent="#forms">
+                            <li>
+                                <a href="form_layouts.html"> Basic </a>
+                            </li>
+                            <li>
+                                <a href="form_layouts_rounded.html"> Rounded </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#forms-validation" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Validation <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="forms-validation" data-parent="#forms">
+                            <li>
+                                <a href="form_validation.html"> Bootstrap </a>
+                            </li>
+                            <li>
+                                <a href="form_jqvalidation.html"> jQuery </a>
+                            </li>
+                            <li>
+                                <a href="form_validation_material.html"> Custom </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="form_input_mask.html"> Input Mask </a>
+                    </li>
+                    <li>
+                        <a href="form_bootstrap_select.html"> Bootstrap Select </a>
+                    </li>
+                    <li>
+                        <a href="form_select2.html"> Select2 </a>
+                    </li>
+                    <li>
+                        <a href="form_bootstrap_touchspin.html"> TouchSpin </a>
+                    </li>
+                    <li>
+                        <a href="form_multiselect.html"> Multi Select </a>
+                    </li>
+                    <li>
+                        <a href="form_maxlength.html"> Maxlength </a>
+                    </li>
+                    <li>
+                        <a href="form_repeater.html"> Repeater </a>
+                    </li>
+                    <li>
+                        <a href="form_checkbox_radio.html"> Checkbox and Radio </a>
+                    </li>
+
+                    <li>
+                        <a href="#forms-wizard" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Wizards <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="forms-wizard" data-parent="#forms">
+                            <li>
+                                <a href="form_bs_wizard.html"> Bootstrap </a>
+                            </li>
+                            <li>
+                                <a href="form_wizard.html"> jQuery Steps </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="form_fileupload.html"> File Upload </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#elements" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-layers"></i>
+                        <span>Elements</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="elements" data-parent="#accordionExample">
+                    <li>
+                        <a href="element_steps.html"> Steps </a>
+                    </li>
+                    <li>
+                        <a href="element_list.html"> List </a>
+                    </li>
+                    <li>
+                        <a href="element_ribbon.html"> Ribbons </a>
+                    </li>
+                    <li>
+                        <a href="element_overlays.html"> Overlays </a>
+                    </li>
+                    <li>
+                        <a href="element_weatherapp.html"> Weather Apps </a>
+                    </li>
+                    <li>
+                        <a href="element_testimonial.html"> Testimonials </a>
+                    </li>
+                    <li>
+                        <a href="element_team.html"> Team </a>
+                    </li>
+                    <li>
+                        <a href="element_contacts.html"> Contacts </a>
+                    </li>
+                    <li>
+                        <a href="element_blog.html"> Blog Elements </a>
+                    </li>
+                    <li>
+                        <a href="element_pricing_table.html"> Pricing Tables </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#editors" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-edit-2"></i>
+                        <span>Editors</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="editors" data-parent="#accordionExample">
+                    <li>
+                        <a href="editor_tinymce.html"> Tinymce </a>
+                    </li>
+                    <li>
+                        <a href="editor_quill.html"> Quill </a>
+                    </li>
+                    <li>
+                        <a href="editor_markdown.html"> Markdown </a>
+                    </li>
+                    <li>
+                        <a href="editor_contenttools.html"> ContentTools </a>
+                    </li>
+                    <li>
+                        <a href="editor_summernote.html"> Summernote </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#tables" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-table"></i>
+                        <span>Tables</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="tables" data-parent="#accordionExample">
+                    <li>
+                        <a href="table_basic.html"> Basic </a>
+                    </li>
+                    <li>
+                        <a href="table_tablesaw.html"> Tablesaw</a>
+                    </li>
+                    <li>
+                        <a href="table_sticky_table_header.html"> Sticky Headers</a>
+                    </li>
+                    <li>
+                        <a href="#tables-editable" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Editable <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="tables-editable" data-parent="#tables">
+                            <li>
+                                <a href="table_jq_spreadsheet.html"> Spreadsheet </a>
+                            </li>
+                            <li>
+                                <a href="table_jquery_tabledit.html"> TableEdit </a>
+                            </li>
+                            <li>
+                                <a href="table_editablegrid.html"> Editable Grid </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tables-data-tables" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> DataTables <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="tables-data-tables"
+                            data-parent="#tables">
+                            <li>
+                                <a href="table_dt_zero_configuration.html"> Basic </a>
+                            </li>
+                            <li>
+                                <a href="table_dt_ordering_sorting.html"> Order Sorting </a>
+                            </li>
+                            <li>
+                                <a href="table_dt_multi-column_ordering.html"> Multi-Column </a>
+                            </li>
+                            <li>
+                                <a href="table_dt_multiple_tables.html"> Multiple Tables</a>
+                            </li>
+                            <li>
+                                <a href="table_dt_alternative_pagination.html"> Alternative Pagination</a>
+                            </li>
+                            <li>
+                                <a href="table_dt_miscellaneous.html"> Miscellaneous </a>
+                            </li>
+                            <li>
+                                <a href="table_dt_custom.html"> Custom </a>
+                            </li>
+                            <li>
+                                <a href="table_dt_scrollable.html"> Scrollable </a>
+                            </li>
+                            <li>
+                                <a href="table_dt_range_search.html"> Range Search </a>
+                            </li>
+                            <li>
+                                <a href="table_dt_html5.html"> HTML5 Export </a>
+                            </li>
+                            <li>
+                                <a href="table_dt_live_dom_ordering.html"> Live DOM ordering </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#charts" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-bar-chart-2"></i>
+                        <span>Charts</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="charts" data-parent="#accordionExample">
+                    <li>
+                        <a href="#chart-amcharts" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> amCharts <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="chart-amcharts" data-parent="#charts">
+                            <li>
+                                <a href="am_column_and_barchart.html"> Column &amp; Bar </a>
+                            </li>
+                            <li>
+                                <a href="am_line_and_areachart.html"> Line &amp; Area </a>
+                            </li>
+                            <li>
+                                <a href="am_pie_and_donutchart.html"> Pie &amp; Donut </a>
+                            </li>
+                            <li>
+                                <a href="am_gauge_and_otherchart.html"> Gauges &amp; Other </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#chart-c3chart" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> C3 <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="chart-c3chart" data-parent="#charts">
+                            <li>
+                                <a href="charts_c3_chart.html"> Simple</a>
+                            </li>
+                            <li>
+                                <a href="charts_c3_api.html"> Api </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="charts_cssplot.html"> CSS Plot </a>
+                    </li>
+                    <li>
+                        <a href="charts_morris.html"> Morris </a>
+                    </li>
+                    <li>
+                        <a href="charts_flowchart.html"> Flowcharts </a>
+                    </li>
+                    <li>
+                        <a href="charts_jQuery_sparklines.html"> jQuery Sparklines </a>
+                    </li>
+                    <li>
+                        <a href="#chart-echart" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> eCharts <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="chart-echart" data-parent="#charts">
+                            <li>
+                                <a href="charts_echart_basic.html"> Basic </a>
+                            </li>
+                            <li>
+                                <a href="charts_echart_candlestick.html"> Candlestick </a>
+                            </li>
+                            <li>
+                                <a href="charts_echart_funnel_radar.html"> Funnel & Radar </a>
+                            </li>
+                            <li>
+                                <a href="charts_echart_scatters.html"> Scatter </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#chart-chartist" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Chartist <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="chart-chartist" data-parent="#charts">
+                            <li>
+                                <a href="charts_chartist_bar.html"> Bar </a>
+                            </li>
+                            <li>
+                                <a href="charts_chartist_line.html"> Line &amp; Area </a>
+                            </li>
+                            <li>
+                                <a href="charts_chartist_pie.html"> Pie </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="charts_google.html"> Google </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#maps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-map-1"></i>
+                        <span>Maps</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="maps" data-parent="#accordionExample">
+                    <li>
+                        <a href="#map-googleMaps" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Google <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="map-googleMaps" data-parent="#maps">
+                            <li>
+                                <a href="map_google_basic.html"> Basic </a>
+                            </li>
+                            <li>
+                                <a href="map_google_event.html"> Event </a>
+                            </li>
+                            <li>
+                                <a href="map_google_controls_interaction.html"> Controls and Interaction </a>
+                            </li>
+                            <li>
+                                <a href="map_google_styles.html"> Styles </a>
+                            </li>
+                            <li>
+                                <a href="map_google_other.html"> Other </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#map-jqMapael" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> jquery Mapael <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="map-jqMapael" data-parent="#maps">
+                            <li>
+                                <a href="map_jquerymapael_basic.html"> Basic </a>
+                            </li>
+                            <li>
+                                <a href="map_jquerymapael_advanced.html"> Advanced </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="map_jhere.html"> jhere </a>
+                    </li>
+                    <li>
+                        <a href="map_open_layers.html"> OpenLayers </a>
+                    </li>
+                    <li>
+                        <a href="#map-vMaps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Vector Maps <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="map-vMaps" data-parent="#maps">
+                            <li>
+                                <a href="map_amvector.html"> amVector</a>
+                            </li>
+                            <li>
+                                <a href="map_jvector.html"> jVector</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#mailing" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-mail-19"></i>
+                        <span>Apps</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="mailing" data-parent="#accordionExample">
+                    <li>
+                        <a href="apps_chat.html"> Chat </a>
+                    </li>
+                    <li>
+                        <a href="apps_mailbox.html"> Mailbox </a>
+                    </li>
+                    <li>
+                        <a href="apps_mailbox_with_chat.html"> Mailbox With Chat </a>
+                    </li>
+                    <li>
+                        <a href="apps_newsletter.html"> Newsletter </a>
+                    </li>
+                    <li>
+                        <a href="apps_scheduler.html"> Scheduler </a>
+                    </li>
+                    <li>
+                        <a href="#apps-calendars" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Calendar <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="apps-calendars"
+                            data-parent="#apps-calendars">
+                            <li>
+                                <a href="apps_basic_calendar.html"> Basic </a>
+                            </li>
+                            <li>
+                                <a href="apps_full_calendar.html"> Full Calendar </a>
+                            </li>
+                            <li>
+                                <a href="apps_drag_n_drop_calendar.html"> Drag n Drop </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#modules" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-computer-5"></i>
+                        <span>Modules</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="modules" data-parent="#accordionExample">
+                    <li>
+                        <a href="modules_widgets.html"> Widgets </a>
+                    </li>
+                    <li>
+                        <a href="modules_table_and_event.html"> Tables &amp; Events </a>
+                    </li>
+                    <li>
+                        <a href="modules_charts_and_maps.html"> Charts &amp; Maps </a>
+                    </li>
+                    <li>
+                        <a href="modules_weather_and_calendar.html"> Weather &amp; Calendar </a>
+                    </li>
+                    <li>
+                        <a href="modules_cards.html"> Cards </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#users" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-user-group"></i>
+                        <span>Users</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="users" data-parent="#accordionExample">
+                    <li>
+                        <a href="user_profile.html"> Profile </a>
+                    </li>
+                    <li>
+                        <a href="user_account_setting.html"> Account Settings </a>
+                    </li>
+
+                    <li>
+                        <a href="#user-login" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Login <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="user-login" data-parent="#users">
+                            <li>
+                                <a href="user_login_1.html"> Login 1 </a>
+                            </li>
+                            <li>
+                                <a href="user_login_2.html"> Login 2 </a>
+                            </li>
+                            <li>
+                                <a href="user_login_3.html"> Login 3 </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#user-register" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Register <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="user-register" data-parent="#users">
+                            <li>
+                                <a href="user_register_1.html"> Register 1 </a>
+                            </li>
+                            <li>
+                                <a href="user_register_2.html"> Register 2 </a>
+                            </li>
+                            <li>
+                                <a href="user_register_3.html"> Register 3 </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#user-passRecovery" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Password Recovery <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="user-passRecovery" data-parent="#users">
+                            <li>
+                                <a href="user_pass_recovery_1.html"> Password Recovery 1 </a>
+                            </li>
+                            <li>
+                                <a href="user_pass_recovery_2.html"> Password Recovery 2 </a>
+                            </li>
+                            <li>
+                                <a href="user_pass_recovery_3.html"> Password Recovery 3 </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#user-lockscreen" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Lockscreen <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="user-lockscreen" data-parent="#users">
+                            <li>
+                                <a href="user_lockscreen_1.html"> Lockscreen 1 </a>
+                            </li>
+                            <li>
+                                <a href="user_lockscreen_2.html"> Lockscreen 2 </a>
+                            </li>
+                            <li>
+                                <a href="user_lockscreen_3.html"> Lockscreen 3 </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#pages" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-copy"></i>
+                        <span>Pages</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="pages" data-parent="#accordionExample">
+                    <li>
+                        <a href="pages_blank_page.html"> Blank Page</a>
+                    </li>
+                    <li>
+                        <a href="pages_helpdesk.html"> Helpdesk </a>
+                    </li>
+                    <li>
+                        <a href="pages_contact_us.html"> Contact Form </a>
+                    </li>
+                    <li>
+                        <a href="pages_faq.html"> FAQ </a>
+                    </li>
+                    <li>
+                        <a href="pages_blog.html"> Blog </a>
+                    </li>
+                    <li>
+                        <a href="pages_privacy.html"> Privacy Policy </a>
+                    </li>
+                    <li>
+                        <a href="pages_cookie_consent.html"> Cookie Consent </a>
+                    </li>
+                    <li>
+                        <a href="pages_landing_page.html" target="_blank"> Landing Page </a>
+                    </li>
+                    <li>
+                        <a href="pages_coming_soon.html"> Coming Soon </a>
+                    </li>
+
+                    <li>
+                        <a href="#pages-error" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Error <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="pages-error" data-parent="#pages">
+                            <li>
+                                <a href="pages_error404.html"> 404 1 </a>
+                            </li>
+                            <li>
+                                <a href="pages_error404-2.html"> 404 2 </a>
+                            </li>
+                            <li>
+                                <a href="pages_error500.html"> 500 1 </a>
+                            </li>
+                            <li>
+                                <a href="pages_error500-2.html"> 500 2 </a>
+                            </li>
+                            <li>
+                                <a href="pages_error503.html"> 503 1 </a>
+                            </li>
+                            <li>
+                                <a href="pages_error503-2.html"> 503 2 </a>
+                            </li>
+                            <li>
+                                <a href="pages_maintenence.html"> Maintanence </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#dragndrop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-redo-1"></i>
+                        <span>Drag and Drop</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="dragndrop" data-parent="#accordionExample">
+                    <li>
+                        <a href="dragndrop_gridstack.html"> Grid Stack</a>
+                    </li>
+                    <li>
+                        <a href="dragndrop_dragula.html"> Dragula</a>
+                    </li>
+                    <li>
+                        <a href="#dragndrop-jqueryui" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> jQuery UI <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="dragndrop-jqueryui"
+                            data-parent="#dragndrop">
+                            <li>
+                                <a href="dragndrop_ui_product_cart.html"> Shopping Cart </a>
+                            </li>
+                            <li>
+                                <a href="dragndrop_scrumboard.html"> Scrum Task Board</a>
+                            </li>
+                            <li>
+                                <a href="dragndrop_scroll_bars.html"> Scrollbar</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <a href="#menulevel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-menu-4"></i>
+                        <span>Menu Level</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="menulevel" data-parent="#accordionExample">
+
+                    <li>
+                        <a href="javascript:void(0);"> Sample Link 1 </a>
+                    </li>
+                    <li>
+                        <a href="#menulevel-sample-link1" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Sub Menu 2 <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="menulevel-sample-link1"
+                            data-parent="#menulevel">
+                            <li>
+                                <a href="javascript:void(0);"> Sample Link 1 </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"> Sample Link 2 </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"> Sample Link 3 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#menulevel-sample-link2" data-toggle="collapse" aria-expanded="false"
+                           class="dropdown-toggle"> Sub Menu 3 <i class="flaticon-right-arrow"></i> </a>
+                        <ul class="collapse list-unstyled sub-submenu" id="menulevel-sample-link2"
+                            data-parent="#menulevel">
+                            <li>
+                                <a href="javascript:void(0);"> Sample Link 1 </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"> Sample Link 2 </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"> Sample Link 3 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);"> Sample Link 2 </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);"> Sample Link 3 </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
 </div>

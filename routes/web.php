@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\ContentController;
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,9 +22,16 @@ Route::get('contacts', [ HomeController::class, 'contact' ])->name('contacts');
 Route::get('products', [ HomeController::class, 'products' ])->name('products');
 Route::get('about', [ HomeController::class, 'about' ])->name('about');
 Route::get('news', [ HomeController::class, 'news' ])->name('news');
+Route::middleware('auth')->group(function () {
+    Route::controller(ContentController::class)->group(function () {
+        Route::get('admin/home/sliders', 'sliders')->name('home.sliders');
+        Route::get('admin/home/sliders/add', 'sliders_add')->name('home.sliders.add');
+        Route::post('admin/home/sliders/store', 'sliders_store')->name('home.sliders.store');
+    });
+});
 
 Route::get('/dashboard', function () {
-    return view('backend.body.index');
+    return view('backend.main');
 })->middleware([ 'auth' ])->name('dashboard');
 
 require __DIR__ . '/auth.php';

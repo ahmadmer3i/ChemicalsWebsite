@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -31,4 +32,5 @@ class HomeController extends Controller
     {
         return view('frontend.news');
     }
+
 }

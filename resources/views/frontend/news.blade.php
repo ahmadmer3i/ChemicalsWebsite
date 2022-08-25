@@ -18,7 +18,7 @@
     <section class="py-5">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-6">
+                <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="row gx-5">
                         <div class="col-md-6 mb-4">
                             <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5"
@@ -30,7 +30,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6 mb-4">
+                        <div class="col-lg-6 col-sm-12 col-md-12 mb-4">
                             <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">News of the day</span>
                             <h4><strong>Behar Chemicals New Warehouse</strong></h4>
                             <p class="text-muted">

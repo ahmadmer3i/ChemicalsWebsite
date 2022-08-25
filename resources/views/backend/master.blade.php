@@ -1,110 +1,243 @@
 <!DOCTYPE html>
-<html class="loading" lang="en" data-textdirection="ltr">
-<!-- BEGIN: Head-->
-
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
-    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="PIXINVENT">
-    <title>Dashboard ecommerce - Vuexy - Bootstrap HTML admin template</title>
-    <link rel="apple-touch-icon" href="{{asset('backend/app-assets/images/ico/apple-icon-120.png')}}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('backend/app-assets/images/ico/favicon.ico')}}">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Chemicals | Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="{{asset('backend/assets/img/favicon.ico')}}"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 
-    <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/vendors/css/vendors.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/vendors/css/charts/apexcharts.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/vendors/css/extensions/toastr.min.css')}}">
-    <!-- END: Vendor CSS-->
+    <!-- END GLOBAL MANDATORY STYLES -->
 
-    <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/css/bootstrap.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/css/bootstrap-extended.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/css/colors.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/css/components.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/css/themes/dark-layout.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/css/themes/bordered-layout.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/css/themes/semi-dark-layout.css')}}">
+    <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
 
-    <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/css/core/menu/menu-types/vertical-menu.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/css/pages/dashboard-ecommerce.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/css/plugins/charts/chart-apex.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/app-assets/css/plugins/extensions/ext-component-toastr.css')}}">
-    <!-- END: Page CSS-->
+    <link href="{{asset('backend/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('backend/assets/css/plugins.css')}}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('backend/plugins/table/datatable/datatables.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('backend/plugins/table/datatable/custom_dt_customer.css')}}">
+    <!-- END GLOBAL MANDATORY STYLES -->
 
-    <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/assets/css/style.css')}}">
-    <!-- END: Custom CSS-->
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="{{asset('backend/assets/css/classic-dashboard/style.css')}}" rel="stylesheet" type="text/css"/>
+    <!--  END CUSTOM STYLE FILE  -->
+    <link href="{{asset('backend/assets/css/ui-kit/buttons/creative/creative-icon-buttons.css')}}" rel="stylesheet"
+          type="text/css"/>
+    <link href="{{asset('backend/assets/css/ui-kit/buttons/creative/creative-gradients.css')}}" rel="stylesheet"
+          type="text/css"/>
+    <link href="{{asset('backend/assets/css/ui-kit/buttons/creative/creative-fill.css')}}" rel="stylesheet"
+          type="text/css"/>
+    <link href="{{asset('backend/assets/css/ui-kit/buttons/creative/creative-material.css')}}" rel="stylesheet"
+          type="text/css"/>
+    <!-- Spinner Buttons -->
+    <link href="{{asset('backend/assets/css/ui-kit/buttons/spinner/spinner.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('backend/assets/css/ui-kit/buttons/spinner/ladda.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('backend/plugins/editors/tinymce/stylesheet.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('backend/plugins/dropzone/dropzone.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('backend/plugins/dropzone/basic.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('backend/plugins/file-upload/file-upload-with-preview.css')}}" rel="stylesheet"
+          type="text/css"/>
+    <script src="{{asset('backend/assets/js/libs/jquery-3.1.1.min.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <style>
+        .form-control {
+            border: 1px solid #ccc;
+            color: #888ea8;
+            font-size: 15px;
+            border-radius: 2px;
+        }
+
+        .form-vertical .form-group .control-label {
+            color: #3b3f5c;
+        }
+
+        .form-control::-webkit-input-placeholder {
+            color: #888ea8;
+            font-size: 15px;
+        }
+
+        .form-control::-ms-input-placeholder {
+            color: #888ea8;
+            font-size: 15px;
+        }
+
+        .form-control::-moz-placeholder {
+            color: #888ea8;
+            font-size: 15px;
+        }
+
+        .form-control:focus {
+            border-color: #f1f3f1;
+            border-left: solid 3px #3862f5;
+        }
+
+        label {
+            color: #3b3f5c;
+            margin-bottom: 14px;
+        }
+    </style>
 </head>
-<!-- END: Head-->
-
-<!-- BEGIN: Body-->
-
-<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
-
-<!-- BEGIN: Header-->
-@include('backend.body.navbar')
+<body>
 @include('backend.body.header')
-<!-- END: Header-->
 
+<!--  BEGIN NAVBAR  -->
+@include('backend.body.navbar')
+<!--  END NAVBAR  -->
 
-<!-- BEGIN: Main Menu-->
-@include('backend.body.sidebar')
-<!-- END: Main Menu-->
+<!--  BEGIN MAIN CONTAINER  -->
+<div class="main-container" id="container">
+    <div class="overlay"></div>
+    <div class="cs-overlay"></div>
 
-<!-- BEGIN: Content-->
-<div class="app-content content ">
-    <div class="content-overlay"></div>
-    <div class="header-navbar-shadow"></div>
-    @yield('content')
+    <!--  BEGIN SIDEBAR  -->
+
+    @include('backend.body.sidebar')
+
+    <!--  BEGIN CONTENT PART  -->
+    @yield('main')
+    <!--  END CONTENT PART  -->
+
 </div>
-<!-- END: Content-->
+<!-- END MAIN CONTAINER -->
 
-<div class="sidenav-overlay"></div>
-<div class="drag-target"></div>
+<!--  BEGIN FOOTER  -->
+@include('backend.body.footer')
+<!--  END FOOTER  -->
 
-<!-- BEGIN: Footer-->
-<footer class="footer footer-static footer-light">
-    <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2021<a class="ms-25" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent</a><span class="d-none d-sm-inline-block">, All rights Reserved</span></span><span class="float-md-end d-none d-md-block">Hand-crafted & Made with<i data-feather="heart"></i></span></p>
-</footer>
-<button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
-<!-- END: Footer-->
+<!--  BEGIN CONTROL SIDEBAR  -->
+@include('backend.body.control_sidebar')
+<!--  END CONTROL SIDEBAR  -->
 
+<!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+<script src="{{asset('backend/bootstrap/js/popper.min.js')}}"></script>
+<script src="{{asset('backend/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('backend/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+<script src="{{asset('backend/assets/js/app.js')}}"></script>
+<script>
+    $(document).ready(function () {
+        App.init();
+    });
+</script>
+<script src="{{asset('backend/assets/js/custom.js')}}"></script>
+<!-- END GLOBAL MANDATORY SCRIPTS -->
 
-<!-- BEGIN: Vendor JS-->
-<script src="{{asset('backend/app-assets/vendors/js/vendors.min.js')}}"></script>
-<!-- BEGIN Vendor JS-->
-
-<!-- BEGIN: Page Vendor JS-->
-<script src="{{asset('backend/app-assets/vendors/js/charts/apexcharts.min.js')}}"></script>
-<script src="{{asset('backend/app-assets/vendors/js/extensions/toastr.min.js')}}"></script>
-<!-- END: Page Vendor JS-->
-
-<!-- BEGIN: Theme JS-->
-<script src="{{asset('backend/app-assets/js/core/app-menu.js')}}"></script>
-<script src="{{asset('backend/app-assets/js/core/app.js')}}"></script>
-<!-- END: Theme JS-->
-
-<!-- BEGIN: Page JS-->
-<script src="../../../app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
-<!-- END: Page JS-->
+<!--  BEGIN CUSTOM SCRIPT FILES  -->
+<script src="{{asset('backend/plugins/charts/amcharts/amcharts.js')}}"></script>
+<script src="{{asset('backend/plugins/maps/vector/ammaps/ammap_amcharts_extension.js')}}"></script>
+<script src="{{asset('backend/plugins/maps/vector/ammaps/worldLow.js')}}"></script>
+<script src="{{asset('backend/plugins/charts/amcharts/serial.js')}}"></script>
+<script src="{{asset('backend/plugins/charts/amcharts/pie.js')}}"></script>
+<script src="{{asset('backend/plugins/progressbar/progressbar.min.js')}}"></script>
+<script src="{{asset('backend/plugins/blockui/jquery.blockUI.min.js')}}"></script>
+<script src="{{asset('backend/assets/js/classic-dashboard/classic-custom.js')}}"></script>
 
 <script>
-    $(window).on('load', function() {
-        if (feather) {
-            feather.replace({
-                width: 14,
-                height: 14
-            });
-        }
-    })
+    $(document).ready(function () {
+        App.init();
+    });
 </script>
-</body>
-<!-- END: Body-->
+<!-- END GLOBAL MANDATORY SCRIPTS -->
 
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="{{asset('backend/plugins/table/datatable/datatables.js')}}"></script>
+<script>
+    // var e;
+    c1 = $('#customer-info-detail-1').DataTable({
+        "lengthMenu": [5, 10, 20, 50, 100],
+        headerCallback: function (e, a, t, n, s) {
+            e.getElementsByTagName("th")[0].innerHTML = '<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+        },
+        columnDefs: [{
+            targets: 0, width: "30px", className: "", orderable: !1, render: function (e, a, t, n) {
+                return '<label class="new-control new-checkbox checkbox-outline-primary  m-auto">\n<input type="checkbox" class="new-control-input child-chk select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+            }
+        }],
+        "language": {
+            "paginate": {
+                "previous": "<i class='flaticon-arrow-left-1'></i>",
+                "next": "<i class='flaticon-arrow-right'></i>"
+            },
+            "info": "Showing page _PAGE_ of _PAGES_"
+        }
+    });
+
+    multiCheck(c1);
+
+    c2 = $('#customer-info-detail-2').DataTable({
+        "lengthMenu": [5, 10, 20, 50, 100],
+        headerCallback: function (e, a, t, n, s) {
+            e.getElementsByTagName("th")[0].innerHTML = '<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+        },
+        columnDefs: [{
+            targets: 0, width: "30px", className: "", orderable: !1, render: function (e, a, t, n) {
+                return '<label class="new-control new-checkbox checkbox-outline-primary  m-auto">\n<input type="checkbox" class="new-control-input child-chk select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+            }
+        }],
+        "language": {
+            "paginate": {
+                "previous": "<i class='flaticon-arrow-left-1'></i>",
+                "next": "<i class='flaticon-arrow-right'></i>"
+            },
+            "info": "Showing page _PAGE_ of _PAGES_"
+        }
+    });
+
+    multiCheck(c2);
+
+    c3 = $('#customer-info-detail-3').DataTable({
+        "lengthMenu": [5, 10, 20, 50, 100],
+        "language": {
+            "paginate": {
+                "previous": "<i class='flaticon-arrow-left-1'></i>",
+                "next": "<i class='flaticon-arrow-right'></i>"
+            },
+            "info": "Showing page _PAGE_ of _PAGES_"
+        }
+    });
+
+    multiCheck(c3);
+</script>
+<script src="{{asset('backend/assets/js/ui-kit/button/spinner/spinner.js')}}"></script>
+<script src="{{asset('backend/assets/js/ui-kit/button/spinner/spin.min.js')}}"></script>
+<script src="{{asset('backend/assets/js/ui-kit/button/spinner/ladda.min.js')}}"></script>
+<script src="{{asset('backend/assets/js/ui-kit/button/custo-spinner.js')}}"></script>
+<script src="{{asset('backend/plugins/editors/tinymce/tinymce.min.js')}}"></script>
+<script src="{{asset('backend/plugins/editors/tinymce/editor_tinymce.js')}}"></script>
+<script src="{{asset('backend/plugins/dropzone/dropzone.min.js')}}"></script>
+<script src="{{asset('backend/plugins/dropzone/custom-dropzone.js')}}"></script>
+<script src="{{asset('backend/plugins/file-upload/file-upload-with-preview.js')}}"></script>
+
+<script>
+    //First upload
+    var firstUpload = new FileUploadWithPreview('myFirstImage')
+    //Second upload
+    var secondUpload = new FileUploadWithPreview('mySecondImage')
+</script>
+<script>
+    @if(Session::has('message'))
+    var type = "{{ Session::get('alert-type','info') }}"
+    switch (type) {
+        case 'info':
+            toastr.info(" {{ Session::get('message') }} ");
+            break;
+
+        case 'success':
+            toastr.success(" {{ Session::get('message') }} ");
+            break;
+
+        case 'warning':
+            toastr.warning(" {{ Session::get('message') }} ");
+            break;
+
+        case 'error':
+            toastr.error(" {{ Session::get('message') }} ");
+            break;
+    }
+    @endif
+</script>
+<!--  END CUSTOM SCRIPT FILES  -->
+</body>
 </html>
