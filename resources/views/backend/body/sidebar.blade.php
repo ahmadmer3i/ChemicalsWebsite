@@ -16,7 +16,7 @@
 
         <ul class="list-unstyled menu-categories" id="accordionExample">
             <li class="menu">
-                <a href="{{route('dashboard')}}" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                <a href="{{route('dashboard')}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <i class="flaticon-computer-6 ml-3"></i>
                         <span>Dashboard</span>
