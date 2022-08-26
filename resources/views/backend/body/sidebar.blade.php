@@ -39,7 +39,7 @@
                         <i class="flaticon-right-arrow"></i>
                     </div>
                 </a>
-                <ul class="collapse submenu list-unstyled {{request()->is('admin/home/sliders') || request()->is('admin/home/general-info') || request()->is('admin/home/global-precences') ? 'show' : ''}}"
+                <ul class="collapse submenu list-unstyled {{request()->is('admin/home/sliders') || request()->is('admin/hom/home-contact') || request()->is('admin/home/general-info') || request()->is('admin/home/global-precences') ? 'show' : ''}}"
                     id="ecommerce" data-parent="#accordionExample">
                     <li class="{{request()->is('admin/home/sliders') ? 'active' : ''}}">
                         <a href="{{route('home.sliders')}}"> Home Sliders </a>
@@ -49,6 +49,9 @@
                     </li>
                     <li class="{{request()->is('admin/home/general-info') ? 'active' : ''}}">
                         <a href="{{route('home.general-info')}}"> General Info </a>
+                    </li>
+                    <li class="{{request()->is('admin/home/home-contact') ? 'active' : ''}}">
+                        <a href="{{route('home.home-contact')}}">Home Contact Us </a>
                     </li>
 
                 </ul>

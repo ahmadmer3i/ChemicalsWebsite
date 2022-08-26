@@ -48,6 +48,8 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/home/general-info/card/edit/{id}', 'general_info_card_edit')->name('home.general-info.card.edit');
         Route::post('admin/home/general-info/card/update', 'general_info_card_update')->name('home.general-info.card.update');
         Route::get('admin/home/general-info/card/delete/{id}', 'general_info_card_delete')->name('home.general-info.card.delete');
+        Route::get('admin/home/home-contact', 'home_contact')->name('home.home-contact');
+        Route::post('admin/home/home-contact/update', 'home_contact_update')->name('home.home-contact.update');
     });
     Route::controller(AdminController::class)->group(function () {
         Route::get('admin/logout', 'destroy')->name('admin.logout');

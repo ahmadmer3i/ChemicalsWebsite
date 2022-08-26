@@ -5,6 +5,7 @@
     @php
         $global_precences= \App\Models\GlobalPrecence::find(1);
         $general_info = \App\Models\GeneralInfo::find(1);
+        $home_contact = \App\Models\HomeContact::find(1);
     @endphp
         <!-- Features Section -->
     <section class="py-5 bg-light">
@@ -108,15 +109,14 @@
     </section>
     <!-- Divider Section -->
     <section class="bg-cover bg-center"
-             style="background: url({{ asset('frontend/img/sections/generalbg.jpeg') }}) fixed ">
+             style="background: url({{!empty($home_contact->image) ?  asset($home_contact->image) : asset('backend/assets/img/1000x667.png') }}) fixed ">
         <div class=" py-5">
             <div class="overlay-content">
                 <div class="container">
                     <div class="row align-items-center gy-4">
                         <div class="col-lg-7 text-center text-lg-start">
-                            <h2 class="text-white mb-2">You Always Get the Best Guidance</h2>
-                            <p class="text-white mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h2 class="text-white mb-2">{{$home_contact->title}}</h2>
+                            <p class="text-white mb-0">{{$home_contact->description}}</p>
                         </div>
                         <div class="col-lg-3 ms-auto text-center text-lg-end"><a class="btn btn-outline-light"
                                                                                  href="{{ route('contacts') }}">Contact
@@ -131,9 +131,11 @@
         <div class="container py-5">
             <div class="row align-items-center gx-lg-0">
                 <div class="col-lg-5">
-                    <div class="bg-primary pe-lg-3"><img class="img-fluid w-100"
-                                                         src="{{ asset('frontend/img/sections/info-section-chemicas.png') }}"
-                                                         alt=""></div>
+                    <div class="bg-primary pe-lg-3">
+                        <img class="img-fluid w-100"
+                             src="{{ asset('frontend/img/sections/info-section-chemicas.png') }}"
+                             alt="">
+                    </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="p-4 p-md-5 shadow bg-white">

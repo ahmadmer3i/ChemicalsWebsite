@@ -8,9 +8,11 @@ use App\Models\AsiaCountry;
 use App\Models\GeneralInfo;
 use App\Models\GeneralInfoCard;
 use App\Models\GlobalPrecence;
+use App\Models\HomeContact;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use function PHPUnit\Framework\fileExists;
 
 class ContentController extends Controller
 {
@@ -262,6 +264,32 @@ class ContentController extends Controller
         }
         $general_info_card->delete();
         $notification = array( 'message' => 'Card Deleted Successfully', 'alert-type' => 'warning' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function home_contact()
+    {
+        $home_contact = HomeContact::find(1);
+        return view('backend.content.home.home_contact.home_contact', compact('home_contact'));
+    }
+
+    public function home_contact_update(Request $request)
+    {
+        $home_contact = HomeContact::find(1);
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(1000, 667)->save('uploads/home_contact/' . $image_name);
+            if (file_exists($home_contact->image)) {
+                unlink($home_contact->image);
+            }
+            $image_url = 'uploads/home_contact/' . $image_name;
+            $home_contact->image = $image_url;
+        }
+        $home_contact->title = $request->title;
+        $home_contact->description = $request->description;
+        $home_contact->update();
+        $notification = array( 'message' => 'Home Contact Us Updated Successfully', 'alert-type' => 'info' );
         return redirect()->back()->with($notification);
     }
 }
