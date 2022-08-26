@@ -27,6 +27,9 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/home/sliders', 'sliders')->name('home.sliders');
         Route::get('admin/home/sliders/add', 'sliders_add')->name('home.sliders.add');
         Route::post('admin/home/sliders/store', 'sliders_store')->name('home.sliders.store');
+        Route::get('admin/home/sliders/edit/{id}', 'sliders_edit')->name('home.sliders.edit');
+        Route::post('admin/home/sliders/update', 'sliders_update')->name('home.sliders.update');
+        Route::get('admin/home/sliders/delete/{id}', 'sliders_delete')->name('home.sliders.delete');
     });
 });
 

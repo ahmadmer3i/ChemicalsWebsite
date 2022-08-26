@@ -55,11 +55,15 @@
                                             </td>
                                             <td class="text-center">
                                                 <ul class="table-controls">
-                                                    <li><a href="javascript:void(0);" class="bs-tooltip"
+                                                    <li>
+                                                        <a href="{{route('home.sliders.edit', $slider->id)}}javascript:void(0);"
+                                                           class="bs-tooltip"
                                                            data-toggle="tooltip" data-placement="top" title=""
                                                            data-original-title="Edit"><i
                                                                 class="flaticon-edit  p-1 br-6 mb-1"></i></a></li>
-                                                    <li><a href="javascript:void(0);" class="bs-tooltip"
+                                                    <li>
+                                                        <a href="{{route('home.sliders.delete', $slider->id)}}"
+                                                           class="bs-tooltip" id="delete"
                                                            data-toggle="tooltip" data-placement="top" title=""
                                                            data-original-title="Delete"><i
                                                                 class="flaticon-delete  p-1 br-6 mb-1"></i></a></li>

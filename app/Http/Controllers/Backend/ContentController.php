@@ -36,4 +36,44 @@ class ContentController extends Controller
         $notification = array( 'message' => 'Slider Added Successfully', 'alert-type' => 'success' );
         return redirect()->route('home.sliders')->with($notification);
     }
+
+    public function sliders_edit($id)
+    {
+        $slider = Slider::find($id);
+        return view('backend.content.home.edit_home_sliders', compact('slider'));
+    }
+
+    public function sliders_update(Request $request)
+    {
+        $slider = Slider::find($request->id);
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(1920, 1280)->save('uploads/slider_images/' . $image_name);
+            $image_url = 'uploads/slider_images/' . $image_name;
+            unlink($slider->image);
+            Slider::find($request->id)->update([
+                'title' => $request->title,
+                'description' => $request->description,
+                'image' => $image_url
+            ]);
+            $notification = array( 'message' => 'Slider Updated Successfully', 'alert-type' => 'info' );
+            return redirect()->route('home.sliders')->with($notification);
+        }
+        Slider::find($request->id)->update([
+            'title' => $request->title,
+            'description' => $request->description,
+        ]);
+        $notification = array( 'message' => 'Slider Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->route('home.sliders')->with($notification);
+    }
+
+    public function sliders_delete($id)
+    {
+        $slider = Slider::find($id);
+        unlink($slider->image);
+        $slider->delete();
+        $notification = array( 'message' => 'Slider Deleted Successfully', 'alert-type' => 'error' );
+        return redirect()->back()->with($notification);
+    }
 }

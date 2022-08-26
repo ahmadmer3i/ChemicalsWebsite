@@ -17,6 +17,11 @@
     <link href="{{asset('backend/assets/css/plugins.css')}}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="{{asset('backend/plugins/table/datatable/datatables.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('backend/plugins/table/datatable/custom_dt_customer.css')}}">
+    <link href="{{asset('backend/plugins/animate/animate.css')}}" rel="stylesheet" type="text/css"/>
+    <script src="{{asset('backend/plugins/sweetalerts/promise-polyfill.js')}}"></script>
+    <link href="{{asset('backend/plugins/sweetalerts/sweetalert2.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('backend/plugins/sweetalerts/sweetalert.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('backend/assets/css/ui-kit/custom-sweetalert.css')}}" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!--  BEGIN CUSTOM STYLE FILE  -->
@@ -209,7 +214,8 @@
 <script src="{{asset('backend/plugins/dropzone/dropzone.min.js')}}"></script>
 <script src="{{asset('backend/plugins/dropzone/custom-dropzone.js')}}"></script>
 <script src="{{asset('backend/plugins/file-upload/file-upload-with-preview.js')}}"></script>
-
+<script src="{{asset('backend/plugins/sweetalerts/sweetalert2.min.js')}}"></script>
+<script src="{{asset('backend/plugins/sweetalerts/custom-sweetalert.js')}}"></script>
 <script>
     //First upload
     var firstUpload = new FileUploadWithPreview('myFirstImage')
