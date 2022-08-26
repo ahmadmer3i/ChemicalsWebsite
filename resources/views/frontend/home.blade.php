@@ -16,33 +16,53 @@
                         We are connected to key producers and customers throughout the whole supply chain in the
                         following countries:</p>
                     <ul class="list-unstyled row px-3 mb-4 gy-2">
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6"><b>ASIA</b></li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6"><b>AFRICA</b></li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">JORDAN</li>
+                        <div class="col-6">
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6"><b>ASIA</b></li>
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">JORDAN</li>
+                            <li class="text-sm text-muted col-lg-12 col-md-12 col-sm-12 col-12">UNITED ARAB EMIRATES
+                            </li>
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">YEMEN</li>
+                            <li class="text-sm text-muted col-lg-12 col-md-12 col-sm-12 col-12">KINGDOM SAUDI ARABIA
+                            </li>
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">SYRIA</li>
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">LEBANON</li>
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">QATAR</li>
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">IRAN</li>
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">PALESTINE</li>
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">OMAN</li>
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">IRAQ</li>
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">TURKEY</li>
+                        </div>
+                        <div class="col-6">
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6"><b>AFRICA</b></li>
 
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">EGYPT</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">UNITED ARAB EMIRATES</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">IVORY COAST</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">YEMEN</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">NIGERIA</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">KINGDOM SAUDI ARABIA</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">CONGO (DRC)</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">SYRIA</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">MOROCCO</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">LEBANON</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">TUNISIA</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">QATAR</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">ETHIOPIA</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">IRAN</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">TOGO</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">PALESTINE</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">SENEGAL</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">OMAN</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">GHANA</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">IRAQ</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">GABON</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">TURKEY</li>
-                        <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">SUDAN</li>
+
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">EGYPT</li>
+
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">IVORY COAST</li>
+
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">NIGERIA</li>
+
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">CONGO (DRC)</li>
+
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">MOROCCO</li>
+
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">TUNISIA</li>
+
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">ETHIOPIA</li>
+
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">TOGO</li>
+
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">SENEGAL</li>
+
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">GHANA</li>
+
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">GABON</li>
+
+                            <li class="text-sm text-muted col-lg-6 col-md-6 col-sm-6 col-6">SUDAN</li>
+                        </div>
+
+
                     </ul>
                     {{--                <ul class="list-inline py-4 border-top border-bottom d-flex align-items-center">--}}
                     {{--                    <li class="list-inline-item pr-4 mr-0"><img src="{{ asset('frontend/img/afriqa.png') }}" alt="" width="80"></li>--}}

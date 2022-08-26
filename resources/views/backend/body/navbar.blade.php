@@ -25,12 +25,12 @@
                     <i class="mr-1 flaticon-lock-2"></i> <span>Lock Screen</span>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="user_login_1.html">
+                <a class="dropdown-item" href="{{route('admin.logout')}}">
                     <i class="mr-1 flaticon-power-button"></i> <span>Log Out</span>
                 </a>
             </div>
         </li>
 
-        
+
     </ul>
 </header>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\ContentController;
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,9 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/home/sliders/edit/{id}', 'sliders_edit')->name('home.sliders.edit');
         Route::post('admin/home/sliders/update', 'sliders_update')->name('home.sliders.update');
         Route::get('admin/home/sliders/delete/{id}', 'sliders_delete')->name('home.sliders.delete');
+    });
+    Route::controller(AdminController::class)->group(function () {
+        Route::get('admin/logout', 'destroy')->name('admin.logout');
     });
 });
 
