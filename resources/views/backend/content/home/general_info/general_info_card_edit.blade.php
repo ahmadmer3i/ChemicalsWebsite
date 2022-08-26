@@ -4,12 +4,13 @@
         <div class="container ">
             <div class="page-header">
                 <div class="page-title">
-                    <h3>Add Home Slider</h3>
+                    <h3>Edit General Info Card</h3>
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="{{route('dashboard')}}"><i class="flaticon-home-fill"></i></a></li>
                             <li><a href="#">Home Page</a></li>
-                            <li class="active"><a href="#">Home Sliders</a></li>
+                            <li><a href="{{route('home.general-info')}}">General Info</a></li>
+                            <li class="active"><a href="#">General Info Edit</a></li>
                         </ul>
                     </div>
                 </div>
@@ -31,19 +32,25 @@
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12 align-left">
-                                        <h4>Add Slider</h4>
+                                        <h4>Edit Card</h4>
                                     </div>
                                 </div>
                             </div>
-                            <form action="{{route('home.sliders.store')}}" enctype="multipart/form-data" method="post">
+                            <form action="{{route('home.general-info.card.update')}}" enctype="multipart/form-data"
+                                  method="post">
                                 @csrf
+                                <input type="hidden" name="id" value="{{$general_info_card->id}}">
                                 <div class="widget-content px-5">
                                     <div class="form-group row mb-4 align-left">
                                         <label for="title"
                                                class="col-xl-2 col-sm-3 col-sm-2 col-form-label">Title</label>
                                         <div class="col-xl-10 col-lg-9 col-sm-10">
-                                            <input type="text" class="form-control" id="title" name="title"
-                                                   placeholder="">
+                                            <input type="text"
+                                                   class="form-control"
+                                                   id="title"
+                                                   name="title"
+                                                   placeholder=""
+                                                   value="{{!empty($general_info_card->title) ? $general_info_card->title : ''}}">
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4 align-left">
@@ -52,7 +59,7 @@
                                         <div class="col-xl-10 col-lg-9 col-sm-10">
                                             <textarea rows="5" type="text" name="description" class="form-control"
                                                       id="description"
-                                                      placeholder=""></textarea>
+                                                      placeholder="">{{!empty($general_info_card->description) ? $general_info_card->description : ''}}</textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4 align-left">
@@ -72,15 +79,17 @@
                                                class="col-xl-2 col-sm-3 col-sm-2 col-form-label"></label>
                                         <div class="col-xl-10 col-lg-9 col-sm-10">
                                             <div class="custom-file mb-4">
-                                                <img src="{{asset('backend/assets/img/192.1280.png')}}" alt=""
-                                                     id="show_image" style="height: 200px"
-                                                     class="img-fluid mr-3 mb-4 rounded">
+                                                <img
+                                                    src="{{!empty($general_info_card->image) ? asset($general_info_card->image) : asset('backend/assets/img/1280x800.png')}}"
+                                                    alt=""
+                                                    id="show_image" style="height: 200px"
+                                                    class="img-fluid mr-3 mb-4 rounded">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4 align-left mt-5 pt-5">
                                         <div class="col-xl-10 col-lg-9 col-sm-10">
-                                            <input type="submit" class="btn btn-dark" value="Add" placeholder="">
+                                            <input type="submit" class="btn btn-dark" value="Update" placeholder="">
                                         </div>
                                     </div>
                                 </div>

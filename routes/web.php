@@ -31,6 +31,23 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/home/sliders/edit/{id}', 'sliders_edit')->name('home.sliders.edit');
         Route::post('admin/home/sliders/update', 'sliders_update')->name('home.sliders.update');
         Route::get('admin/home/sliders/delete/{id}', 'sliders_delete')->name('home.sliders.delete');
+        Route::get('admin/home/global-precences', 'global_precences')->name('home.global-precences');
+        Route::post('admin/home/global-precences/update', 'global_precences_update')->name('home.global-precences.update');
+        Route::post('admin/home/global-precences/country/asia/store', 'global_precences_asia_country_store')->name('home.global-precences.country.asia.store');
+        Route::post('admin/home/global-precences/country/africa/store', 'global_precences_africa_country_store')->name('home.global-precences.country.africa.store');
+        Route::get('admin/home/global-precences/country/africa/edit/{id}', 'global_precences_africa_country_edit')->name('home.global-precences.country.africa.edit');
+        Route::post('admin/home/global-precences/country/africa/update', 'global_precences_africa_country_update')->name('home.global-precences.country.africa.update');
+        Route::get('admin/home/global-precences/country/africa/delete/{id}', 'global_precences_africa_country_delete')->name('home.global-precences.country.africa.delete');
+        Route::get('admin/home/global-precences/country/asia/edit/{id}', 'global_precences_asia_country_edit')->name('home.global-precences.country.asia.edit');
+        Route::post('admin/home/global-precences/country/asia/update', 'global_precences_asia_country_update')->name('home.global-precences.country.asia.update');
+        Route::get('admin/home/global-precences/county/asia/delete/{id}', 'global_precences_asia_country_delete')->name('home.global-precences.county.asia.delete');
+        Route::get('admin/home/general-info', 'general_info_section')->name('home.general-info');
+        Route::post('admin/home/general-info/update', 'general_info_update')->name('home.general-info.update');
+        Route::get('admin/home/general-info/card/add', 'general_info_card_add')->name('home.general-info.card.add');
+        Route::post('admin/home/general-info/card/store', 'general_info_card_store')->name('home.general-info.card.store');
+        Route::get('admin/home/general-info/card/edit/{id}', 'general_info_card_edit')->name('home.general-info.card.edit');
+        Route::post('admin/home/general-info/card/update', 'general_info_card_update')->name('home.general-info.card.update');
+        Route::get('admin/home/general-info/card/delete/{id}', 'general_info_card_delete')->name('home.general-info.card.delete');
     });
     Route::controller(AdminController::class)->group(function () {
         Route::get('admin/logout', 'destroy')->name('admin.logout');
