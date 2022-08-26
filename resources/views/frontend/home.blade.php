@@ -6,6 +6,7 @@
         $global_precences= \App\Models\GlobalPrecence::find(1);
         $general_info = \App\Models\GeneralInfo::find(1);
         $home_contact = \App\Models\HomeContact::find(1);
+        $why_choose = \App\Models\WhyChoose::find(1);
     @endphp
         <!-- Features Section -->
     <section class="py-5 bg-light">
@@ -133,36 +134,25 @@
                 <div class="col-lg-5">
                     <div class="bg-primary pe-lg-3">
                         <img class="img-fluid w-100"
-                             src="{{ asset('frontend/img/sections/info-section-chemicas.png') }}"
+                             src="{{ !empty($why_choose->image) ? asset($why_choose->image) : asset('backend/assets/img/570x590.png') }}"
                              alt="">
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="p-4 p-md-5 shadow bg-white">
-                        <p class="h6 mb-1 text-uppercase text-primary mb-3">Why choose us</p>
-                        <h2 class="mb-5">We Provide Experts To Create A Great Value For Your Business</h2>
+                        <p class="h6 mb-1 text-uppercase text-primary mb-3">{{$why_choose->title}}</p>
+                        <h2 class="mb-5">{{$why_choose->subtitle}}</h2>
                         <div class="row">
                             <div class="col-lg-9">
                                 <ol class="list-numbers mb-0">
-                                    <li class="mb-4">
-                                        <h5 class="text-capitalize">high quality products</h5>
-                                        <p class="text-sm text-muted">Distribute high quality products and providing
-                                            high quality services</p>
-                                    </li>
-                                    <li class="mb-4">
-                                        <h5 class="text-capitalize">Compliance with requirements</h5>
-                                        <p class="text-sm text-muted">Compliance with requirements</p>
-                                    </li>
-                                    <li class="mb-4">
-                                        <h5 class="text-capitalize">quality management system.</h5>
-                                        <p class="text-sm text-muted">Regular review of effectiveness of our
-                                            ISO9001:2015 compliant quality management system. </p>
-                                    </li>
-                                    <li>
-                                        <h5 class="text-capitalize">Continual improvement</h5>
-                                        <p class="text-sm text-muted">Continual improvement of our systems and
-                                            operations. </p>
-                                    </li>
+                                    @foreach($why_choose->why_choose_list as $why)
+                                        <li class="mb-4">
+                                            <h5 class="text-capitalize">{{$why->title}}</h5>
+                                            <p class="text-sm text-muted">
+                                                {{$why->description}}
+                                            </p>
+                                        </li>
+                                    @endforeach
                                 </ol>
                             </div>
                         </div>

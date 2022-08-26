@@ -50,6 +50,13 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/home/general-info/card/delete/{id}', 'general_info_card_delete')->name('home.general-info.card.delete');
         Route::get('admin/home/home-contact', 'home_contact')->name('home.home-contact');
         Route::post('admin/home/home-contact/update', 'home_contact_update')->name('home.home-contact.update');
+        Route::get('admin/home/why-choose-us', 'why_choose_us')->name('home.why-choose-us');
+        Route::post('admin/home/why-choose-us/update', 'why_choose_us_update')->name('home.why-choose-us.update');
+        Route::get('admin/home/why-choose-us/list/add', 'why_choose_us_list_add')->name('home.why-choose-us.list.add');
+        Route::post('admin/home/why-choose-us/list/store', 'why_choose_us_list_store')->name('home.why-choose-us.list.store');
+        Route::get('admin/home/why-choose-us/list/edit/{id}', 'why_choose_us_list_edit')->name('home.why-choose-us.list.edit');
+        Route::post('admin/home/why-choose-us/lust/update', 'why_choose_us_list_update')->name('home.why-choose-us.lust.update');
+        Route::get('admin/home/why-choose-us/list/delete/{id}', 'why_choose_us_list_delete')->name('home.why-choose-us.list.delete');
     });
     Route::controller(AdminController::class)->group(function () {
         Route::get('admin/logout', 'destroy')->name('admin.logout');

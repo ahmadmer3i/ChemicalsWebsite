@@ -10,6 +10,8 @@ use App\Models\GeneralInfoCard;
 use App\Models\GlobalPrecence;
 use App\Models\HomeContact;
 use App\Models\Slider;
+use App\Models\WhyChoose;
+use App\Models\WhyChooseList;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use function PHPUnit\Framework\fileExists;
@@ -290,6 +292,72 @@ class ContentController extends Controller
         $home_contact->description = $request->description;
         $home_contact->update();
         $notification = array( 'message' => 'Home Contact Us Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function why_choose_us()
+    {
+        $why_choose = WhyChoose::find(1);
+        return view('backend.content.home.why_choose_us.why_choose_us', compact('why_choose'));
+    }
+
+    public function why_choose_us_update(Request $request)
+    {
+        $why_choose = WhyChoose::find(1);
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(570, 590)->save('uploads/why_choose_us/' . $image_name);
+            if (file_exists($why_choose->image)) {
+                unlink($why_choose->image);
+            }
+            $image_url = 'uploads/why_choose_us/' . $image_name;
+            $why_choose->image = $image_url;
+        }
+        $why_choose->title = $request->title;
+        $why_choose->subtitle = $request->subtitle;
+        $why_choose->save();
+        $notification = array( 'message' => 'Why Choose Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function why_choose_us_list_add()
+    {
+        return view('backend.content.home.why_choose_us.why_choose_us_list_add');
+    }
+
+    public function why_choose_us_list_store(Request $request)
+    {
+        $why_list = new WhyChooseList();
+        $why_list->why_id = 1;
+        $why_list->title = $request->title;
+        $why_list->description = $request->description;
+        $why_list->save();
+        $notification = array( 'message' => 'Why List Added Successfully', 'alert-type' => 'success' );
+        return redirect()->route('home.why-choose-us')->with($notification);
+    }
+
+    public function why_choose_us_list_edit($id)
+    {
+        $why_list = WhyChooseList::find($id);
+        return view('backend.content.home.why_choose_us.why_choose_us_list_edit', compact('why_list'));
+    }
+
+    public function why_choose_us_list_update(Request $request)
+    {
+        $why_list = WhyChooseList::find($request->id);
+        $why_list->title = $request->title;
+        $why_list->description = $request->description;
+        $why_list->update();
+        $notification = array( 'message' => 'Why List Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->route('home.why-choose-us')->with($notification);
+    }
+
+    public function why_choose_us_list_delete($id)
+    {
+        $why_list = WhyChooseList::find($id);
+        $why_list->delete();
+        $notification = array( 'message' => 'Why List Deleted Successfully', 'alert-type' => 'warning' );
         return redirect()->back()->with($notification);
     }
 }
