@@ -51,9 +51,9 @@ class ContentController extends Controller
             $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
             Image::make($image)->resize(1920, 1280)->save('uploads/slider_images/' . $image_name);
             $image_url = 'uploads/slider_images/' . $image_name;
-            if (public_path(($slider->image))) {
-                unlink($slider->image);
-            }
+//            if (public_path(($slider->image))) {
+//                unlink($slider->image);
+//            }
             Slider::find($request->id)->update([
                 'title' => $request->title,
                 'description' => $request->description,
