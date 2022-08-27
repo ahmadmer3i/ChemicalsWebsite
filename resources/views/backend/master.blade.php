@@ -26,6 +26,7 @@
 
     <!--  BEGIN CUSTOM STYLE FILE  -->
     <link href="{{asset('backend/assets/css/classic-dashboard/style.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('backend/assets/css/components/custom-video_player.css')}}" rel="stylesheet" type="text/css">
     <!--  END CUSTOM STYLE FILE  -->
     <link href="{{asset('backend/assets/css/ui-kit/buttons/creative/creative-icon-buttons.css')}}" rel="stylesheet"
           type="text/css"/>
@@ -216,6 +217,7 @@
 <script src="{{asset('backend/plugins/file-upload/file-upload-with-preview.js')}}"></script>
 <script src="{{asset('backend/plugins/sweetalerts/sweetalert2.min.js')}}"></script>
 <script src="{{asset('backend/plugins/sweetalerts/custom-sweetalert.js')}}"></script>
+<script src="{{asset('backend/assets/js/components/media/video-custom.js')}}"></script>
 <script>
     //First upload
     var firstUpload = new FileUploadWithPreview('myFirstImage')

@@ -9,6 +9,7 @@ use App\Models\GeneralInfo;
 use App\Models\GeneralInfoCard;
 use App\Models\GlobalPrecence;
 use App\Models\HomeContact;
+use App\Models\HomeVideo;
 use App\Models\Slider;
 use App\Models\WhyChoose;
 use App\Models\WhyChooseList;
@@ -358,6 +359,42 @@ class ContentController extends Controller
         $why_list = WhyChooseList::find($id);
         $why_list->delete();
         $notification = array( 'message' => 'Why List Deleted Successfully', 'alert-type' => 'warning' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function video_section()
+    {
+        $video_section = HomeVideo::find(1);
+        return view('backend.content.home.vedio_section.vedio_section', compact('video_section'));
+    }
+
+    public function video_section_update(Request $request)
+    {
+        $video_section = HomeVideo::find(1);
+        if ($request->file('video')) {
+            $video = $request->file('video');
+            $video_name = hexdec(uniqid()) . '.' . $video->getClientOriginalExtension();
+            $video->move(public_path('uploads/video_section/'), $video_name);
+            $video_url = 'uploads/video_section/' . $video_name;
+            if (file_exists($video_section->video)) {
+                unlink($video_section->video);
+            }
+            $video_section->video = $video_url;
+        }
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(1000, 500)->save('uploads/video_section/' . $image_name);
+            if (file_exists($video_section->image)) {
+                unlink($video_section->image);
+            }
+            $image_url = 'uploads/video_section/' . $image_name;
+            $video_section->image = $image_url;
+        }
+        $video_section->section_title = $request->section_title;
+        $video_section->title = $request->title;
+        $video_section->update();
+        $notification = array( 'message' => 'Video Section Updated Successfully', 'alert-type' => 'info' );
         return redirect()->back()->with($notification);
     }
 }

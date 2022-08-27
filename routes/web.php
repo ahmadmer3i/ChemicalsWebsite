@@ -57,6 +57,8 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/home/why-choose-us/list/edit/{id}', 'why_choose_us_list_edit')->name('home.why-choose-us.list.edit');
         Route::post('admin/home/why-choose-us/lust/update', 'why_choose_us_list_update')->name('home.why-choose-us.lust.update');
         Route::get('admin/home/why-choose-us/list/delete/{id}', 'why_choose_us_list_delete')->name('home.why-choose-us.list.delete');
+        Route::get('admin/home/home-video', 'video_section')->name('home.home-video');
+        Route::post('admin/home/home-video/update', 'video_section_update')->name('home.home-video.update');
     });
     Route::controller(AdminController::class)->group(function () {
         Route::get('admin/logout', 'destroy')->name('admin.logout');
