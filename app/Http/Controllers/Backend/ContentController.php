@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutHeader;
 use App\Models\AfricanCountry;
 use App\Models\AsiaCountry;
 use App\Models\GeneralInfo;
@@ -395,6 +396,31 @@ class ContentController extends Controller
         $video_section->title = $request->title;
         $video_section->update();
         $notification = array( 'message' => 'Video Section Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function about_header()
+    {
+        $about_header = AboutHeader::find(1);
+        return view('backend.content.about.about_header.about_header', compact('about_header'));
+    }
+
+    public function about_header_update(Request $request)
+    {
+        $about_header = AboutHeader::find(1);
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(1280, 720)->save('uploads/about_page/about_header/' . $image_name);
+            if (file_exists($about_header->image)) {
+                unlink($about_header->imge);
+            }
+            $image_url = 'uploads/about_page/about_header/' . $image_name;
+            $about_header->image = $image_url;
+        }
+        $about_header->title = $request->title;
+        $about_header->update();
+        $notification = array( 'message' => 'About Header Updated Successfully', 'alert-type' => 'info' );
         return redirect()->back()->with($notification);
     }
 }

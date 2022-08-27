@@ -62,6 +62,24 @@
 
                 </ul>
             </li>
+            <li class="menu">
+                <a href="#ecommerce" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-profits"></i>
+                        <span>About Page</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled {{request()->is('admin/about/about-header') ? 'show' : ''}}"
+                    id="ecommerce" data-parent="#accordionExample">
+                    <li class="{{request()->is('admin/about/about-header') ? 'active' : ''}}">
+                        <a href="{{route('about.about-header')}}"> About Header </a>
+                    </li>
+
+                </ul>
+            </li>
 
             {{--<li class="menu">
                 <a href="#ui-features" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
