@@ -61,6 +61,13 @@ Route::middleware('auth')->group(function () {
         Route::post('admin/home/home-video/update', 'video_section_update')->name('home.home-video.update');
         Route::get('admin/about/about-header', 'about_header')->name('about.about-header');
         Route::post('admin/about/about-header/update', 'about_header_update')->name('about.about-header.update');
+        Route::get('admin/about/quality-policy', 'quality_policy')->name('about.quality-policy');
+        Route::post('admin/about/quality-policy/update', 'quality_policy_update')->name('about.quality-policy.update');
+        Route::get('admin/about/quality-policy/item', 'quality_policy_item_add')->name('about.quality-policy.item');
+        Route::post('admin/about/quality-policy/item/store', 'quality_policy_item_store')->name('about.quality-policy.item.store');
+        Route::get('admin/about/quality-policy/item/edit/{id}', 'quality_policy_item_edit')->name('about.quality-policy.item.edit');
+        Route::post('admin/about/quality-policy/item/update', 'quality_policy_item_update')->name('about.quality-policy.item.update');
+        Route::get('admin/about/quality-policy/item/delete/{id}', 'quality_policy_item_delete')->name('about.quality-policy.item.delete');
     });
     Route::controller(AdminController::class)->group(function () {
         Route::get('admin/logout', 'destroy')->name('admin.logout');

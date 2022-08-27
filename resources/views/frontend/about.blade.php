@@ -2,6 +2,7 @@
 @section('content')
     @php
         $about_header = \App\Models\AboutHeader::find(1);
+        $quality = \App\Models\QualityPolicy::find(1);
     @endphp
         <!-- Hero Slider -->
     <section class="hero bg-cover bg-position py-4"
@@ -22,25 +23,22 @@
         <div class="container py-5">
             <div class="row gy-4">
                 <div class="col-lg-5">
-                    <div class="pt-1 bg-primary"><img class="img-fluid" src="{{  asset('frontend/img/iso.png') }}"
-                                                      alt=""></div>
+                    <div class="pt-1 bg-primary">
+                        <img class="img-fluid"
+                             src="{{ !empty($quality->image) ? asset($quality->image) : asset('backend/assets/img/810x755.png') }}"
+                             alt="">
+                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <p class="h6 mb-1 text-uppercase text-primary mb-3">Quality Policy</p>
-                    <h2 class="mb-4">Al-Behar Chemicals is ISO 9001: 2015 certified.</h2>
-                    <p class="text-sm text-muted">Al-Behar Chemicals is ISO 9001: 2015 certified; obtained to ensure the
-                        highest standards of quality and performance.
-                        Our Quality Policy is to strive for total customer satisfaction by virtue of:</p>
+                    <p class="h6 mb-1 text-uppercase text-primary mb-3">{{$quality->section_title}}</p>
+                    <h2 class="mb-4">{{$quality->title}}</h2>
+                    <p class="text-sm text-muted">{{ $quality->description }}</p>
                     <ul class="list-check list-unstyled row px-3 gy-2 mb-4">
-                        <li class="text-sm text-muted col-lg-12">Distribute high quality products and providing high
-                            quality services
-                        </li>
-                        <li class="text-sm text-muted col-lg-12">Compliance with requirements</li>
-                        <li class="text-sm text-muted col-lg-12"> Regular review of effectiveness of our ISO9001:2015
-                            compliant quality management system
-                        </li>
-                        <li class="text-sm text-muted col-lg-12"> Continual improvement of our systems and operations
-                        </li>
+                        @foreach($quality->quality_item as $item)
+                            <li class="text-sm text-muted col-lg-12">
+                                {{ $item->item }}
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

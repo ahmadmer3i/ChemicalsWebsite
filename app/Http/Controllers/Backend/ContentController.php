@@ -11,6 +11,8 @@ use App\Models\GeneralInfoCard;
 use App\Models\GlobalPrecence;
 use App\Models\HomeContact;
 use App\Models\HomeVideo;
+use App\Models\QualityPolicy;
+use App\Models\QualityPolicyItem;
 use App\Models\Slider;
 use App\Models\WhyChoose;
 use App\Models\WhyChooseList;
@@ -421,6 +423,71 @@ class ContentController extends Controller
         $about_header->title = $request->title;
         $about_header->update();
         $notification = array( 'message' => 'About Header Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function quality_policy()
+    {
+        $quality = QualityPolicy::find(1);
+        return view('backend.content.about.quality_policy.quality_policy', compact('quality'));
+    }
+
+    public function quality_policy_update(Request $request)
+    {
+        $quality = QualityPolicy::find(1);
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(810, 755)->save('uploads/about_page/quality_policy/' . $image_name);
+            if (file_exists($quality->image)) {
+                unlink($quality->image);
+            }
+            $image_url = 'uploads/about_page/quality_policy/' . $image_name;
+            $quality->image = $image_url;
+        }
+        $quality->section_title = $request->section_title;
+        $quality->title = $request->title;
+        $quality->description = $request->description;
+        $quality->update();
+        $notification = array( 'message' => 'Quality Policy Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function quality_policy_item_add()
+    {
+        return view('backend.content.about.quality_policy.quality_policy_item');
+    }
+
+    public function quality_policy_item_store(Request $request)
+    {
+        $item = new QualityPolicyItem();
+        $item->item = $request->item;
+        $item->quality_id = 1;
+        $item->save();
+        $notification = array( 'message' => 'Quality Policy Item Added Successfully', 'alert-type' => 'success' );
+        return redirect()->route('about.quality-policy')->with($notification);
+    }
+
+    public function quality_policy_item_edit($id)
+    {
+        $item = QualityPolicyItem::find($id);
+        return view('backend.content.about.quality_policy.quality_policy_item_edit', compact('item'));
+    }
+
+    public function quality_policy_item_update(Request $request)
+    {
+        $item = QualityPolicyItem::find($request->id);
+        $item->item = $request->item;
+        $item->update();
+        $notification = array( 'message' => 'Quality Policy Item Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->route('about.quality-policy')->with($notification);
+    }
+
+    public function quality_policy_item_delete($id)
+    {
+        $item = QualityPolicyItem::find($id);
+        $item->delete();
+        $notification = array( 'message' => 'Quality Policy Item Deleted Successfully', 'alert-type' => 'warning' );
         return redirect()->back()->with($notification);
     }
 }
