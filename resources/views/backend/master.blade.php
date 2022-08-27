@@ -13,6 +13,8 @@
 
     <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
 
+    <script src="https://cdn.tiny.cloud/1/1vfaf8ywbacy00zaik4lxdwv4s8koyq74b3o4eqx9d06qwro/tinymce/6/tinymce.min.js"
+            referrerpolicy="origin"></script>
     <link href="{{asset('backend/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('backend/assets/css/plugins.css')}}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="{{asset('backend/plugins/table/datatable/datatables.css')}}">
@@ -210,8 +212,6 @@
 <script src="{{asset('backend/assets/js/ui-kit/button/spinner/spin.min.js')}}"></script>
 <script src="{{asset('backend/assets/js/ui-kit/button/spinner/ladda.min.js')}}"></script>
 <script src="{{asset('backend/assets/js/ui-kit/button/custo-spinner.js')}}"></script>
-<script src="{{asset('backend/plugins/editors/tinymce/tinymce.min.js')}}"></script>
-<script src="{{asset('backend/plugins/editors/tinymce/editor_tinymce.js')}}"></script>
 <script src="{{asset('backend/plugins/dropzone/dropzone.min.js')}}"></script>
 <script src="{{asset('backend/plugins/dropzone/custom-dropzone.js')}}"></script>
 <script src="{{asset('backend/plugins/file-upload/file-upload-with-preview.js')}}"></script>

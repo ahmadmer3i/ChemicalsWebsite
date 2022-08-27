@@ -3,6 +3,7 @@
     @php
         $about_header = \App\Models\AboutHeader::find(1);
         $quality = \App\Models\QualityPolicy::find(1);
+        $reliable = \App\Models\AboutReliable::find(1);
     @endphp
         <!-- Hero Slider -->
     <section class="hero bg-cover bg-position py-4"
@@ -49,68 +50,30 @@
             <header class="mb-5 text-center">
                 <div class="row">
                     <div class="col-lg-7 mx-auto">
-                        <p class="h6 text-uppercase text-primary">Reliable &amp; Trustworthy</p>
-                        <h2>We're looking for specific approach to each cases</h2>
+                        <p class="h6 text-uppercase text-primary">{{$reliable->section_title}}</p>
+                        <h2>{{$reliable->title}}</h2>
                         {{--                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod--}}
                         {{--                            tempor incididunt ut labore et dolore</p>--}}
                     </div>
                 </div>
             </header>
             <div class="row align-items-stretch gy-4">
-                <div class="col-lg-4">
-                    <div class="bg-white h-100">
-                        <div class="bg-primary px-4 py-3 d-inline-block">
-                            <svg class="svg-icon text-white">
-                                <use xlink:href="#arrow-target-1"></use>
-                            </svg>
-                        </div>
-                        <div class="px-5 pt-0 pb-5 bg-white text-center">
-                            <h2 class="h4 mb-3 text-capitalize">Our mission</h2>
-                            <p class="text-muted text-sm mb-0 justify-center">Partner up with both suppliers and
-                                customers to supply the Middle East, North & West African region adequately,
-                                consistently and on timely manner; through horizontal integration and wide-spread
-                                product portfolio.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="bg-white h-100">
-                        <div class="bg-primary px-4 py-3 d-inline-block">
-                            <svg class="svg-icon text-white">
-                                <use xlink:href="#stack-1"></use>
-                            </svg>
-                        </div>
-                        <div class="px-5 pt-0 pb-5 bg-white text-center">
-                            <h2 class="h4 mb-3 text-capitalize">Our vision</h2>
-                            <p class="text-muted text-sm mb-0 justify-center">Contributing to the industrial and
-                                economic development of the region by playing a vital role as a trader in the supply
-                                chain.
-                            </p>
+                @foreach($reliable->reliable_item as $item)
+                    <div class="col-lg-4">
+                        <div class="bg-white h-100">
+                            <div class="bg-primary px-4 py-3 d-inline-block">
+                                <svg class="svg-icon text-white">
+                                    <use xlink:href="{{$item->icon}}"></use>
+                                </svg>
+                            </div>
+                            <div class="px-5 pt-0 pb-5 bg-white text-center">
+                                <h2 class="h4 mb-3 text-capitalize">Our mission</h2>
+                                <div class="text-muted text-sm mb-0 justify-center">{!! $item->description !!}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="bg-white h-100">
-                        <div class="bg-primary px-4 py-3 d-inline-block">
-                            <svg class="svg-icon text-white">
-                                <use xlink:href="#sales-up-1"></use>
-                            </svg>
-                        </div>
-                        <div class="px-5 pt-0 pb-5 bg-white text-center">
-                            <h2 class="h4 mb-3 text-capitalize">Our Core Values</h2>
-                            <p class="text-muted text-sm mb-0 justify-center">Our firm insists on the highest standards
-                                of quality and performance. It is through attention to detail that this can be achieved.
-                                Serving our customers with transparency, and our ability to accommodate and empathize
-                                with the situations that our customers and stakeholders face, made it possible for us to
-                                achieve long-term relationships with them. <br><br>We believe in the necessity of
-                                complying to standards through our code of conduct and code of ethics, in addition to
-                                our strong belief in investing in human resources and building trust with them, which is
-                                leading us to continuous improvement and success.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

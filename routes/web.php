@@ -68,6 +68,13 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/about/quality-policy/item/edit/{id}', 'quality_policy_item_edit')->name('about.quality-policy.item.edit');
         Route::post('admin/about/quality-policy/item/update', 'quality_policy_item_update')->name('about.quality-policy.item.update');
         Route::get('admin/about/quality-policy/item/delete/{id}', 'quality_policy_item_delete')->name('about.quality-policy.item.delete');
+        Route::get('admin/about/about-reliable', 'about_reliable')->name('about.about-reliable');
+        Route::post('admin/about/about-reliable/update', 'about_reliable_update')->name('about.about-reliable.update');
+        Route::get('admin/about/about-reliable/item', 'about_reliable_item')->name('about.about-reliable.item');
+        Route::post('admin/about/about-reliable/item/store', 'about_reliable_item_store')->name('about.about-reliable.item.store');
+        Route::get('admin/about/about-reliable/item/edit/{id}', 'about_reliable_item_edit')->name('about.about-reliable.item.edit');
+        Route::post('admin/about/about-reliable/item/update', 'about_reliable_item_update')->name('about.about-reliable.item.update');
+        Route::get('admin/about/about-reliable/item/delete/{id}', 'about_reliable_item_delete')->name('about.about-reliable.item.delete');
     });
     Route::controller(AdminController::class)->group(function () {
         Route::get('admin/logout', 'destroy')->name('admin.logout');

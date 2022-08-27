@@ -72,13 +72,16 @@
                         <i class="flaticon-right-arrow"></i>
                     </div>
                 </a>
-                <ul class="collapse submenu list-unstyled {{request()->is('admin/about/about-header') || request()->is('admin/about/quality-policy') ? 'show' : ''}}"
+                <ul class="collapse submenu list-unstyled {{request()->is('admin/about/about-header') || request()->is('admin/about/quality-policy')|| request()->is('admin/about/about-reliable') ? 'show' : ''}}"
                     id="ecommerce" data-parent="#accordionExample">
                     <li class="{{request()->is('admin/about/about-header') ? 'active' : ''}}">
                         <a href="{{route('about.about-header')}}"> About Header </a>
                     </li>
                     <li class="{{request()->is('admin/about/quality-policy') ? 'active' : ''}}">
                         <a href="{{route('about.quality-policy')}}"> Quality Policy </a>
+                    </li>
+                    <li class="{{request()->is('admin/about/about-reliable') ? 'active' : ''}}">
+                        <a href="{{route('about.about-reliable')}}"> About Reliable </a>
                     </li>
 
                 </ul>

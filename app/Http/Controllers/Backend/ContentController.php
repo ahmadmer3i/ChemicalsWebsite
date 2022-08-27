@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutHeader;
+use App\Models\AboutReliable;
+use App\Models\AboutReliableItem;
 use App\Models\AfricanCountry;
 use App\Models\AsiaCountry;
 use App\Models\GeneralInfo;
@@ -488,6 +490,64 @@ class ContentController extends Controller
         $item = QualityPolicyItem::find($id);
         $item->delete();
         $notification = array( 'message' => 'Quality Policy Item Deleted Successfully', 'alert-type' => 'warning' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function about_reliable()
+    {
+        $reliable = AboutReliable::find(1);
+        return view('backend.content.about.about_reliable.about_reliable', compact('reliable'));
+    }
+
+    public function about_reliable_update(Request $request)
+    {
+        $reliable = AboutReliable::find(1);
+        $reliable->section_title = $request->section_title;
+        $reliable->title = $request->title;
+        $reliable->update();
+        $notification = array( 'message' => 'About Reliable Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function about_reliable_item()
+    {
+        return view('backend.content.about.about_reliable.about_reliable_item');
+    }
+
+    public function about_reliable_item_store(Request $request)
+    {
+        $item = new AboutReliableItem();
+        $item->reliable_id = 1;
+        $item->title = $request->title;
+        $item->description = $request->description;
+        $item->icon = $request->icon;
+        $item->save();
+        $notification = array( 'message' => 'About Reliable Item Added Successfully', 'alert-type' => 'success' );
+        return redirect()->route('about.about-reliable')->with($notification);
+    }
+
+    public function about_reliable_item_edit($id)
+    {
+        $item = AboutReliableItem::find($id);
+        return view('backend.content.about.about_reliable.about_reliable_item_edit', compact('item'));
+    }
+
+    public function about_reliable_item_update(Request $request)
+    {
+        $item = AboutReliableItem::find($request->id);
+        $item->title = $request->title;
+        $item->description = $request->description;
+        $item->icon = $request->icon;
+        $item->update();
+        $notification = array( 'message' => 'About Reliable Item Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->route('about.about-reliable')->with($notification);
+    }
+
+    public function about_reliable_item_delete($id)
+    {
+        $item = AboutReliableItem::find($id);
+        $item->delete();
+        $notification = array( 'message' => 'About Reliable Item Deleted Successfully', 'alert-type' => 'warning' );
         return redirect()->back()->with($notification);
     }
 }
