@@ -408,10 +408,10 @@
                     value: function getYoutubeUrl(youtube, videoId) {
                         var query = this.getQueryString(youtube);
                         if (youtube.nocookie === true) {
-                            return '//chemicals.al-behar.com/' + videoId + '?' + query;
+                            return '//' + videoId + '?' + query;
                         }
 
-                        return '//chemicals.al-behar.com/' + videoId + '?' + query;
+                        return '//' + videoId + '?' + query;
                     }
                 }, {
                     key: 'getFacebookUrl',
