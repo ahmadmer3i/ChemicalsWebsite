@@ -67,7 +67,7 @@
                                 </svg>
                             </div>
                             <div class="px-5 pt-0 pb-5 bg-white text-center">
-                                <h2 class="h4 mb-3 text-capitalize">Our mission</h2>
+                                <h2 class="h4 mb-3 text-capitalize">{{$item->title}}</h2>
                                 <div class="text-muted text-sm mb-0 justify-center">{!! $item->description !!}
                                 </div>
                             </div>
