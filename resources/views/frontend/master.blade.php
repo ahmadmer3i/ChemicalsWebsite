@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&amp;display=swap">
     <!-- Modal Video-->
     <link rel="stylesheet" href="{{ asset('frontend/vendor/modal-video/css/modal-video.min.css') }}">
+    <link rel="stylesheet" href="{{asset('frontend/vendor/bootstrap/css/bootstrap.min.css')}}">
     <!-- Leaflet-->
     <link rel="stylesheet" href="{{ asset('frontend/vendor/leaflet/leaflet.css') }}">
     <!-- Swiper slider-->

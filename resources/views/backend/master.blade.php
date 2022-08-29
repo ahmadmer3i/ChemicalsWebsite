@@ -1,228 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--begin::Head-->
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Chemicals | Dashboard</title>
-    <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}"/>
-    <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-
-    <!-- END GLOBAL MANDATORY STYLES -->
-
-    <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
-
+    <base href="../">
+    <title>Chemicals Dashboard</title>
+    <meta charset="utf-8"/>
+    <meta name="description"
+          content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free."/>
+    <meta name="keywords"
+          content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title"
+          content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme"/>
+    <meta property="og:url" content="https://keenthemes.com/metronic"/>
+    <meta property="og:site_name" content="Keenthemes | Metronic"/>
+    <link rel="canonical" href="https://preview.keenthemes.com/metronic8"/>
+    <link rel="shortcut icon" href="{{asset('favicon.ico')}}"/>
+    <!--begin::Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
+    <!--end::Fonts-->
+    <!--begin::Page Vendor Stylesheets(used by this page)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="{{asset('backend/assets/plugins/custom/prismjs/prismjs.bundle.css')}}" rel="stylesheet"
+          type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link href="{{ asset('backend/assets/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet"
+          type="text/css"/>
+    <link href="{{ asset('backend/assets/plugins/custom/vis-timeline/vis-timeline.bundle.css') }}" rel="stylesheet"
+          type="text/css"/>
+    <!--end::Page Vendor Stylesheets-->
+    <!--begin::Global Stylesheets Bundle(used by all pages)-->
+    <link href="{{ asset('backend/assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('backend/assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css"/>
     <script src="https://cdn.tiny.cloud/1/1vfaf8ywbacy00zaik4lxdwv4s8koyq74b3o4eqx9d06qwro/tinymce/6/tinymce.min.js"
             referrerpolicy="origin"></script>
-    <link href="{{asset('backend/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
-    <link href="{{asset('backend/assets/css/plugins.css')}}" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/plugins/table/datatable/datatables.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('backend/plugins/table/datatable/custom_dt_customer.css')}}">
-    <link href="{{asset('backend/plugins/animate/animate.css')}}" rel="stylesheet" type="text/css"/>
-    <script src="{{asset('backend/plugins/sweetalerts/promise-polyfill.js')}}"></script>
-    <link href="{{asset('backend/plugins/sweetalerts/sweetalert2.min.css')}}" rel="stylesheet" type="text/css"/>
-    <link href="{{asset('backend/plugins/sweetalerts/sweetalert.css')}}" rel="stylesheet" type="text/css"/>
-    <link href="{{asset('backend/assets/css/ui-kit/custom-sweetalert.css')}}" rel="stylesheet" type="text/css"/>
-    <!-- END GLOBAL MANDATORY STYLES -->
-
-    <!--  BEGIN CUSTOM STYLE FILE  -->
-    <link href="{{asset('backend/assets/css/classic-dashboard/style.css')}}" rel="stylesheet" type="text/css"/>
-    <link href="{{asset('backend/assets/css/components/custom-video_player.css')}}" rel="stylesheet" type="text/css">
-    <!--  END CUSTOM STYLE FILE  -->
-    <link href="{{asset('backend/assets/css/ui-kit/buttons/creative/creative-icon-buttons.css')}}" rel="stylesheet"
-          type="text/css"/>
-    <link href="{{asset('backend/assets/css/ui-kit/buttons/creative/creative-gradients.css')}}" rel="stylesheet"
-          type="text/css"/>
-    <link href="{{asset('backend/assets/css/ui-kit/buttons/creative/creative-fill.css')}}" rel="stylesheet"
-          type="text/css"/>
-    <link href="{{asset('backend/assets/css/ui-kit/buttons/creative/creative-material.css')}}" rel="stylesheet"
-          type="text/css"/>
-    <!-- Spinner Buttons -->
-    <link href="{{asset('backend/assets/css/ui-kit/buttons/spinner/spinner.css')}}" rel="stylesheet" type="text/css"/>
-    <link href="{{asset('backend/assets/css/ui-kit/buttons/spinner/ladda.min.css')}}" rel="stylesheet" type="text/css"/>
-    <link href="{{asset('backend/plugins/editors/tinymce/stylesheet.css')}}" rel="stylesheet" type="text/css"/>
-    <link href="{{asset('backend/plugins/dropzone/dropzone.min.css')}}" rel="stylesheet" type="text/css"/>
-    <link href="{{asset('backend/plugins/dropzone/basic.min.css')}}" rel="stylesheet" type="text/css"/>
-    <link href="{{asset('backend/plugins/file-upload/file-upload-with-preview.css')}}" rel="stylesheet"
-          type="text/css"/>
-    <script src="{{asset('backend/assets/js/libs/jquery-3.1.1.min.js')}}"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <style>
-        .form-control {
-            border: 1px solid #ccc;
-            color: #888ea8;
-            font-size: 15px;
-            border-radius: 2px;
-        }
-
-        .form-vertical .form-group .control-label {
-            color: #3b3f5c;
-        }
-
-        .form-control::-webkit-input-placeholder {
-            color: #888ea8;
-            font-size: 15px;
-        }
-
-        .form-control::-ms-input-placeholder {
-            color: #888ea8;
-            font-size: 15px;
-        }
-
-        .form-control::-moz-placeholder {
-            color: #888ea8;
-            font-size: 15px;
-        }
-
-        .form-control:focus {
-            border-color: #f1f3f1;
-            border-left: solid 3px #3862f5;
-        }
-
-        label {
-            color: #3b3f5c;
-            margin-bottom: 14px;
-        }
-    </style>
+    <!--end::Global Stylesheets Bundle-->
 </head>
-<body>
-@include('backend.body.header')
+<!--end::Head-->
+<!--begin::Body-->
 
-<!--  BEGIN NAVBAR  -->
-@include('backend.body.navbar')
-<!--  END NAVBAR  -->
-
-<!--  BEGIN MAIN CONTAINER  -->
-<div class="main-container" id="container">
-    <div class="overlay"></div>
-    <div class="cs-overlay"></div>
-
-    <!--  BEGIN SIDEBAR  -->
-
-    @include('backend.body.sidebar')
-
-    <!--  BEGIN CONTENT PART  -->
-    @yield('main')
-    <!--  END CONTENT PART  -->
-
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled aside-enabled aside-fixed"
+      style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+<!--begin::Main-->
+<!--begin::Root-->
+<div class="d-flex flex-column flex-root">
+    <!--begin::Page-->
+    <div class="page d-flex flex-row flex-column-fluid">
+        <!--begin::Aside-->
+        @include('backend.body.sidebar')
+        <!--end::Aside-->
+        <!--begin::Wrapper-->
+        <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+            <!--begin::Header-->
+            @include('backend.body.header')
+            <!--end::Header-->
+            <!--begin::Content-->
+            @yield('main')
+            <!--end::Content-->
+            <!--begin::Footer-->
+            @include('backend.body.footer')
+            <!--end::Footer-->
+        </div>
+        <!--end::Wrapper-->
+    </div>
+    <!--end::Page-->
 </div>
-<!-- END MAIN CONTAINER -->
-
-<!--  BEGIN FOOTER  -->
-@include('backend.body.footer')
-<!--  END FOOTER  -->
-
-<!--  BEGIN CONTROL SIDEBAR  -->
-@include('backend.body.control_sidebar')
-<!--  END CONTROL SIDEBAR  -->
-
-<!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-<script src="{{asset('backend/bootstrap/js/popper.min.js')}}"></script>
-<script src="{{asset('backend/bootstrap/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('backend/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
-<script src="{{asset('backend/assets/js/app.js')}}"></script>
+<!--end::Root-->
+<!--begin::Scrolltop-->
+<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+    <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+    <span class="svg-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                 fill="none">
+                <rect opacity="0.5" x="13" y="6" width="13" height="2"
+                      rx="1" transform="rotate(90 13 6)" fill="black"/>
+                <path
+                    d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
+                    fill="black"/>
+            </svg>
+        </span>
+    <!--end::Svg Icon-->
+</div>
+<!--end::Scrolltop-->
+<!--begin::Modals-->
+<!--begin::Modal - Upgrade plan-->
+<!--end::Modal - Upgrade plan-->
+<!--begin::Modal - New Target-->
+<!--end::Modal - New Target-->
+<!--begin::Modal - Users Search-->
+<!--end::Modal - Users Search-->
+<!--begin::Modal - Invite Friends-->
+<!--end::Modal - Invite Friend-->
+<!--end::Modals-->
+<!--begin::Javascript-->
 <script>
-    $(document).ready(function () {
-        App.init();
-    });
+    var hostUrl = "assets/";
 </script>
-<script src="{{asset('backend/assets/js/custom.js')}}"></script>
-<!-- END GLOBAL MANDATORY SCRIPTS -->
+<!--begin::Global Javascript Bundle(used by all pages)-->
+<script src="{{ asset('backend/assets/plugins/global/plugins.bundle.js') }}"></script>
+<script src="{{ asset('backend/assets/js/scripts.bundle.js') }}"></script>
+<!--end::Global Javascript Bundle-->
+<!--begin::Page Vendors Javascript(used by this page)-->
+<script src="{{ asset('backend/assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+<script src="{{ asset('backend/assets/plugins/custom/vis-timeline/vis-timeline.bundle.js') }}"></script>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+<!--end::Page Vendors Javascript-->
+<!--begin::Page Custom Javascript(used by this page)-->
+<script src="{{ asset('backend/assets/js/widgets.bundle.js') }}"></script>
+<script src="{{ asset('backend/assets/js/custom/widgets.js') }}"></script>
+<script src="{{ asset('backend/assets/js/custom/apps/chat/chat.js') }}"></script>
+<script src="{{ asset('backend/assets/js/custom/utilities/modals/upgrade-plan.js') }}"></script>
+<script src="{{ asset('backend/assets/js/custom/utilities/modals/new-target.js') }}"></script>
+<script src="{{asset('backend/assets/js/custom/pages/pricing/general.js')}}"></script>
+<script src="{{asset('backend/assets/js/custom/utilities/modals/create-app.js')}}"></script>
+<script src="{{ asset('backend/assets/js/custom/utilities/modals/users-search.js') }}"></script>
+<script src="{{asset('backend/assets/plugins/custom/prismjs/prismjs.bundle.js')}}"></script>
+<script src="{{asset('backend/assets/js/custom/documentation/general/datatables/advanced.js')}}"></script>
+<script src="{{asset('backend/assets/js/custom/documentation/general/sweetalert.js')}}"></script>
 
-<!--  BEGIN CUSTOM SCRIPT FILES  -->
-<script src="{{asset('backend/plugins/charts/amcharts/amcharts.js')}}"></script>
-<script src="{{asset('backend/plugins/maps/vector/ammaps/ammap_amcharts_extension.js')}}"></script>
-<script src="{{asset('backend/plugins/maps/vector/ammaps/worldLow.js')}}"></script>
-<script src="{{asset('backend/plugins/charts/amcharts/serial.js')}}"></script>
-<script src="{{asset('backend/plugins/charts/amcharts/pie.js')}}"></script>
-<script src="{{asset('backend/plugins/progressbar/progressbar.min.js')}}"></script>
-<script src="{{asset('backend/plugins/blockui/jquery.blockUI.min.js')}}"></script>
-<script src="{{asset('backend/assets/js/classic-dashboard/classic-custom.js')}}"></script>
+
+<script src="{{ asset('backend/assets/js/code.js') }}"></script>
+
 
 <script>
-    $(document).ready(function () {
-        App.init();
+    $(function () {
+        $(document).on('click', '#delete', function (e) {
+            e.preventDefault();
+            var link = $(this).attr("href");
+
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "Delete This Data?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = link
+                    Swal.fire(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                    )
+                }
+            })
+
+
+        });
+
     });
-</script>
-<!-- END GLOBAL MANDATORY SCRIPTS -->
-
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="{{asset('backend/plugins/table/datatable/datatables.js')}}"></script>
-<script>
-    // var e;
-    c1 = $('#customer-info-detail-1').DataTable({
-        "lengthMenu": [5, 10, 20, 50, 100],
-        headerCallback: function (e, a, t, n, s) {
-            e.getElementsByTagName("th")[0].innerHTML = '<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
-        },
-        columnDefs: [{
-            targets: 0, width: "30px", className: "", orderable: !1, render: function (e, a, t, n) {
-                return '<label class="new-control new-checkbox checkbox-outline-primary  m-auto">\n<input type="checkbox" class="new-control-input child-chk select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
-            }
-        }],
-        "language": {
-            "paginate": {
-                "previous": "<i class='flaticon-arrow-left-1'></i>",
-                "next": "<i class='flaticon-arrow-right'></i>"
-            },
-            "info": "Showing page _PAGE_ of _PAGES_"
-        }
-    });
-
-    multiCheck(c1);
-
-    c2 = $('#customer-info-detail-2').DataTable({
-        "lengthMenu": [5, 10, 20, 50, 100],
-        headerCallback: function (e, a, t, n, s) {
-            e.getElementsByTagName("th")[0].innerHTML = '<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
-        },
-        columnDefs: [{
-            targets: 0, width: "30px", className: "", orderable: !1, render: function (e, a, t, n) {
-                return '<label class="new-control new-checkbox checkbox-outline-primary  m-auto">\n<input type="checkbox" class="new-control-input child-chk select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
-            }
-        }],
-        "language": {
-            "paginate": {
-                "previous": "<i class='flaticon-arrow-left-1'></i>",
-                "next": "<i class='flaticon-arrow-right'></i>"
-            },
-            "info": "Showing page _PAGE_ of _PAGES_"
-        }
-    });
-
-    multiCheck(c2);
-
-    c3 = $('#customer-info-detail-3').DataTable({
-        "lengthMenu": [5, 10, 20, 50, 100],
-        "language": {
-            "paginate": {
-                "previous": "<i class='flaticon-arrow-left-1'></i>",
-                "next": "<i class='flaticon-arrow-right'></i>"
-            },
-            "info": "Showing page _PAGE_ of _PAGES_"
-        }
-    });
-
-    multiCheck(c3);
-</script>
-<script src="{{asset('backend/assets/js/ui-kit/button/spinner/spinner.js')}}"></script>
-<script src="{{asset('backend/assets/js/ui-kit/button/spinner/spin.min.js')}}"></script>
-<script src="{{asset('backend/assets/js/ui-kit/button/spinner/ladda.min.js')}}"></script>
-<script src="{{asset('backend/assets/js/ui-kit/button/custo-spinner.js')}}"></script>
-<script src="{{asset('backend/plugins/dropzone/dropzone.min.js')}}"></script>
-<script src="{{asset('backend/plugins/dropzone/custom-dropzone.js')}}"></script>
-<script src="{{asset('backend/plugins/file-upload/file-upload-with-preview.js')}}"></script>
-<script src="{{asset('backend/plugins/sweetalerts/sweetalert2.min.js')}}"></script>
-<script src="{{asset('backend/plugins/sweetalerts/custom-sweetalert.js')}}"></script>
-<script src="{{asset('backend/assets/js/components/media/video-custom.js')}}"></script>
-<script>
-    //First upload
-    var firstUpload = new FileUploadWithPreview('myFirstImage')
-    //Second upload
-    var secondUpload = new FileUploadWithPreview('mySecondImage')
 </script>
 <script>
     @if(Session::has('message'))
@@ -246,6 +188,20 @@
     }
     @endif
 </script>
-<!--  END CUSTOM SCRIPT FILES  -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#image').change(function (e) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                $('#show_image').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(e.target.files['0']);
+        });
+    });
+</script>
+
+<!--end::Javascript-->
 </body>
+<!--end::Body-->
+
 </html>

@@ -1,105 +1,130 @@
 @extends('backend.master')
 @section('main')
-    <div id="content" class="main-content">
-        <div class="container ">
-            <div class="page-header">
-                <div class="page-title">
-                    <h3>File Upload</h3>
-                    <div class="crumbs">
-                        <ul id="breadcrumbs" class="breadcrumb">
-                            <li><a href="{{route('dashboard')}}"><i class="flaticon-home-fill"></i></a></li>
-                            <li><a href="#">Home Page</a></li>
-                            <li class="active"><a href="#">Home Sliders</a></li>
-                        </ul>
-                    </div>
+    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+        <div class="toolbar" id="kt_toolbar">
+            <!--begin::Container-->
+            <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+                <!--begin::Page title-->
+                <div data-kt-swapper="true" data-kt-swapper-mode="prepend"
+                     data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
+                     class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                    <!--begin::Title-->
+                    <h1 class="d-flex text-dark fw-bolder fs-3 align-items-center my-1">Home Sliders</h1>
+                    <!--end::Title-->
+                    <!--begin::Separator-->
+                    <span class="h-20px border-gray-300 border-start mx-4"></span>
+                    <!--end::Separator-->
+                    <!--begin::Breadcrumb-->
+                    <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-muted">
+                            <a href="{{route('dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                        </li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item">
+                            <span class="bullet bg-gray-300 w-5px h-2px"></span>
+                        </li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-muted">Home Page</li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item">
+                            <span class="bullet bg-gray-300 w-5px h-2px"></span>
+                        </li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-muted">
+                            <a href="{{route('home.sliders')}}" class="text-muted text-hover-primary">Home Sliders</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <span class="bullet bg-gray-300 w-5px h-2px"></span>
+                        </li>
+                        <li class="breadcrumb-item text-dark"> Add Home Sliders</li>
+                        <!--end::Item-->
+                    </ul>
+                    <!--end::Breadcrumb-->
                 </div>
+                <!--end::Page title-->
+                <!--begin::Actions-->
+                <!--end::Actions-->
             </div>
-            <div class="row">
+            <!--end::Container-->
+        </div>
+        <div id="kt_content_container" class="container-xxl">
 
-                <div class="col-lg-12">
-                    <div class="statbox widget box box-shadow">
-                        <div class="widget-header widget-heading">
-                            <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <div class="py-10">
+                        <!--begin::Heading-->
+                        <div class="row">
+                            <div class="col-10">
+                                <h1 class="anchor fw-bolder mb-5" id="dom-positioning">
+                                    Add Slider</h1>
+                            </div>
+                            <div class="col-2 d-flex justify-content-end">
+
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-8 align-center">
-                    <div class="card statbox widget shadow">
-                        <div class="">
-                            <div class="widget-header">
+                        <form action="{{route('home.sliders.update')}}" method="post"
+                              enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="{{ $slider->id }}">
+                            <div class="my-5">
+                                @csrf
+                                <div class="row mb-3">
+                                    <label for="title" class="col-sm-3 col-form-label">Slider Title</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="title"
+                                               placeholder="Enter Slider Title" name="title" value="{{$slider->title}}">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="description" class="col-sm-3 col-form-label">Slider Text</label>
+                                    <div class="col-sm-9">
+                                    <textarea rows="4" type="text" class="form-control" id="description"
+                                              name="description"
+                                              placeholder="Enter Slider Text">{{ $slider->description }}</textarea>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="image" class="col-sm-3 col-form-label">Slider
+                                        Image</label>
+                                    <div class="col-sm-9">
+                                        <input type="file" class="form-control" id="image" name="image">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputAddress4" class="col-sm-3 col-form-label"></label>
+                                    <div class="col-sm-9">
+                                        <img
+                                            src="{{!empty($slider->image) ? asset($slider->image) : asset('backend/assets/media/holders/192.1280.png')}}"
+                                            width="300" alt="" id="show_image"
+                                            class="img-thumbnail mr-3 mb-4 rounded"/>
+                                    </div>
+                                </div>
                                 <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12 align-left">
-                                        <h4>Edit Slider</h4>
+                                    <div class="col-sm-10">
+                                        <button type="submit" class="btn btn-dark px-5">Update</button>
+                                    </div>
+                                    <div class="col-sm-2 d-flex justify-content-end">
+                                        <a href="{{route('home.sliders')}}" class="btn btn-danger px-5">Back</a>
                                     </div>
                                 </div>
                             </div>
-                            <form action="{{route('home.sliders.update')}}" enctype="multipart/form-data" method="post">
-                                @csrf
-                                <input type="hidden" id="id" name="id" value="{{$slider->id}}">
-                                <div class="widget-content px-5">
-                                    <div class="form-group row mb-4 align-left">
-                                        <label for="title"
-                                               class="col-xl-2 col-sm-3 col-sm-2 col-form-label">Title</label>
-                                        <div class="col-xl-10 col-lg-9 col-sm-10">
-                                            <input type="text" class="form-control" id="title" name="title"
-                                                   value="{{$slider->title}}"
-                                                   placeholder="">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row mb-4 align-left">
-                                        <label for="description"
-                                               class="col-xl-2 col-sm-3 col-sm-2 col-form-label">Description</label>
-                                        <div class="col-xl-10 col-lg-9 col-sm-10">
-                                            <textarea rows="5" type="text" name="description" class="form-control"
-                                                      id="description"
-                                                      placeholder="">{{$slider->description}}</textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row mb-4 align-left">
-                                        <label for="description"
-                                               class="col-xl-2 col-sm-3 col-sm-2 col-form-label">Image</label>
-                                        <div class="col-xl-10 col-lg-9 col-sm-10">
-                                            <div class="custom-file mb-4">
-                                                <input type="file" class="custom-file-input" id="image"
-                                                       name="image" value="">
-                                                <label class="custom-file-label"
-                                                       for="customFile">{{!empty(request()->file('image')) ? request()->file('image')->getClientOriginalName() : 'Choose File'}}</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row mb-4 align-left">
-                                        <label for="description"
-                                               class="col-xl-2 col-sm-3 col-sm-2 col-form-label"></label>
-                                        <div class="col-xl-10 col-lg-9 col-sm-10">
-                                            <div class="custom-file mb-4">
-                                                <img
-                                                    src="{{!empty($slider->image) ? asset($slider->image) : asset('backend/assets/img/192.1280.png')}}"
-                                                    alt=""
-                                                    id="show_image" style="height: 200px"
-                                                    class="img-fluid mr-3 mb-4 rounded">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row mb-4 align-left mt-5 mr-2 pt-5">
-                                        <div class="col-xl-11 col-lg-9 col-sm-10">
-                                            <input type="submit" class="btn btn-dark" value="Update" placeholder="">
-                                        </div>
-                                        <div class="col-xl-1 col-lg-9 col-sm-10">
-                                            <a class="btn btn-danger" href="{{route('home.sliders')}}">Back</a>
-                                        </div>
-                                    </div>
-                            </form>
-                        </div>
+                        </form>
+
                     </div>
                 </div>
-
-
             </div>
-
         </div>
     </div>
+    <!--end row-->
     <script type="text/javascript">
         $(document).ready(function () {
             $('#image').change(function (e) {

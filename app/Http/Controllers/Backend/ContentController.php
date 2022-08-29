@@ -49,7 +49,7 @@ class ContentController extends Controller
         }
         $slider->save();
         $notification = array( 'message' => 'Slider Added Successfully', 'alert-type' => 'success' );
-        return redirect()->route('home.sliders')->with($notification);
+        return redirect()->back()->with($notification);
     }
 
     public function sliders_edit($id)
@@ -75,7 +75,7 @@ class ContentController extends Controller
                 'image' => $image_url
             ]);
             $notification = array( 'message' => 'Slider Updated Successfully', 'alert-type' => 'info' );
-            return redirect()->route('home.sliders')->with($notification);
+            return redirect()->back()->with($notification);
         }
         Slider::find($request->id)->update([
             'title' => $request->title,
@@ -165,7 +165,7 @@ class ContentController extends Controller
             'country' => $request->country,
         ]);
         $notification = array( 'message' => 'Africa Country Updated Successfully', 'alert-type' => 'success' );
-        return redirect()->route('home.global-precences')->with($notification);
+        return redirect()->back()->with($notification);
     }
 
     public function global_precences_africa_country_delete($id)
@@ -187,7 +187,7 @@ class ContentController extends Controller
             'country' => $request->country,
         ]);
         $notification = array( 'message' => 'Asia Country Updated Successfully', 'alert-type' => 'success' );
-        return redirect()->route('home.global-precences')->with($notification);
+        return redirect()->back()->with($notification);
     }
 
     public function global_precences_asia_country_delete($id)
@@ -234,7 +234,7 @@ class ContentController extends Controller
         $general_info_card->info_id = 1;
         $general_info_card->save();
         $notification = array( 'message' => 'Card Added Successfully', 'alert-type' => 'success' );
-        return redirect()->route('home.general-info')->with($notification);
+        return redirect()->back()->with($notification);
 
     }
 
@@ -417,7 +417,7 @@ class ContentController extends Controller
             $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
             Image::make($image)->resize(1280, 720)->save('uploads/about_page/about_header/' . $image_name);
             if (file_exists($about_header->image)) {
-                unlink($about_header->imge);
+                unlink($about_header->image);
             }
             $image_url = 'uploads/about_page/about_header/' . $image_name;
             $about_header->image = $image_url;
@@ -482,7 +482,7 @@ class ContentController extends Controller
         $item->item = $request->item;
         $item->update();
         $notification = array( 'message' => 'Quality Policy Item Updated Successfully', 'alert-type' => 'info' );
-        return redirect()->route('about.quality-policy')->with($notification);
+        return redirect()->back()->with($notification);
     }
 
     public function quality_policy_item_delete($id)

@@ -14,4 +14,8 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-/public/uploads/about_page/quality_policy/1742312198684395.png;
+/public/uploads/about_page/quality_policy/1742312198684395.png
+/public/*.jpg
+/public/*.png
+/public/*.jpeg
+/public/*.mp4
