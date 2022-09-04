@@ -218,7 +218,7 @@
                 <div class="col-lg-4">
                     <div class="subscribe-call-to-acton">
                         <h3>Can We Help?</h3>
-                        <h4>(+962) 6 5811 799</h4>
+                        <h4>(+962)-6-5811-799</h4>
                     </div>
                 </div><!-- Col end -->
 
