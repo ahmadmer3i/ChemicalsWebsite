@@ -94,7 +94,7 @@
                             </div>
 
                             <div class="col-md-6 mt-5 mt-md-0">
-                                <h3 class="column-title-small">You Should Know</h3>
+                                <h3 class="column-title-small">{{$category->questions_title}}</h3>
 
                                 <div class="accordion accordion-group accordion-classic" id="construction-accordion">
                                     @foreach($category->product_questions as $question)
