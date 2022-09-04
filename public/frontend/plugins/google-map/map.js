@@ -229,7 +229,7 @@ function initialize() {
         center: new google.maps.LatLng(31.963328365780686, 35.8440251890927),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         backgroundColor: "#000",
-        zoom: 6,
+        zoom: 15,
         panControl: !1,
         zoomControl: !0,
         mapTypeControl: !1,
