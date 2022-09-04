@@ -90,6 +90,9 @@
         </div>
     </div>
 </footer>--}}
+@php
+    $products = \App\Models\ProductCategory::all();
+@endphp
 <footer id="footer" class="footer bg-overlay">
     <div class="footer-main">
         <div class="container">
@@ -120,23 +123,19 @@
                 <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
                     <h3 class="widget-title">Working Hours</h3>
                     <div class="working-hours">
-                        We work 7 days a week, every day excluding major holidays. Contact us if you have an
+                        We work 6 days a week, every day excluding major holidays. Contact us if you have an
                         emergency, with our
                         Hotline and Contact form.
-                        <br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
-                        <br> Saturday: <span class="text-right">12:00 - 15:00</span>
-                        <br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span>
+                        <br><br> Saturday - Thirsday: <span class="text-right">9:00 - 21:00 </span>
                     </div>
                 </div><!-- Col end -->
 
                 <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
-                    <h3 class="widget-title">Services</h3>
+                    <h3 class="widget-title">Products</h3>
                     <ul class="list-arrow">
-                        <li><a href="service-single.html">Pre-Construction</a></li>
-                        <li><a href="service-single.html">General Contracting</a></li>
-                        <li><a href="service-single.html">Construction Management</a></li>
-                        <li><a href="service-single.html">Design and Build</a></li>
-                        <li><a href="service-single.html">Self-Perform Construction</a></li>
+                        @foreach($products as $product)
+                            <li><a href="{{route('product-details', $product->id)}}">{{$product->name}}</a></li>
+                        @endforeach
                     </ul>
                 </div><!-- Col end -->
             </div><!-- Row end -->
@@ -150,18 +149,18 @@
                     <div class="copyright-info">
               <span>Copyright &copy; <script>
                   document.write(new Date().getFullYear())
-                </script>, Designed &amp; Developed by <a href="https://themefisher.com">Themefisher</a></span>
+                </script>, Designed &amp; Developed by <a href="https://sitesandapp.com">Sites & App</a></span>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="footer-menu text-center text-md-right">
                         <ul class="list-unstyled">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="team.html">Our people</a></li>
-                            <li><a href="faq.html">Faq</a></li>
-                            <li><a href="news-left-sidebar.html">Blog</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="{{route('about')}}">About</a></li>
+                            <li><a href="{{route('products')}}">Our Products</a></li>
+                            <li><a href="{{route('contacts')}}">Contact Us</a></li>
+                            <li><a href="{{route('news')}}">News</a></li>
+                            <li><a href="{{route('home')}}">Home</a></li>
                         </ul>
                     </div>
                 </div>

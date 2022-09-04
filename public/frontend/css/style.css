@@ -2527,7 +2527,7 @@ img.testimonial-thumb {
 /*- Footer common */
 .footer {
     background-color: #0d0d0d;
-    color: #999;
+    color: #99dde4;
 }
 
 .footer-main {
@@ -2574,7 +2574,7 @@ img.testimonial-thumb {
 .footer-social ul li a i {
     display: block;
     font-size: 16px;
-    color: #999;
+    color: #66cdd6;
     transition: 400ms;
     padding: 10px 13px;
 }
@@ -2595,7 +2595,7 @@ img.testimonial-thumb {
 
 .footer-widget ul.list-arrow li a,
 .footer-widget ul.list-arrow li:before {
-    color: #747474;
+    color: #66cdd6;
 }
 
 .footer-widget ul.list-arrow li:hover a,
@@ -2614,7 +2614,7 @@ img.testimonial-thumb {
 /*-- Copyright --*/
 .copyright {
     background: #00444b;
-    color: #111;
+    color: #fff;
     padding: 25px 0;
     position: relative;
     z-index: 1;
@@ -2630,7 +2630,7 @@ img.testimonial-thumb {
 
 .footer-menu ul.nav li a {
     background: none;
-    color: #111;
+    color: #fff;
     padding: 0;
 }
 
