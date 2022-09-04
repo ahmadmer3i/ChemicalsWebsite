@@ -229,7 +229,7 @@ function initialize() {
         center: nottingham,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         backgroundColor: "#000",
-        zoom: 30,
+        zoom: 100,
         panControl: !1,
         zoomControl: !0,
         mapTypeControl: !1,
