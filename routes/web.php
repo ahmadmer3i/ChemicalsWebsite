@@ -86,6 +86,7 @@ Route::middleware('auth')->group(function () {
         Route::post('admin/product/product_category/subcategory/store', 'product_subcategory_store')->name('product.product-category.subcategory.store');
         Route::get('admin/product/product_category/subcategory/edit/{id}', 'product_subcategory_edit')->name('product.product-category.subcategory.edit');
         Route::post('admin/product/product_category/subcategory/item/store', 'product_subcategory_item_store')->name('product.product-category.subcategory.item.store');
+        Route::post('admin/product/product_category/subcategory/update', 'product_subcategory_update')->name('product.product-category.subcategory.update');
         Route::get('admin/news/all-news', 'news')->name('news.all-news');
         Route::post('admin/news/store', 'news_store')->name('news.store');
         Route::get('admin/news/delete/{id}', 'news_delete')->name('news.delete');

@@ -685,6 +685,27 @@ class ContentController extends Controller
         return view('backend.content.products.products_subcategory_edit', compact('subcategory'));
     }
 
+    public function product_subcategory_update(Request $request)
+    {
+        $subcategory = ProductSubCategory::find($request->id);
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(512, 512)->save('uploads/product/' . $image_name);
+            $image_url = 'uploads/product/' . $image_name;
+            if (file_exists($subcategory->image)) {
+                unlink($subcategory->image);
+            }
+            $subcategory->image = $image_url;
+        }
+        $subcategory->category_id = $request->id;
+        $subcategory->name = $request->name;
+        $subcategory->description = $request->description;
+        $subcategory->update();
+        $notification = array( 'message' => 'Product Subcategory Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->back()->with($notification);
+    }
+
     public function product_subcategory_item_store(Request $request)
     {
         $list_item = new ProductSubCategoryList();

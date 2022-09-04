@@ -183,7 +183,7 @@
                             </div>
                         </div>
 
-                        <form action="{{route('product.product-category.update')}}"
+                        <form action="{{route('product.product-category.subcategory.update')}}"
                               method="post"
                               enctype="multipart/form-data"
                         > @csrf
@@ -200,6 +200,17 @@
                                                value="{{ !empty($subcategory->name) ? $subcategory->name : ''}}">
                                     </div>
                                 </div>
+                                <div class="row mb-3">
+
+                                    <label for="section_title" class="col-sm-3 col-form-label">Subcategory
+                                        Description</label>
+                                    <div class="col-sm-9">
+                                        <textarea type="text" class="form-control" id="name"
+                                                  name="description"
+                                                  placeholder="Enter Subcategory Description"
+                                        >{{$subcategory->description}}</textarea>
+                                    </div>
+                                </div>
 
                                 <div class="row mb-3">
                                     <label for="inputConfirmPassword2" class="col-sm-3 col-form-label">Subcategory
@@ -208,6 +219,7 @@
                                         <input type="file" class="form-control" id="image" name="image">
                                     </div>
                                 </div>
+
                                 <div class="row mb-3">
                                     <label for="inputAddress4" class="col-sm-3 col-form-label"></label>
                                     <div class="col-sm-9">
@@ -217,12 +229,14 @@
                                             class="img-thumbnail mr-3 mb-4 rounded"/>
                                     </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <button type="submit" class="btn btn-dark px-5">Update</button>
                                     </div>
 
                                 </div>
+
                             </div>
                         </form>
 
@@ -366,6 +380,16 @@
                 }
                 reader.readAsDataURL(e.target.files['0']);
             });
+        });
+    </script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+            toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+            toolbar_mode: 'floating',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
         });
     </script>
 

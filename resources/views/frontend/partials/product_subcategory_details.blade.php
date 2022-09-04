@@ -74,17 +74,7 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget
-                                    risus
-                                    sollicitudin pellentesque et non erat. Maecenas nibh dolor, malesuada et bibendum a,
-                                    sagittis accumsan
-                                    ipsum. Pellentesque ultrices ultrices sapien.</p>
-                                <p>Nam scelerisque tristique dolor vitae tincidunt. Aenean quis massa uada mi elementum
-                                    elementum. , nec
-                                    tincidunt nunc posuere ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Nulla commodo
-                                    iaculis ligula, ac dapibus quam ornare ut. Praesent ac hendrerit sem, et tempus
-                                    sem</p>
+                                {!! $subcategory->description !!}
                             </div><!-- col end -->
                         </div><!-- 1st row end-->
 
@@ -103,24 +93,33 @@
                         <div class="gap-40"></div>
 
                         <div class="row">
-                            <div class="col-md-6">
-                                <h3 class="column-title-small">What Makes Us Different</h3>
+                            <div class="col-md-12">
+                                @if($subcategory->product_subcategory_list->count() > 0)
+                                    <h3 class="column-title-small">Product Categories</h3>
+                                @endif
 
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
+                                {{--<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
                                     ad squid. 3 wolf
                                     moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
                                     laborum eiusmod.
                                     Consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin
                                     pellentesque et non erat
-                                    tincidunt nunc posuere.</p>
+                                    tincidunt nunc posuere.</p>--}}
                                 <ul class="list-arrow">
-                                    @foreach($subcategory->product_subcategory_list as $item)
-                                        <li>{{$item->item}}</li>
-                                    @endforeach
+                                    <div
+                                        class="row">
+                                        @foreach($subcategory->product_subcategory_list as $item)
+                                            <div class="col-6">
+                                                <li>{{$item->item}}</li>
+                                            </div>
+
+                                        @endforeach
+                                    </div>
                                 </ul>
+
                             </div>
 
-                            <div class="col-md-6 mt-5 mt-md-0">
+                            {{--<div class="col-md-6 mt-5 mt-md-0">
                                 <h3 class="column-title-small">You Should Know</h3>
 
                                 <div class="accordion accordion-group accordion-classic" id="construction-accordion">
@@ -199,7 +198,7 @@
                                     </div>
                                 </div>
                                 <!--/ Accordion end -->
-                            </div>
+                            </div>--}}
                         </div>
                         <!--2nd row end -->
 
