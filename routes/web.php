@@ -23,6 +23,9 @@ Route::get('contacts', [ HomeController::class, 'contact' ])->name('contacts');
 Route::get('products', [ HomeController::class, 'products' ])->name('products');
 Route::get('about', [ HomeController::class, 'about' ])->name('about');
 Route::get('news', [ HomeController::class, 'news' ])->name('news');
+Route::get('product-details/{id}', [ HomeController::class, 'product_details' ])->name('product-details');
+Route::get('product-subcategory-details/{id}', [ HomeController::class, 'product_subcategory_details' ])->name('product-subcategory-details');
+Route::get('news/news-details/{id}', [ HomeController::class, 'news_details' ])->name('news.news-details');
 Route::middleware('auth')->group(function () {
     Route::controller(ContentController::class)->group(function () {
         Route::get('admin/home/sliders', 'sliders')->name('home.sliders');
@@ -75,6 +78,22 @@ Route::middleware('auth')->group(function () {
         Route::get('admin/about/about-reliable/item/edit/{id}', 'about_reliable_item_edit')->name('about.about-reliable.item.edit');
         Route::post('admin/about/about-reliable/item/update', 'about_reliable_item_update')->name('about.about-reliable.item.update');
         Route::get('admin/about/about-reliable/item/delete/{id}', 'about_reliable_item_delete')->name('about.about-reliable.item.delete');
+        Route::get('admin/product/product-title', 'products')->name('product.product-title');
+        Route::post('admin/product/product-title/update', 'products_update')->name('product.product-title.update');
+        Route::post('admin/product/product_category/store', 'product_category_store')->name('product.product-category.store');
+        Route::get('admin/product/product_category/edit/{id}', 'product_category_edit')->name('product.product-category.edit');
+        Route::post('admin/product/product_category/update', 'product_category_update')->name('product.product-category.update');
+        Route::post('admin/product/product_category/subcategory/store', 'product_subcategory_store')->name('product.product-category.subcategory.store');
+        Route::get('admin/product/product_category/subcategory/edit/{id}', 'product_subcategory_edit')->name('product.product-category.subcategory.edit');
+        Route::post('admin/product/product_category/subcategory/item/store', 'product_subcategory_item_store')->name('product.product-category.subcategory.item.store');
+        Route::get('admin/news/all-news', 'news')->name('news.all-news');
+        Route::post('admin/news/store', 'news_store')->name('news.store');
+        Route::get('admin/news/delete/{id}', 'news_delete')->name('news.delete');
+        Route::post('admin/news/news-images/store', 'news_image_store')->name('news.news-images.store');
+        Route::get('admin/news/news-edit/{id}', 'news_edit')->name('news.news-edit');
+        Route::post('admin/news/update/', 'news_update')->name('news.update');
+        Route::post('admin/news/news-image/update', 'news_image_update')->name('news.news-image.update');
+        Route::get('admin/news/news-image/delete/{id}', 'news_image_delete')->name('news.news-image.delete');
     });
     Route::controller(AdminController::class)->group(function () {
         Route::get('admin/logout', 'destroy')->name('admin.logout');

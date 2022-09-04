@@ -152,6 +152,35 @@
                                                placeholder="Enter Icon Tag" name="icon"
                                                value=""/>
                                     </div>
+                                    <div class="d-flex flex-column mb-8 fv-row">
+                                        <!--begin::Label-->
+                                        <label
+                                            class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                            <span class="required">Icon</span>
+                                            <i class="fas fa-exclamation-circle ms-2 fs-7"
+                                               data-bs-toggle="tooltip"
+                                               title=""></i>
+                                        </label>
+                                        <!--end::Label-->
+                                        <input type="file"
+                                               class="form-control"
+                                               placeholder="Enter Icon Tag" name="image"
+                                               id="image4"
+                                               value=""/>
+                                    </div>
+                                    <div class="form-group row mb-4 align-left pb-5">
+                                        <label for="description"
+                                               class="col-xl-2 col-sm-3 col-sm-2 col-form-label"></label>
+                                        <div class="col-xl-10 col-lg-9 col-sm-10">
+                                            <div class="custom-file mb-4">
+                                                <img
+                                                    src="{{asset('backend/assets/media/holders/263x300.png')}}"
+                                                    alt=""
+                                                    id="show_image4" style="height: 200px"
+                                                    class="img-fluid mr-3 mb-4 rounded">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!--end::Input group-->
                                     <!--begin::Input group-->
                                     <!--end::Input group-->
@@ -176,7 +205,19 @@
                                     <!--end::Actions-->
                                 </form>
                                 <!--end:Form-->
+                                <script type="text/javascript">
+                                    $(document).ready(function () {
+                                        $('#image4').change(function (e) {
+                                            const reader = new FileReader();
+                                            reader.onload = function (e) {
+                                                $('#show_image4').attr('src', e.target.result);
+                                            }
+                                            reader.readAsDataURL(e.target.files['0']);
+                                        });
+                                    });
+                                </script>
                             </div>
+
                             <!--end::Modal body-->
                         </div>
                         <!--end::Modal content-->
@@ -247,6 +288,7 @@
                                         <th>Title</th>
                                         <th>Description</th>
                                         <th>Icon</th>
+                                        <th>Image</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -258,6 +300,9 @@
                                             <td>{{$item->title}}</td>
                                             <td>{!! $item->description !!}</td>
                                             <td>{{$item->icon}}</td>
+                                            <td><img class="img-thumbnail img-fluid" width="300"
+                                                     src="{{!empty($item->image) ? asset($item->image) : asset('backend/assets/media/holders/263x300.png')}}"
+                                                     alt=""></td>
                                             <td style="width: 80px">
                                                 <a data-bs-toggle="modal"
                                                    data-bs-target="#kt_modal_new_target-{{$item->id}}"
@@ -371,6 +416,36 @@
                                                                        class="form-control form-control-solid"
                                                                        placeholder="Enter Icon Tag" name="icon"
                                                                        value="{{!empty($item->icon) ? $item->icon : ''}}"/>
+                                                            </div>
+                                                            <div class="d-flex flex-column mb-8 fv-row">
+                                                                <!--begin::Label-->
+                                                                <label
+                                                                    class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                                                    <span class="required">Icon</span>
+                                                                    <i class="fas fa-exclamation-circle ms-2 fs-7"
+                                                                       data-bs-toggle="tooltip"
+                                                                       title=""></i>
+                                                                </label>
+                                                                <!--end::Label-->
+                                                                <input type="file"
+                                                                       class="form-control"
+                                                                       placeholder="Upload Image" name="image"
+                                                                       id="image{{$item->id}}"
+                                                                       value=""/>
+                                                            </div>
+                                                            <div class="form-group row mb-4 align-left pb-5">
+                                                                <label for="description"
+                                                                       class="col-xl-2 col-sm-3 col-sm-2 col-form-label"></label>
+                                                                <div class="col-xl-10 col-lg-9 col-sm-10">
+                                                                    <div class="custom-file mb-4">
+                                                                        <img
+                                                                            src="{{!empty($item->image) ? asset($item->image) : asset('backend/assets/media/holders/263x300.png')}}"
+                                                                            alt=""
+                                                                            id="show_image{{$item->id}}"
+                                                                            style="height: 200px"
+                                                                            class="img-fluid mr-3 mb-4 rounded">
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <!--end::Input group-->
                                                             <!--begin::Input group-->

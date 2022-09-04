@@ -13,6 +13,12 @@ use App\Models\GeneralInfoCard;
 use App\Models\GlobalPrecence;
 use App\Models\HomeContact;
 use App\Models\HomeVideo;
+use App\Models\News;
+use App\Models\NewsImage;
+use App\Models\Product;
+use App\Models\ProductCategory;
+use App\Models\ProductSubCategory;
+use App\Models\ProductSubCategoryList;
 use App\Models\QualityPolicy;
 use App\Models\QualityPolicyItem;
 use App\Models\Slider;
@@ -20,6 +26,7 @@ use App\Models\WhyChoose;
 use App\Models\WhyChooseList;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use function PHPUnit\Framework\assertEmpty;
 use function PHPUnit\Framework\fileExists;
 
 class ContentController extends Controller
@@ -517,6 +524,13 @@ class ContentController extends Controller
     public function about_reliable_item_store(Request $request)
     {
         $item = new AboutReliableItem();
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(263, 300)->save('uploads/about_page/' . $image_name);
+            $image_url = 'uploads/about_page/' . $image_name;
+            $item->image = $image_url;
+        }
         $item->reliable_id = 1;
         $item->title = $request->title;
         $item->description = $request->description;
@@ -534,7 +548,18 @@ class ContentController extends Controller
 
     public function about_reliable_item_update(Request $request)
     {
+
         $item = AboutReliableItem::find($request->id);
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(263, 300)->save('uploads/about_page/' . $image_name);
+            $image_url = 'uploads/about_page/' . $image_name;
+            if (file_exists($item->image)) {
+                unlink($item->image);
+            }
+            $item->image = $image_url;
+        }
         $item->title = $request->title;
         $item->description = $request->description;
         $item->icon = $request->icon;
@@ -548,6 +573,226 @@ class ContentController extends Controller
         $item = AboutReliableItem::find($id);
         $item->delete();
         $notification = array( 'message' => 'About Reliable Item Deleted Successfully', 'alert-type' => 'warning' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function products()
+    {
+        $product = Product::find(1);
+        return view('backend.content.products.products', compact('product'));
+    }
+
+    public function products_update(Request $request)
+    {
+        $product = Product::find(1);
+        if ($request->file('page_image')) {
+            $image = $request->file('page_image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(1000, 667)->save('uploads/product/' . $image_name);
+            $image_url = 'uploads/product/' . $image_name;
+            if (file_exists($product->page_image)) {
+                unlink($product->page_image);
+            }
+            $product->page_image = $image_url;
+        }
+        if ($request->file('title_image')) {
+            $title_image = $request->file('title_image');
+            $image_name = hexdec(uniqid()) . '.' . $title_image->getClientOriginalExtension();
+            Image::make($title_image)->resize(1000, 667)->save('uploads/product/' . $image_name);
+            $title_image_url = 'uploads/product/' . $image_name;
+            if (file_exists($product->title_image)) {
+                unlink($product->title_image);
+            }
+            $product->title_image = $title_image_url;
+        }
+        $product->title = $request->title;
+        $product->section_title = $request->section_title;
+        $product->page_title = $request->page_title;
+        $product->subtitle = $request->subtitle;
+        $product->update();
+        $notification = array( 'message' => 'Product Page Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function product_category_store(Request $request)
+    {
+        $category = new ProductCategory();
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(1280, 800)->save('uploads/product/' . $image_name);
+            $image_url = 'uploads/product/' . $image_name;
+            $category->image = $image_url;
+        }
+        $category->name = $request->name;
+        $category->product_id = 1;
+        $category->tag = $request->tag;
+        $category->save();
+        $notification = array( 'message' => 'Product Category Added Successfully', 'alert-type' => 'success' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function product_category_edit($id)
+    {
+        $category = ProductCategory::find($id);
+        return view('backend.content.products.products_category_edit', compact('category'));
+    }
+
+    public function product_category_update(Request $request)
+    {
+        $category = ProductCategory::find($request->id);
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(512, 512)->save('uploads/product/' . $image_name);
+            if (file_exists($category->image)) {
+                unlink($category->image);
+            }
+            $image_url = 'uploads/product/' . $image_name;
+            $category->image = $image_url;
+        }
+        $category->tag = $request->tag;
+        $category->name = $request->name;
+        $category->update();
+        $notification = array( 'message' => 'Product Category Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->route('product.product-title')->with($notification);
+    }
+
+    public function product_subcategory_store(Request $request)
+    {
+        $subcategory = new ProductSubCategory();
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(512, 512)->save('uploads/product/' . $image_name);
+            $image_url = 'uploads/product/' . $image_name;
+            $subcategory->image = $image_url;
+        }
+        $subcategory->category_id = $request->id;
+        $subcategory->name = $request->name;
+        $subcategory->save();
+        $notification = array( 'message' => 'Product Subcategory Added Successfully', 'alert-type' => 'success' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function product_subcategory_edit($id)
+    {
+        $subcategory = ProductSubCategory::find($id);
+        return view('backend.content.products.products_subcategory_edit', compact('subcategory'));
+    }
+
+    public function product_subcategory_item_store(Request $request)
+    {
+        $list_item = new ProductSubCategoryList();
+        $list_item->item = $request->item;
+        $list_item->subcategory_id = $request->id;
+        $list_item->save();
+        $notification = array( 'message' => 'Subcategory Item Added Successfully', 'alert-type' => 'success' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function news()
+    {
+        $news = News::all();
+        return view('backend.content.news.news', compact('news'));
+    }
+
+    public function news_store(Request $request)
+    {
+        $news = new News();
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(750, 450)->save('uploads/news/' . $image_name);
+            $image_url = 'uploads/news/' . $image_name;
+            $news->image = $image_url;
+        }
+        $news->title = $request->title;
+        $news->description = $request->description;
+        $news->save();
+        $notification = array( 'message' => 'News Added Successfully', 'alert-type' => 'success' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function news_delete($id)
+    {
+        $news = News::find($id);
+        if (file_exists($news->image)) {
+            unlink($news->image);
+        }
+        $news->delete();
+        $notification = array( 'message' => 'News Deleted Successfully', 'alert-type' => 'warning' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function news_image_store(Request $request)
+    {
+        $news_image = new NewsImage();
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(750, 450)->save('uploads/news/' . $image_name);
+            $image_url = 'uploads/news/' . $image_name;
+            $news_image->image = $image_url;
+            $news_image->news_id = $request->id;
+            $news_image->save();
+            $notification = array( 'message' => 'Image Added Successfully', 'alert-type' => 'success' );
+            return redirect()->back()->with($notification);
+        }
+    }
+
+    public function news_edit($id)
+    {
+        $news = News::find($id);
+        return view('backend.content.news.edit_news', compact('news'));
+    }
+
+    public function news_update(Request $request)
+    {
+        $news = News::find($request->id);
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(750, 450)->save('uploads/news/' . $image_name);
+            $image_url = 'uploads/news/' . $image_name;
+            if (file_exists($news->image)) {
+                unlink($news->image);
+            }
+            $news->image = $image_url;
+        }
+        $news->title = $request->title;
+        $news->description = $request->description;
+        $news->update();
+        $notification = array( 'message' => 'News Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->route('news.all-news')->with($notification);
+    }
+
+    public function news_image_update(Request $request)
+    {
+        $news_image = NewsImage::find($request->id);
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(750, 450)->save('uploads/news/' . $image_name);
+            if (file_exists($news_image->image)) {
+                unlink($news_image->image);
+            }
+            $image_url = 'uploads/news/' . $image_name;
+            $news_image->image = $image_url;
+            $news_image->update();
+            $notification = array( 'message' => 'News Image Updated Successfully', 'alert-type' => 'info' );
+            return redirect()->back()->with($notification);
+        }
+    }
+
+    public function news_image_delete($id)
+    {
+        $news_image = NewsImage::find($id);
+        if (file_exists($news_image->image)) {
+            unlink($news_image->image);
+        }
+        $news_image->delete();
+        $notification = array( 'message' => 'News Image Deleted Successfully', 'alert-type' => 'warning' );
         return redirect()->back()->with($notification);
     }
 }

@@ -1,5 +1,8 @@
 @extends('frontend.master')
 @section('content')
+    @php
+
+        @endphp
     <section class="hero bg-cover bg-position py-4"
              style="background: url({{ asset('frontend/img/sections/section1bk.jpeg') }})">
         <div class="container py-5 index-forward text-white">
@@ -249,7 +252,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 pb-5">

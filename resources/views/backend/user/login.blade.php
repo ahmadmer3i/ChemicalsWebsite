@@ -23,10 +23,6 @@ License: For each use you must have a valid license purchased only from above li
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:title"
-          content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme"/>
-    <meta property="og:url" content="https://keenthemes.com/metronic"/>
-    <meta property="og:site_name" content="Keenthemes | Metronic"/>
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8"/>
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}"/>
     <!--begin::Fonts-->
@@ -51,7 +47,7 @@ License: For each use you must have a valid license purchased only from above li
         <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
             <!--begin::Logo-->
             <a href="#" class="mb-12">
-                <img alt="Logo" src="{{asset('frontend/img/logo/logo.png')}}" class="h-70px"/>
+                <img alt="Logo" src="{{asset('frontend/images/logo/logo.png')}}" class="h-70px"/>
             </a>
             <!--end::Logo-->
             <!--begin::Wrapper-->
