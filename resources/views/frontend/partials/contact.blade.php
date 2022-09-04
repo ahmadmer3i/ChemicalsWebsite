@@ -75,7 +75,7 @@
 
             <div class="google-map">
                 <div id="map" class="map" data-latitude="31.963328365780686" data-longitude="35.8440251890927"
-                     data-marker="images/marker.png" data-marker-name="Al Behar Chemicals"></div>
+                     data-marker="{{asset('frontend/images/marker.png')}}" data-marker-name="Al Behar Chemicals"></div>
             </div>
 
             <div class="gap-40"></div>
