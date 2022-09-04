@@ -6,7 +6,7 @@ function initialize() {
     var longitude = $('#map').attr('data-longitude');
     var mapMarker = $('#map').attr('data-marker');
     var mapMarkerName = $('#map').attr('data-marker-name');
-    var nottingham = new google.maps.LatLng(latitude, longitude);
+    var behar = new google.maps.LatLng(latitude, longitude);
     var style = [{
         "featureType": "administrative.locality",
         "elementType": "all",
@@ -226,7 +226,7 @@ function initialize() {
         }
     ];
     var mapOptions = {
-        center: new google.maps.LatLng(31.963328365780686, 35.8440251890927),
+        center: behar,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         backgroundColor: "#000",
         zoom: 15,
@@ -249,7 +249,7 @@ function initialize() {
     var marker_image = mapMarker;
     var pinIcon = new google.maps.MarkerImage(marker_image, null, null, null, new google.maps.Size(46, 40));
     marker = new google.maps.Marker({
-        position: new google.maps.LatLng(31.963328365780686, 35.8440251890927),
+        position: behar,
         map: map,
         icon: pinIcon,
         title: mapMarkerName
