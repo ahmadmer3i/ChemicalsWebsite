@@ -280,7 +280,7 @@
                                              <span class="menu-bullet">
                                                  <span class="bullet bullet-dot"></span>
                                              </span>
-                                <span class="menu-title">Product Header</span>
+                                <span class="menu-title">Product Details</span>
                             </a>
                         </div>
                         {{--<div class="menu-item">

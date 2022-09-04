@@ -639,6 +639,17 @@ class ContentController extends Controller
         return view('backend.content.products.products_category_edit', compact('category'));
     }
 
+    public function product_category_delete($id)
+    {
+        $category = ProductCategory::find($id);
+        if (file_exists($category->image)) {
+            unlink($category->image);
+        }
+        $category->delete();
+        $notification = array( 'message' => 'Product Category Deleted Successfully', 'alert-type' => 'warning' );
+        return redirect()->back()->with($notification);
+    }
+
     public function product_category_update(Request $request)
     {
         $category = ProductCategory::find($request->id);
@@ -706,6 +717,17 @@ class ContentController extends Controller
         return redirect()->back()->with($notification);
     }
 
+    public function product_subcategory_delete($id)
+    {
+        $subcategory = ProductSubCategory::find($id);
+        if (file_exists($subcategory->image)) {
+            unlink($subcategory->image);
+        }
+        $subcategory->delete();
+        $notification = array( 'message' => 'Product Subcategory Deleted Successfully', 'alert-type' => 'warning' );
+        return redirect()->back()->with($notification);
+    }
+
     public function product_subcategory_item_store(Request $request)
     {
         $list_item = new ProductSubCategoryList();
@@ -740,6 +762,23 @@ class ContentController extends Controller
         $question->product_id = $request->id;
         $question->save();
         $notification = array( 'message' => 'Question Added Successfully', 'alert-type' => 'success' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function product_category_update_question(Request $request)
+    {
+        $question = ProductQuestion::find($request->id);
+        $question->question = $request->question;
+        $question->answer = $request->answer;
+        $question->update();
+        $notification = array( 'message' => 'Question Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function product_category_delete_question($id)
+    {
+        ProductQuestion::find($id)->delete();
+        $notification = array( 'message' => 'Question Deleted Successfully', 'alert-type' => 'warning' );
         return redirect()->back()->with($notification);
     }
 

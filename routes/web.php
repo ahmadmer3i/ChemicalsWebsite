@@ -83,8 +83,10 @@ Route::middleware('auth')->group(function () {
         Route::post('admin/product/product_category/store', 'product_category_store')->name('product.product-category.store');
         Route::get('admin/product/product_category/edit/{id}', 'product_category_edit')->name('product.product-category.edit');
         Route::post('admin/product/product_category/update', 'product_category_update')->name('product.product-category.update');
+        Route::get('admin/product/product_category/delete/{id}', 'product_category_delete')->name('product.product-category.delete');
         Route::post('admin/product/product_category/subcategory/store', 'product_subcategory_store')->name('product.product-category.subcategory.store');
         Route::get('admin/product/product_category/subcategory/edit/{id}', 'product_subcategory_edit')->name('product.product-category.subcategory.edit');
+        Route::get('admin/product/product_category/subcategory/delete/{id}', 'product_subcategory_delete')->name('product.product-category.subcategory.delete');
         Route::post('admin/product/product_category/subcategory/item/store', 'product_subcategory_item_store')->name('product.product-category.subcategory.item.store');
         Route::post('admin/product/product_category/subcategory/update', 'product_subcategory_update')->name('product.product-category.subcategory.update');
         Route::post('admin/product/product_category/subcategory/item/update', 'product_subcategory_item_update')->name('product.product-category.subcategory.item.update');
@@ -97,7 +99,9 @@ Route::middleware('auth')->group(function () {
         Route::post('admin/news/update/', 'news_update')->name('news.update');
         Route::post('admin/news/news-image/update', 'news_image_update')->name('news.news-image.update');
         Route::get('admin/news/news-image/delete/{id}', 'news_image_delete')->name('news.news-image.delete');
-        Route::post('admin/products/product_category/question/store', 'product_category_store_question')->name('products.product-category.question.store');
+        Route::post('admin/product/product_category/question/store', 'product_category_store_question')->name('products.product-category.question.store');
+        Route::post('admin/product/product_category/question/update', 'product_category_update_question')->name('product.product-category.question.update');
+        Route::get('admin/product/product_category/question/delete/{id}', 'product_category_delete_question')->name('product.product-category.question.delete');
     });
     Route::controller(AdminController::class)->group(function () {
         Route::get('admin/logout', 'destroy')->name('admin.logout');

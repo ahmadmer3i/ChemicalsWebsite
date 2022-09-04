@@ -433,11 +433,13 @@
                                     <td>{!! $question->answer !!}</td>
                                     <td style="width: 80px">
                                         <a
-                                            href="{{route('product.product-category.subcategory.edit',$question->id)}}"
+                                            href=""
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#kt_modal_new_target-{{$question->id}}"
                                             class="btn btn-icon btn-info btn-sm">
                                             <i class="fas fa-pencil-alt fs-4"></i>
                                         </a>
-                                        <a href="{{route('home.global-precences.county.asia.delete', $question->id)}}"
+                                        <a href="{{route('product.product-category.question.delete', $question->id)}}"
                                            class="btn btn-icon btn-danger btn-sm" id="delete">
                                             <i class="fas fa-trash fs-4"></i>
                                         </a>
@@ -457,14 +459,16 @@
                                                      data-bs-dismiss="modal">
                                                     <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
                                                     <span class="svg-icon svg-icon-1">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none">
-									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1"
-                                          transform="rotate(-45 6 17.3137)" fill="black"/>
-									<rect x="7.41422" y="6" width="16" height="2" rx="1"
-                                          transform="rotate(45 7.41422 6)" fill="black"/>
-								</svg>
-							</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                             viewBox="0 0 24 24"
+                                                             fill="none">
+                                                            <rect opacity="0.5" x="6" y="17.3137" width="16" height="2"
+                                                                  rx="1"
+                                                                  transform="rotate(-45 6 17.3137)" fill="black"/>
+                                                            <rect x="7.41422" y="6" width="16" height="2" rx="1"
+                                                                  transform="rotate(45 7.41422 6)" fill="black"/>
+                                                        </svg>
+                                                    </span>
                                                     <!--end::Svg Icon-->
                                                 </div>
                                                 <!--end::Close-->
@@ -476,7 +480,7 @@
                                                 <form
                                                     id="kt_modal_new_target_form"
                                                     class="form"
-                                                    action="{{route('home.global-precences.country.asia.update')}}"
+                                                    action="{{route('product.product-category.question.update')}}"
                                                     method="post"
                                                 >
                                                     @csrf
@@ -484,7 +488,7 @@
                                                     <input type="hidden" name="id" value="{{$question->id}}">
                                                     <div class="mb-13 text-center">
                                                         <!--begin::Title-->
-                                                        <h1 class="mb-3">Country Update</h1>
+                                                        <h1 class="mb-3">Question Update</h1>
                                                         <!--end::Title-->
                                                         <!--begin::Description-->
                                                         <div class="text-muted fw-bold fs-5">
@@ -496,15 +500,28 @@
                                                     <div class="d-flex flex-column mb-8 fv-row">
                                                         <!--begin::Label-->
                                                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                                            <span class="required">Country Name</span>
+                                                            <span class="required">Question</span>
                                                             <i class="fas fa-exclamation-circle ms-2 fs-7"
                                                                data-bs-toggle="tooltip"
-                                                               title="Please update country name, the old one is: {{$question->country}}"></i>
+                                                               title=""></i>
                                                         </label>
                                                         <!--end::Label-->
                                                         <input type="text" class="form-control form-control-solid"
-                                                               placeholder="Enter Country name" name="country"
-                                                               value="{{$question->country}}"/>
+                                                               placeholder="Enter Country name" name="question"
+                                                               value="{{$question->question}}"/>
+                                                    </div>
+                                                    <div class="d-flex flex-column mb-8 fv-row">
+                                                        <!--begin::Label-->
+                                                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                                            <span class="required">Answer</span>
+                                                            <i class="fas fa-exclamation-circle ms-2 fs-7"
+                                                               data-bs-toggle="tooltip"
+                                                               title=""></i>
+                                                        </label>
+                                                        <!--end::Label-->
+                                                        <textarea type="text" class="form-control form-control-solid"
+                                                                  placeholder="Enter Country name" name="answer"
+                                                        >{{$question->answer}}</textarea>
                                                     </div>
                                                     <!--end::Input group-->
                                                     <!--begin::Input group-->
@@ -528,6 +545,16 @@
                                                     </div>
                                                     <!--end::Actions-->
                                                 </form>
+                                                <script>
+                                                    tinymce.init({
+                                                        selector: 'textarea',
+                                                        plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+                                                        toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+                                                        toolbar_mode: 'floating',
+                                                        tinycomments_mode: 'embedded',
+                                                        tinycomments_author: 'Author name',
+                                                    });
+                                                </script>
                                                 <!--end:Form-->
                                             </div>
                                             <!--end::Modal body-->
@@ -554,16 +581,16 @@
                                 <tr>
                                     <td>{{$i}}</td>
                                     <td>{{$subcategory->name}}</td>
-                                    <td style="width: 200px"><img
+                                    <td style="width: 180px"><img
                                             src="{{!empty($subcategory->image) ? asset($subcategory->image) : asset('backend/assets/media/holders/512x512.png')}}"
                                             alt="" width="200" class="img-fluid img-thumbnail"></td>
-                                    <td style="width: 80px">
+                                    <td style="width: 120px">
                                         <a
                                             href="{{route('product.product-category.subcategory.edit',$subcategory->id)}}"
                                             class="btn btn-icon btn-info btn-sm">
                                             <i class="fas fa-pencil-alt fs-4"></i>
                                         </a>
-                                        <a href="{{route('home.global-precences.county.asia.delete', $subcategory->id)}}"
+                                        <a href="{{route('product.product-category.subcategory.delete', $subcategory->id)}}"
                                            class="btn btn-icon btn-danger btn-sm" id="delete">
                                             <i class="fas fa-trash fs-4"></i>
                                         </a>
@@ -654,10 +681,12 @@
                                                     </div>
                                                     <!--end::Actions-->
                                                 </form>
+
                                                 <!--end:Form-->
                                             </div>
                                             <!--end::Modal body-->
                                         </div>
+
                                         <!--end::Modal content-->
                                     </div>
                                     <!--end::Modal dialog-->

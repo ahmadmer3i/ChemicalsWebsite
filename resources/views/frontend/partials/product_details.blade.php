@@ -103,14 +103,17 @@
                                                 <h2 class="mb-0">
                                                     <button class="btn btn-block text-left" type="button"
                                                             data-toggle="collapse"
-                                                            data-target="#collapseOne" aria-expanded="true"
-                                                            aria-controls="collapseOne">
+                                                            data-target="#collapse{{$question->id}}"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapse{{$question->id}}">
                                                         {{$question->question}}
                                                     </button>
                                                 </h2>
                                             </div>
 
-                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                            <div id="collapse{{$question->id}}"
+                                                 class="collapse @if($loop->first) show @endif"
+                                                 aria-labelledby="headingOne"
                                                  data-parent="#construction-accordion">
                                                 <div class="card-body">
                                                     {!! $question->answer !!}

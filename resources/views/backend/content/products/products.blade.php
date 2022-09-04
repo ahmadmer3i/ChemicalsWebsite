@@ -334,7 +334,7 @@
                                             class="btn btn-icon btn-info btn-sm">
                                             <i class="fas fa-pencil-alt fs-4"></i>
                                         </a>
-                                        <a href="{{route('home.general-info.card.delete', $category->id)}}"
+                                        <a href="{{route('product.product-category.delete', $category->id)}}"
                                            class="btn btn-icon btn-danger btn-sm" id="delete">
                                             <i class="fas fa-trash fs-4"></i>
                                         </a>
