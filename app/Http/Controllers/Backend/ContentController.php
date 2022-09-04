@@ -17,6 +17,7 @@ use App\Models\News;
 use App\Models\NewsImage;
 use App\Models\Product;
 use App\Models\ProductCategory;
+use App\Models\ProductQuestion;
 use App\Models\ProductSubCategory;
 use App\Models\ProductSubCategoryList;
 use App\Models\QualityPolicy;
@@ -653,6 +654,9 @@ class ContentController extends Controller
         }
         $category->tag = $request->tag;
         $category->name = $request->name;
+        $category->description = $request->description;
+        $category->details_title = $request->details_title;
+        $category->details = $request->details;
         $category->update();
         $notification = array( 'message' => 'Product Category Updated Successfully', 'alert-type' => 'info' );
         return redirect()->route('product.product-title')->with($notification);
@@ -688,6 +692,17 @@ class ContentController extends Controller
         $list_item->subcategory_id = $request->id;
         $list_item->save();
         $notification = array( 'message' => 'Subcategory Item Added Successfully', 'alert-type' => 'success' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function product_category_store_question(Request $request)
+    {
+        $question = new ProductQuestion();
+        $question->question = $request->question;
+        $question->answer = $request->answer;
+        $question->product_id = $request->id;
+        $question->save();
+        $notification = array( 'message' => 'Question Added Successfully', 'alert-type' => 'success' );
         return redirect()->back()->with($notification);
     }
 

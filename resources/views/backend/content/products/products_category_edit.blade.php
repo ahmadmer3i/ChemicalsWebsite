@@ -57,14 +57,138 @@
                     <!--end::Breadcrumb-->
                 </div>
                 <div>
-                    <a href="" class="btn btn-sm btn-dark" data-bs-toggle="modal"
-                       data-bs-target="#kt_modal_new_target2"><i class="fa fa-plus fs-9"></i>Add Subcategory</a>
+                    <a href="" class="btn btn-sm btn-info mr-1" data-bs-toggle="modal"
+                       data-bs-target="#kt_modal_new_target5"><i class="fa fa-plus fs-9"></i>Add Question</a>
+                    <a
+                        href="" class="btn btn-sm btn-dark" data-bs-toggle="modal"
+                        data-bs-target="#kt_modal_new_target2"><i class="fa fa-plus fs-9"></i>Add Subcategory</a>
                 </div>
                 <!--end::Page title-->
                 <!--begin::Actions-->
                 <!--end::Actions-->
             </div>
             <!--end::Container-->
+        </div>
+        <div class="modal fade" id="kt_modal_new_target5" tabindex="-1"
+             aria-hidden="true">
+            <!--begin::Modal dialog-->
+            <div class="modal-dialog modal-dialog-centered mw-650px">
+                <!--begin::Modal content-->
+                <div class="modal-content rounded">
+                    <!--begin::Modal header-->
+                    <div class="modal-header pb-0 border-0 justify-content-end">
+                        <!--begin::Close-->
+                        <div class="btn btn-sm btn-icon btn-active-color-primary"
+                             data-bs-dismiss="modal">
+                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                            <span class="svg-icon svg-icon-1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1"
+                                          transform="rotate(-45 6 17.3137)" fill="black"/>
+									<rect x="7.41422" y="6" width="16" height="2" rx="1"
+                                          transform="rotate(45 7.41422 6)" fill="black"/>
+								</svg>
+							</span>
+                            <!--end::Svg Icon-->
+                        </div>
+                        <!--end::Close-->
+                    </div>
+                    <!--begin::Modal header-->
+                    <!--begin::Modal body-->
+                    <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+                        <!--begin:Form-->
+                        <form
+                            id="kt_modal_new_target_form"
+                            class="form"
+                            action="{{route('products.product-category.question.store')}}"
+                            method="post"
+                            enctype="multipart/form-data"
+                        >
+                            @csrf
+                            <!--begin::Heading-->
+                            <input type="hidden" name="id" value="{{$category->id}}">
+                            <div class="mb-13 text-center">
+                                <!--begin::Title-->
+                                <h1 class="mb-3">Add Product Question</h1>
+                                <!--end::Title-->
+                                <!--begin::Description-->
+                                <div class="text-muted fw-bold fs-5">
+                                </div>
+                                <!--end::Description-->
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Input group-->
+                            <div class="d-flex flex-column mb-8 fv-row">
+                                <!--begin::Label-->
+                                <label
+                                    class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                    <span class="required">Question</span>
+                                    <i class="fas fa-exclamation-circle ms-2 fs-7"
+                                       data-bs-toggle="tooltip"
+                                       title=""></i>
+                                </label>
+                                <!--end::Label-->
+                                <input type="text"
+                                       class="form-control form-control-solid"
+                                       placeholder="Enter Question" name="question"
+                                       value=""/>
+                            </div>
+                            <div class="d-flex flex-column mb-8 fv-row">
+                                <!--begin::Label-->
+                                <label
+                                    class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                    <span class="required">Answer</span>
+                                    <i class="fas fa-exclamation-circle ms-2 fs-7"
+                                       data-bs-toggle="tooltip"
+                                       title=""></i>
+                                </label>
+                                <!--end::Label-->
+                                <textarea type="file" id="image"
+                                          class="form-control form-control-solid"
+                                          placeholder="Enter Answer" name="answer"
+                                ></textarea>
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <!--end::Input group-->
+                            <!--begin::Actions-->
+                            <div class="text-center">
+                                <button type="reset" id="kt_modal_new_target_cancel"
+                                        class="btn btn-light me-3"
+                                        data-bs-dismiss="modal">
+                                    Cancel
+                                </button>
+                                <button type="submit" id="kt_modal_new_target_submit"
+                                        class="btn btn-primary">
+                                                            <span class="indicator-label">Add Question
+                                                            </span>
+                                    <span class="indicator-progress">Please wait...
+									                        <span
+                                                                class="spinner-border spinner-border-sm align-middle ms-2">
+                                                             </span>
+                                                            </span>
+                                </button>
+                            </div>
+                            <!--end::Actions-->
+                        </form>
+                        <script>
+                            tinymce.init({
+                                selector: 'textarea',
+                                plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+                                toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+                                toolbar_mode: 'floating',
+                                tinycomments_mode: 'embedded',
+                                tinycomments_author: 'Author name',
+                            });
+                        </script>
+                        <!--end:Form-->
+                    </div>
+                    <!--end::Modal body-->
+                </div>
+                <!--end::Modal content-->
+            </div>
+            <!--end::Modal dialog-->
         </div>
         <div class="modal fade" id="kt_modal_new_target2" tabindex="-1"
              aria-hidden="true">
@@ -234,7 +358,39 @@
                                                value="{{ !empty($category->tag) ? $category->tag : ''}}">
                                     </div>
                                 </div>
+                                <div class="row mb-3">
 
+                                    <label for="section_title" class="col-sm-3 col-form-label">Category
+                                        Description</label>
+                                    <div class="col-sm-9">
+                                        <textarea type="text" class="form-control" id="tag"
+                                                  name="description"
+                                                  placeholder="Enter Category Description"
+                                        >{{$category->description}}</textarea>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+
+                                    <label for="details_title" class="col-sm-3 col-form-label">Category Details
+                                        Title</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="tag"
+                                               name="details_title"
+                                               placeholder="Category Details Title"
+                                               value="{{ !empty($category->details_title) ? $category->details_title : ''}}">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+
+                                    <label for="section_title" class="col-sm-3 col-form-label">Category
+                                        Description</label>
+                                    <div class="col-sm-9">
+                                        <textarea type="text" class="form-control" id="tag"
+                                                  name="details"
+                                                  placeholder="Enter Category Details"
+                                        >{{$category->details}}</textarea>
+                                    </div>
+                                </div>
                                 <div class="row mb-3">
                                     <label for="inputConfirmPassword2" class="col-sm-3 col-form-label">Slider
                                         Image</label>
@@ -259,7 +415,130 @@
                                 </div>
                             </div>
                         </form>
-
+                        <table id="kt_datatable_example_8" class="table table-striped gy-5 gs-7 border rounded mt-5">
+                            <thead>
+                            <tr class="fw-bolder fs-6 text-gray-800 px-7">
+                                <th style="width: 30px;">#</th>
+                                <th>Question</th>
+                                <th>Answer</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @php($i = 1)
+                            @foreach($category->product_questions as $question)
+                                <tr>
+                                    <td>{{$i}}</td>
+                                    <td>{{$question->question}}</td>
+                                    <td>{!! $question->answer !!}</td>
+                                    <td style="width: 80px">
+                                        <a
+                                            href="{{route('product.product-category.subcategory.edit',$question->id)}}"
+                                            class="btn btn-icon btn-info btn-sm">
+                                            <i class="fas fa-pencil-alt fs-4"></i>
+                                        </a>
+                                        <a href="{{route('home.global-precences.county.asia.delete', $question->id)}}"
+                                           class="btn btn-icon btn-danger btn-sm" id="delete">
+                                            <i class="fas fa-trash fs-4"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <input type="hidden" value="{{ $i++ }}">
+                                <div class="modal fade" id="kt_modal_new_target-{{$question->id}}" tabindex="-1"
+                                     aria-hidden="true">
+                                    <!--begin::Modal dialog-->
+                                    <div class="modal-dialog modal-dialog-centered mw-650px">
+                                        <!--begin::Modal content-->
+                                        <div class="modal-content rounded">
+                                            <!--begin::Modal header-->
+                                            <div class="modal-header pb-0 border-0 justify-content-end">
+                                                <!--begin::Close-->
+                                                <div class="btn btn-sm btn-icon btn-active-color-primary"
+                                                     data-bs-dismiss="modal">
+                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                                    <span class="svg-icon svg-icon-1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1"
+                                          transform="rotate(-45 6 17.3137)" fill="black"/>
+									<rect x="7.41422" y="6" width="16" height="2" rx="1"
+                                          transform="rotate(45 7.41422 6)" fill="black"/>
+								</svg>
+							</span>
+                                                    <!--end::Svg Icon-->
+                                                </div>
+                                                <!--end::Close-->
+                                            </div>
+                                            <!--begin::Modal header-->
+                                            <!--begin::Modal body-->
+                                            <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+                                                <!--begin:Form-->
+                                                <form
+                                                    id="kt_modal_new_target_form"
+                                                    class="form"
+                                                    action="{{route('home.global-precences.country.asia.update')}}"
+                                                    method="post"
+                                                >
+                                                    @csrf
+                                                    <!--begin::Heading-->
+                                                    <input type="hidden" name="id" value="{{$question->id}}">
+                                                    <div class="mb-13 text-center">
+                                                        <!--begin::Title-->
+                                                        <h1 class="mb-3">Country Update</h1>
+                                                        <!--end::Title-->
+                                                        <!--begin::Description-->
+                                                        <div class="text-muted fw-bold fs-5">
+                                                        </div>
+                                                        <!--end::Description-->
+                                                    </div>
+                                                    <!--end::Heading-->
+                                                    <!--begin::Input group-->
+                                                    <div class="d-flex flex-column mb-8 fv-row">
+                                                        <!--begin::Label-->
+                                                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                                            <span class="required">Country Name</span>
+                                                            <i class="fas fa-exclamation-circle ms-2 fs-7"
+                                                               data-bs-toggle="tooltip"
+                                                               title="Please update country name, the old one is: {{$question->country}}"></i>
+                                                        </label>
+                                                        <!--end::Label-->
+                                                        <input type="text" class="form-control form-control-solid"
+                                                               placeholder="Enter Country name" name="country"
+                                                               value="{{$question->country}}"/>
+                                                    </div>
+                                                    <!--end::Input group-->
+                                                    <!--begin::Input group-->
+                                                    <!--end::Input group-->
+                                                    <!--begin::Actions-->
+                                                    <div class="text-center">
+                                                        <button type="reset" id="kt_modal_new_target_cancel"
+                                                                class="btn btn-light me-3" data-bs-dismiss="modal">
+                                                            Cancel
+                                                        </button>
+                                                        <button type="submit" id="kt_modal_new_target_submit"
+                                                                class="btn btn-primary">
+                                                            <span class="indicator-label">Update
+                                                            </span>
+                                                            <span class="indicator-progress">Please wait...
+									                        <span
+                                                                class="spinner-border spinner-border-sm align-middle ms-2">
+                                                             </span>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <!--end::Actions-->
+                                                </form>
+                                                <!--end:Form-->
+                                            </div>
+                                            <!--end::Modal body-->
+                                        </div>
+                                        <!--end::Modal content-->
+                                    </div>
+                                    <!--end::Modal dialog-->
+                                </div>
+                            @endforeach
+                            </tbody>
+                        </table>
                         <table id="kt_datatable_example_8" class="table table-striped gy-5 gs-7 border rounded mt-5">
                             <thead>
                             <tr class="fw-bolder fs-6 text-gray-800 px-7">

@@ -94,6 +94,7 @@ Route::middleware('auth')->group(function () {
         Route::post('admin/news/update/', 'news_update')->name('news.update');
         Route::post('admin/news/news-image/update', 'news_image_update')->name('news.news-image.update');
         Route::get('admin/news/news-image/delete/{id}', 'news_image_delete')->name('news.news-image.delete');
+        Route::post('admin/products/product_category/question/store', 'product_category_store_question')->name('products.product-category.question.store');
     });
     Route::controller(AdminController::class)->group(function () {
         Route::get('admin/logout', 'destroy')->name('admin.logout');
