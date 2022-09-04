@@ -716,6 +716,22 @@ class ContentController extends Controller
         return redirect()->back()->with($notification);
     }
 
+    public function product_subcategory_item_update(Request $request)
+    {
+        $list_item = ProductSubCategoryList::find($request->id);
+        $list_item->item = $request->item;
+        $list_item->update();
+        $notification = array( 'message' => 'Subcategory Item Updated Successfully', 'alert-type' => 'info' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function product_subcategory_item_delete($id)
+    {
+        ProductSubCategoryList::find($id)->delete();
+        $notification = array( 'message' => 'Subcategory Item Deleted Successfully', 'alert-type' => 'warning' );
+        return redirect()->back()->with($notification);
+    }
+
     public function product_category_store_question(Request $request)
     {
         $question = new ProductQuestion();

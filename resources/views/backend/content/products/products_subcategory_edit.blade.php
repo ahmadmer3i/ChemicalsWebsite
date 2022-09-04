@@ -258,11 +258,11 @@
                                         <td style="width: 80px">
                                             <a data-bs-toggle="modal"
                                                data-bs-target="#kt_modal_new_target-{{$item->id}}"
-                                               href="{{route('home.global-precences.country.asia.edit',$item->id)}}"
+                                               href=""
                                                class="btn btn-icon btn-info btn-sm">
                                                 <i class="fas fa-pencil-alt fs-4"></i>
                                             </a>
-                                            <a href="{{route('home.global-precences.county.asia.delete', $item->id)}}"
+                                            <a href="{{route('product.product-category.subcategory.item.delete', $item->id)}}"
                                                class="btn btn-icon btn-danger btn-sm" id="delete">
                                                 <i class="fas fa-trash fs-4"></i>
                                             </a>
@@ -301,7 +301,7 @@
                                                     <form
                                                         id="kt_modal_new_target_form"
                                                         class="form"
-                                                        action="{{route('home.global-precences.country.asia.update')}}"
+                                                        action="{{route('product.product-category.subcategory.item.update')}}"
                                                         method="post"
                                                     >
                                                         @csrf
@@ -309,7 +309,7 @@
                                                         <input type="hidden" name="id" value="{{$item->id}}">
                                                         <div class="mb-13 text-center">
                                                             <!--begin::Title-->
-                                                            <h1 class="mb-3">Country Update</h1>
+                                                            <h1 class="mb-3">Subcategory Item Edit</h1>
                                                             <!--end::Title-->
                                                             <!--begin::Description-->
                                                             <div class="text-muted fw-bold fs-5">
@@ -321,15 +321,15 @@
                                                         <div class="d-flex flex-column mb-8 fv-row">
                                                             <!--begin::Label-->
                                                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                                                <span class="required">Country Name</span>
+                                                                <span class="required">Item Name</span>
                                                                 <i class="fas fa-exclamation-circle ms-2 fs-7"
                                                                    data-bs-toggle="tooltip"
-                                                                   title="Please update country name, the old one is: {{$item->country}}"></i>
+                                                                   title=""></i>
                                                             </label>
                                                             <!--end::Label-->
                                                             <input type="text" class="form-control form-control-solid"
-                                                                   placeholder="Enter Country name" name="country"
-                                                                   value="{{$item->country}}"/>
+                                                                   placeholder="Enter Country name" name="item"
+                                                                   value="{{$item->item}}"/>
                                                         </div>
                                                         <!--end::Input group-->
                                                         <!--begin::Input group-->
