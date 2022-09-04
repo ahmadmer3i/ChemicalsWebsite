@@ -226,7 +226,7 @@ function initialize() {
         }
     ];
     var mapOptions = {
-        center: nottingham,
+        center: new google.maps.LatLng(31.963328365780686, 35.8440251890927),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         backgroundColor: "#000",
         zoom: 6,
