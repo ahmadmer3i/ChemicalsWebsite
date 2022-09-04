@@ -249,7 +249,7 @@ function initialize() {
     var marker_image = mapMarker;
     var pinIcon = new google.maps.MarkerImage(marker_image, null, null, null, new google.maps.Size(46, 40));
     marker = new google.maps.Marker({
-        position: nottingham,
+        position: new google.maps.LatLng(31.963328365780686, 35.8440251890927),
         map: map,
         icon: pinIcon,
         title: mapMarkerName
