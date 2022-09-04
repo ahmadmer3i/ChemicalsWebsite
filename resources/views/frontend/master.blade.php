@@ -105,7 +105,7 @@
 
 
     <!-- Google Map API Key-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhcKBSzpWtBiRNjzaPDzzzmAEKSDuRjZ8" defer></script>
     <!-- Google Map Plugin-->
     <script src="{{asset('frontend/plugins/google-map/map.js')}}" defer></script>
 

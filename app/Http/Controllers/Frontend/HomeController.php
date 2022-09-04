@@ -23,7 +23,7 @@ class HomeController extends Controller
 
     public function contact()
     {
-        return view('frontend.contact');
+        return view('frontend.partials.contact');
     }
 
     public function products()
