@@ -229,7 +229,7 @@ function initialize() {
         center: behar,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         backgroundColor: "#000",
-        zoom: 10,
+        zoom: 14,
         panControl: !1,
         zoomControl: !0,
         mapTypeControl: !1,
