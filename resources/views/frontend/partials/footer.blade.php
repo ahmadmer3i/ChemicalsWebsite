@@ -101,20 +101,20 @@
                     <h3 class="widget-title">About Us</h3>
                     <img loading="lazy" width="200px" class="footer-logo"
                          src="{{asset('frontend/images/logo/logo.png')}}"
-                         alt="Constra">
+                         alt="Chemicals">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done
                         idunt ut
                         labore et dolore magna aliqua.</p>
                     <div class="footer-social">
                         <ul>
-                            <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
+                            <li><a href="#" aria-label="Facebook"><i
                                         class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i
+                            <li><a href="3" aria-label="Twitter"><i
                                         class="fab fa-twitter"></i></a>
                             </li>
-                            <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
+                            <li><a href="#" aria-label="Instagram"><i
                                         class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://github.com/themefisher" aria-label="Github"><i
+                            <li><a href="#" aria-label="Github"><i
                                         class="fab fa-github"></i></a></li>
                         </ul>
                     </div><!-- Footer social end -->
@@ -126,7 +126,7 @@
                         We work 6 days a week, every day excluding major holidays. Contact us if you have an
                         emergency, with our
                         Hotline and Contact form.
-                        <br><br> Saturday - Thirsday: <span class="text-right">9:00 - 21:00 </span>
+                        <br><br> Saturday - Thursday: <span class="text-right">9:00 - 21:00 </span>
                     </div>
                 </div><!-- Col end -->
 
