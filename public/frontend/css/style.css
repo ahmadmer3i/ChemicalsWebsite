@@ -3697,11 +3697,6 @@ ol.list-numbers li::before {
     border: 1px solid #dee2e6 !important;
 }
 
-.col-sm-12 {
-    flex: 0 0 auto;
-    width: 100%;
-}
-
 .border-2 {
     border-width: 2px !important;
 }
