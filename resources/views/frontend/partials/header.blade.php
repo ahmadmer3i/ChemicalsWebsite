@@ -37,7 +37,7 @@
                                 </div>
                             </li>
                             <li class="header-get-a-quote">
-                                <a class="btn btn-primary" href="contact.html">Get A Quote</a>
+                                <a class="btn btn-primary" href="{{route('contacts')}}">Get A Quote</a>
                             </li>
                         </ul><!-- Ul end -->
                     </div><!-- header right end -->
