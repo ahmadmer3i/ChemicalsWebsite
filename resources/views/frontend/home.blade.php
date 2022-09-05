@@ -215,7 +215,7 @@
     <section class="subscribe no-padding">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-12 col-sm-12">
                     <div class="subscribe-call-to-acton">
                         <h3>Can We Help?</h3>
                         <h4>(+962)-6-5811-799</h4>
