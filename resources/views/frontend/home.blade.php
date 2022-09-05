@@ -252,14 +252,14 @@
             <header class="mb-5">
                 <div class="row">
                     <div class="col-lg-7 mx-auto">
-                        <p class="h6 text-uppercase text-primary mb-0">{{$general_info->section_title}}</p>
-                        <h2>{{$general_info->title}}</h2>
+                        <h2 class="text-uppercase section-title">{{$general_info->section_title}}</h2>
+                        <h3 class="action-title">{{$general_info->title}}</h3>
                     </div>
                 </div>
             </header>
             <div class="row align-items-stretch gy-4">
                 @foreach($general_info->general_info_card as $card)
-                    <div class="col-lg-4 col-md-6 pt-2">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 pt-2">
                         <div class="px-4 py-5 border border-2 border-dash h-100">
                             <img
                                 src="{{ !empty($card->image) ? asset($card->image) : asset('backend/assets/img/1280x800.png') }}"
