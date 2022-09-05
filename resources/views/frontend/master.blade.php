@@ -23,6 +23,7 @@
   ================================================== -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{asset('frontend/plugins/bootstrap/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/plugins/bootstrap/bootstrap.min.css')}}">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="{{asset('frontend/plugins/fontawesome/css/all.min.css')}}">
     <!-- Animation -->
@@ -36,6 +37,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/icons/styles.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/plugins/modal-video/css/modal-video.min.css')}}">
+
 
 </head>
 <body>

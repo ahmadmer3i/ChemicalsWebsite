@@ -259,7 +259,7 @@
             </header>
             <div class="row align-items-stretch gy-4">
                 @foreach($general_info->general_info_card as $card)
-                    <div class="col-12 col-lg-4  col-md-12 col-sm-12 pt-2">
+                    <div class="col-12 col-lg-4  col-sm col-sm-12 pt-2">
                         <div class="px-4 py-5 border border-2 border-dash h-100">
                             <img
                                 src="{{ !empty($card->image) ? asset($card->image) : asset('backend/assets/img/1280x800.png') }}"
