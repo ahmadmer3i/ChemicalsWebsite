@@ -200,7 +200,7 @@
                     <!--/ Testimonial carousel end-->
                 </div><!-- Col end -->
 
-                <div class="col-lg-4 mt-5 mt-lg-50">
+                <div class="col-lg-4 col-12 col-sm-12 m-sm-0 mt-5 mt-lg-50">
 
                     <img src="{{asset($global_precence->image)}}" alt="" width="700">
 
@@ -215,7 +215,7 @@
     <section class="subscribe no-padding">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-12 col-sm-12">
+                <div class="col-lg-12 col-12 col-md-12 col-sm-12">
                     <div class="subscribe-call-to-acton">
                         <h3>Can We Help?</h3>
                         <h4>(+962)-6-5811-799</h4>
@@ -259,7 +259,7 @@
             </header>
             <div class="row align-items-stretch gy-4">
                 @foreach($general_info->general_info_card as $card)
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 pt-2">
+                    <div class="col-12 col-lg-4  col-md-12 col-sm-12 pt-2">
                         <div class="px-4 py-5 border border-2 border-dash h-100">
                             <img
                                 src="{{ !empty($card->image) ? asset($card->image) : asset('backend/assets/img/1280x800.png') }}"
