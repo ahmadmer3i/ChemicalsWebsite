@@ -3,7 +3,7 @@
     <div id="banner-area" class="banner-area overlay sm-overlay"
          style="background-image:url({{asset($subcategory->product_category->image)}}); background-attachment: fixed;">
         <div class="banner-text">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="banner-heading">
@@ -26,7 +26,7 @@
     </div><!-- Banner area end -->
 
     <section id="main-container" class="main-container">
-        <div class="container">
+        <div class="container-fluid mx-4">
             <div class="row">
 
                 <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
