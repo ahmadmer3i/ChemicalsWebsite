@@ -253,7 +253,7 @@
                 <div class="row">
                     <div class="col-lg-7 mx-auto">
                         <h2 class="text-uppercase section-title">{{$general_info->section_title}}</h2>
-                        <h3 class="action-title">{{$general_info->title}}</h3>
+                        <h4 class="section-sub-title">{{$general_info->title}}</h4>
                     </div>
                 </div>
             </header>
