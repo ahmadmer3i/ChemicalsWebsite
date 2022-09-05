@@ -3,7 +3,7 @@
     <div id="banner-area" class="banner-area overlay sm-overlay"
          style="background-image:url({{asset($subcategory->product_category->image)}}); background-attachment: fixed;">
         <div class="banner-text">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="banner-heading">
@@ -29,12 +29,11 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-xl-3 col-lg-4">
+                <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
                     <div class="sidebar sidebar-left">
                         <div class="widget">
                             <h3 class="widget-title">Categories</h3>
                             <ul class="nav service-menu">
-
                                 @foreach($subcategory->product_category->product_subcategory as $sub)
                                     <li class="{{request()->is('product-subcategory-details/'.$sub->id) ? 'active' : ''}}">
                                         <a
@@ -80,14 +79,17 @@
 
                         <div class="gap-40"></div>
 
-                        <div id="page-slider" class="page-slider">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div id="page-slider" class="page-slider">
+                                    <div class="item">
+                                        <img loading="lazy" class="img-fluid" height="30%"
+                                             src="{{asset($subcategory->image)}}"
+                                             alt="project-slider-image"/>
+                                    </div>
 
-                            <div class="item">
-                                <img loading="lazy" class="img-fluid" height="30%"
-                                     src="{{asset($subcategory->image)}}"
-                                     alt="project-slider-image"/>
+                                </div>
                             </div>
-
                         </div><!-- Page slider end -->
 
                         <div class="gap-40"></div>
