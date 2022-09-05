@@ -85,7 +85,7 @@
                 <!-- Team 1 end -->
 
                 @foreach($about_reliable->reliable_item as $reliable)
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-12 col-sm-12 pb-2">
                         <div class="bg-white h-100">
                             <div class="bg-primary px-4 py-3 d-inline-block">
                                 <svg class="svg-icon text-white">
