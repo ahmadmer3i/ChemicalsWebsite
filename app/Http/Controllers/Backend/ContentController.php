@@ -8,6 +8,7 @@ use App\Models\AboutReliable;
 use App\Models\AboutReliableItem;
 use App\Models\AfricanCountry;
 use App\Models\AsiaCountry;
+use App\Models\ContactUs;
 use App\Models\GeneralInfo;
 use App\Models\GeneralInfoCard;
 use App\Models\GlobalPrecence;
@@ -884,6 +885,32 @@ class ContentController extends Controller
         }
         $news_image->delete();
         $notification = array( 'message' => 'News Image Deleted Successfully', 'alert-type' => 'warning' );
+        return redirect()->back()->with($notification);
+    }
+
+    public function contact_info()
+    {
+        $contact = ContactUs::find(1);
+        return view('backend.content.contact_us.contact_inf', compact('contact'));
+    }
+
+    public function contact_info_update(Request $request)
+    {
+        $contact = ContactUs::find(1);
+        $contact->address_title = $request->address_title;
+        $contact->address = $request->address;
+        $contact->email_title = $request->email_title;
+        $contact->email = $request->email;
+        $contact->phone_title = $request->phone_title;
+        $contact->phone = $request->phone;
+        $contact->lat = $request->lat;
+        $contact->long = $request->long;
+        $contact->form_title = $request->form_title;
+        $contact->page_title = $request->page_title;
+        $contact->section_title = $request->section_title;
+        $contact->section_subtitle = $request->section_subtitle;
+        $contact->update();
+        $notification = array( 'message' => 'Contact Info Updated Successfully', 'alert-type' => 'info' );
         return redirect()->back()->with($notification);
     }
 }

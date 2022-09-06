@@ -102,6 +102,8 @@ Route::middleware('auth')->group(function () {
         Route::post('admin/product/product_category/question/store', 'product_category_store_question')->name('products.product-category.question.store');
         Route::post('admin/product/product_category/question/update', 'product_category_update_question')->name('product.product-category.question.update');
         Route::get('admin/product/product_category/question/delete/{id}', 'product_category_delete_question')->name('product.product-category.question.delete');
+        Route::get('admin/contact/contact_info', 'contact_info')->name('contact.contact-info');
+        Route::post('admin/contact/contact_info/update', 'contact_info_update')->name('contact.contact-info.update');
     });
     Route::controller(AdminController::class)->group(function () {
         Route::get('admin/logout', 'destroy')->name('admin.logout');
