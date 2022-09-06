@@ -92,15 +92,15 @@
                                 <span class="menu-title">General Info</span>
                             </a>
                         </div>
-                        <div class="menu-item">
-                            <a class="menu-link {{request()->is('admin/home/home-contact') ? 'active' : ''}}"
-                               href="{{route('home.home-contact')}}">
-                                            <span class="menu-bullet">
-                                                <span class="bullet bullet-dot"></span>
-                                            </span>
-                                <span class="menu-title">Home Contact Us</span>
-                            </a>
-                        </div>
+                        {{-- <div class="menu-item">
+                             <a class="menu-link {{request()->is('admin/home/home-contact') ? 'active' : ''}}"
+                                href="{{route('home.home-contact')}}">
+                                             <span class="menu-bullet">
+                                                 <span class="bullet bullet-dot"></span>
+                                             </span>
+                                 <span class="menu-title">Home Contact Us</span>
+                             </a>
+                         </div>--}}
                         <div class="menu-item">
                             <a class="menu-link {{request()->is('admin/home/why-choose-us') ? 'active' : ''}}"
                                href="{{route('home.why-choose-us')}}">
