@@ -24,7 +24,7 @@
 
                 <div class="col-lg-4 col-md-6 shuffle-item"
                      data-groups="[&quot;{{$category->tag}}&quot;]">
-                    <a class="gallery-popup" href="{{route('product-details', $category->id)}}">
+                    <a href="{{route('product-details', $category->id)}}">
                         <div class="project-img-container">
 
 
