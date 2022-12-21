@@ -45,7 +45,6 @@
                     <!--end::Breadcrumb-->
                 </div>
                 <div>
-
                 </div>
                 {{--Modal--}}
                 <div class="modal fade" id="kt_modal_new_target2" tabindex="-1"

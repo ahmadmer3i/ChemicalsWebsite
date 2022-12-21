@@ -102,9 +102,9 @@
                     <img loading="lazy" width="200px" class="footer-logo"
                          src="{{asset('frontend/images/logo/logo.png')}}"
                          alt="Chemicals">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done
-                        idunt ut
-                        labore et dolore magna aliqua.</p>
+                    <p>Our Company maintains strong business relations with key producers and manufacturers around the
+                        globe ,and ensures a consistent and steady supply of high-quality products ,that meets
+                        customer’s specifications, market trends and consumer preferences.</p>
                     <div class="footer-social">
                         <ul>
                             <li><a href="#" aria-label="Facebook"><i
