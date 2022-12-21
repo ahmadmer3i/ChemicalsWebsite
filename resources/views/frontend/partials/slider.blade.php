@@ -12,7 +12,7 @@
                         <h3 class="box-slide-sub-title">{{$slider->title}}</h3>
                         <p class="box-slide-description">{{$slider->description}}</p>
                         <p>
-                            <a href="services.html" class="slider btn btn-primary">Our Service</a>
+                            <a href="{{ route('products') }}" class="slider btn btn-primary">Our Service</a>
                         </p>
                     </div>
                 </div>
