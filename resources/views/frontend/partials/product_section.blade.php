@@ -24,26 +24,26 @@
 
                 <div class="col-lg-4 col-md-6 shuffle-item"
                      data-groups="[&quot;{{$category->tag}}&quot;]">
-                    <a href="{{route('product-details', $category->id)}}">
-                        <div class="project-img-container">
+                    <div class="project-img-container">
 
-                            <a class="gallery-popup" href="{{asset($category->image)}}">
+                        <a class="gallery-popup" href="{{asset($category->image)}}">
+                            <a href="{{route('product-details', $category->id)}}">
                                 <img class="img-fluid" src="{{asset($category->image)}}"
                                      alt="project-image">
-                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
                             </a>
+                            <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                        </a>
 
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title" style="color: white">
-                                        {{$category->name}}
-                                    </h3>
-                                    <p class="project-cat">Commercial</p>
-                                </div>
+                        <div class="project-item-info">
+                            <div class="project-item-info-content">
+                                <h3 class="project-item-title" style="color: white">
+                                    {{$category->name}}
+                                </h3>
+                                <p class="project-cat">Commercial</p>
                             </div>
-
                         </div>
-                    </a>
+
+                    </div>
                 </div>
             @endforeach<!-- shuffle item 1 end -->
 
