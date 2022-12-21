@@ -28,11 +28,11 @@
                         <div class="project-img-container">
 
 
-                            {{--<a href="{{route('product-details', $category->id)}}">
-                                <img class="img-fluid" src="{{asset($category->image)}}"
-                                     alt="project-image">
-                            </a>
-                            <span class="gallery-icon"><i class="fa fa-plus"></i></span>--}}
+                            {{--<a href="{{route('product-details', $category->id)}}">--}}
+                            <img class="img-fluid" src="{{asset($category->image)}}"
+                                 alt="project-image">
+                            {{--                            </a>--}}
+                            {{--                            <span class="gallery-icon"><i class="fa fa-plus"></i></span>--}}
 
 
                             <div class="project-item-info">
